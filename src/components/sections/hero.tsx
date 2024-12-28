@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/animations/fade-in";
+import { NetworkBackground } from "@/components/animations/network-background";
 
 interface HeroProps {
   dictionary: {
@@ -69,6 +70,10 @@ export function Hero({ dictionary }: HeroProps) {
               </p>
             </div>
           </FadeIn>
+
+          <div className="hidden lg:flex lg:items-center lg:justify-center">
+            <NetworkBackground />
+          </div>
         </div>
       </div>
     </div>
