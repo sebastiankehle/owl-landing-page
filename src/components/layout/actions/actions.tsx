@@ -26,9 +26,7 @@ export function Actions({ dictionary }: ActionsProps) {
       <div className="hidden md:flex md:items-center md:gap-4">
         <LanguageSwitcher />
         <ThemeToggle />
-        <Button variant="default" size="sm">
-          {dictionary.getQuote}
-        </Button>
+        <Button variant="gradient">{dictionary.getQuote}</Button>
       </div>
     </div>
   );

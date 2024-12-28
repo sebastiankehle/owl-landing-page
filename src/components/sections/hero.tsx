@@ -31,16 +31,16 @@ export function Hero({ dictionary }: HeroProps) {
           <FadeIn className="flex flex-col justify-center">
             <div className="mb-6 inline-flex gap-3">
               <div className="w-fit">
-                <span className="inline-flex items-center gap-2 rounded-full border bg-background/50 px-3 py-1 text-sm backdrop-blur">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+                <span className="inline-flex items-center gap-2 rounded-full border bg-background/50 px-3 py-1 text-xs backdrop-blur">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-violet-500" />
                   <span className="text-muted-foreground">
                     {dictionary.hero.badges.engineering}
                   </span>
                 </span>
               </div>
               <div className="w-fit">
-                <span className="inline-flex items-center gap-2 rounded-full border bg-background/50 px-3 py-1 text-sm backdrop-blur">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+                <span className="inline-flex items-center gap-2 rounded-full border bg-background/50 px-3 py-1 text-xs backdrop-blur">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-cyan-500" />
                   <span className="text-muted-foreground">
                     {dictionary.hero.badges.digital}
                   </span>
@@ -48,19 +48,17 @@ export function Hero({ dictionary }: HeroProps) {
               </div>
             </div>
 
-            <h1 className="mb-6 text-3xl font-medium tracking-tight sm:text-4xl md:text-5xl">
+            <h1 className="mb-6 text-2xl font-medium sm:text-3xl md:text-4xl">
               {dictionary.hero.title}
             </h1>
 
-            <p className="mb-8 max-w-2xl text-base text-muted-foreground md:text-lg">
+            <p className="mb-8 max-w-2xl text-sm text-muted-foreground md:text-sm">
               {dictionary.hero.subtitle}
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
-              <Button className="h-10 px-6 text-sm">
-                {dictionary.hero.cta.primary}
-              </Button>
-              <Button variant="outline" className="h-10 px-6 text-sm">
+              <Button variant="gradient">{dictionary.hero.cta.primary}</Button>
+              <Button variant="gradientAlternative">
                 {dictionary.hero.cta.secondary}
               </Button>
             </div>
