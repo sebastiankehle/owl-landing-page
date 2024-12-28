@@ -36,7 +36,7 @@ export default async function Layout({
           disableTransitionOnChange
         >
           <Header dict={dict} />
-          <MobileMenu dict={dict.header.nav} />
+          <MobileMenu dict={dict} />
           {children}
         </ThemeProvider>
       </body>

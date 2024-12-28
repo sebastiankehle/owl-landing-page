@@ -1,29 +1,35 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
-import { usePathname, useRouter } from "next/navigation";
 import { useMobileMenu } from "@/stores/mobile-menu";
+import { ThemeToggle } from "./actions/theme-toggle";
+import { LanguageSwitcher } from "./actions/language-switcher";
+import { Nav } from "./nav";
+import { SiGithub, SiX, SiLinkedin } from "@icons-pack/react-simple-icons";
 
 interface MobileMenuProps {
   dict: {
-    features: string;
-    pricing: string;
-    about: string;
+    header: {
+      logo: string;
+      nav: {
+        features: string;
+        pricing: string;
+        about: string;
+      };
+      actions: {
+        getQuote: string;
+      };
+    };
+    mobile: {
+      getInTouch: {
+        title: string;
+        description: string;
+      };
+    };
   };
 }
 
 export function MobileMenu({ dict }: MobileMenuProps) {
   const { isOpen } = useMobileMenu();
-  const { theme, setTheme } = useTheme();
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const switchLanguage = (locale: string) => {
-    const newPath = pathname.replace(/^\/[a-z]{2}/, `/${locale}`);
-    router.push(newPath);
-  };
 
   return (
     <div
@@ -34,38 +40,55 @@ export function MobileMenu({ dict }: MobileMenuProps) {
       }`}
     >
       <div className="h-full pt-[calc(0.5rem+2.75rem)]">
-        <div className="flex h-full flex-col items-center justify-center gap-12 p-8">
-          <nav className="flex flex-col items-center gap-8 text-xl">
-            <a href="#features" className="text-foreground hover:text-primary">
-              {dict.features}
-            </a>
-            <a href="#pricing" className="text-foreground hover:text-primary">
-              {dict.pricing}
-            </a>
-            <a href="#about" className="text-foreground hover:text-primary">
-              {dict.about}
-            </a>
-          </nav>
+        <div className="container flex h-full flex-col p-8">
+          {/* Get in Touch Section */}
+          <div className="mb-16 space-y-3">
+            <h3 className="text-lg">{dict.mobile.getInTouch.title}</h3>
+            <p className="text-sm text-muted-foreground">
+              {dict.mobile.getInTouch.description}
+            </p>
+          </div>
 
-          <div className="flex flex-col items-center gap-8">
-            <div className="flex gap-4">
-              <button
-                onClick={() => switchLanguage("en")}
-                className="text-lg text-foreground hover:text-primary"
+          {/* Navigation */}
+          <div className="flex-1">
+            <Nav dict={dict.header.nav} variant="mobile" />
+
+            {/* Social Icons */}
+            <div className="mt-8 flex items-center gap-6">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary"
               >
-                English
-              </button>
+                <SiGithub size={24} />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary"
+              >
+                <SiX size={24} />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary"
+              >
+                <SiLinkedin size={24} />
+              </a>
             </div>
+          </div>
 
-            <Button
-              variant="ghost"
-              size="icon"
-              className="h-12 w-12"
-              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            >
-              <Sun className="h-6 w-6 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-6 w-6 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            </Button>
+          {/* Bottom Section */}
+          <div className="flex items-center justify-start pt-8">
+            {/* Controls */}
+            <div className="flex items-center gap-6">
+              <LanguageSwitcher />
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </div>

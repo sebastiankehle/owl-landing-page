@@ -9,5 +9,11 @@
     "actions": {
       "getQuote": "Get Quote"
     }
+  },
+  "mobile": {
+    "getInTouch": {
+      "title": "Get in Touch",
+      "description": "Let's discuss your next project and bring your ideas to life."
+    }
   }
 }
