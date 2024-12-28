@@ -51,9 +51,6 @@
 │ ├── layout/ # Layout components (header, footer, sidebar)
 │ ├── landing/ # Page sections (hero, benefits, features)
 │ └── ui/ # Base UI components (shadcn/ui)
-├── content/ # Static content
-│ ├── landing/ # Landing page content
-│ └── legal/ # Legal content
 ├── hooks/ # Custom React hooks
 ├── lib/ # Utilities and services
 │ └── utils.ts # Helper functions
@@ -120,40 +117,4 @@
 - Use declarative patterns
 - Maintain consistent formatting
 
-## Database Schema
 
-### Core Tables
-- profiles: User profiles
-- subscriptions: User subscription data
-- ai_preferences: AI generation settings
-- content_schedule: Scheduled content
-- platforms: Platform-specific settings
-
-## API Structure
-
-### Content Generation
-- /api/content/quick-generate
-- /api/content/advanced-generate
-- /api/content/matrix-generate
-
-### Subscription Management
-- /api/subscriptions/create-checkout
-- /api/subscriptions/create-portal
-- /api/webhooks/stripe
-
-## Authentication Flow
-- Login/Signup via Supabase Auth
-- Password reset functionality
-- Protected routes in dashboard
-
-## Third-Party Integrations
-
-### Stripe
-- Subscription management
-- Webhook handling
-- Customer portal
-
-### Supabase
-- Authentication
-- Database
-- Row Level Security

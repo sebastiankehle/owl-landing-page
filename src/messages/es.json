@@ -1,0 +1,13 @@
+{
+  "header": {
+    "logo": "OLD WORLD LABS",
+    "nav": {
+      "features": "Características",
+      "pricing": "Precios",
+      "about": "Acerca de"
+    },
+    "actions": {
+      "getQuote": "Obtener Cotización"
+    }
+  }
+}
