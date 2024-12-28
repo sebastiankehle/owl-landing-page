@@ -8,7 +8,7 @@ export function NetworkBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { theme, resolvedTheme } = useTheme();
   const sceneRef = useRef<THREE.Scene | null>(null);
-
+  console.log(theme);
   useEffect(() => {
     if (!containerRef.current) return;
 
