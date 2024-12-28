@@ -13,17 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export async function generateStaticParams() {
-  return [{ lang: "en-US" }, { lang: "de" }];
-}
-
-export default async function RootLayout({
-  children,
-  params,
-}: Readonly<{
+type LayoutProps = {
   children: React.ReactNode;
-  params: { lang: "en-US" | "de" };
-}>) {
+  params: { lang: "en" | "de" };
+};
+
+export default async function RootLayout({ children, params }: LayoutProps) {
   const dict = await getDictionary(params.lang);
 
   return (

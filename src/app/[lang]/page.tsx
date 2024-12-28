@@ -6,7 +6,7 @@ export default async function Home({
 }: {
   params: { lang: "en-US" | "de" };
 }) {
-  const lang = (await params).lang;
+  const lang = params.lang;
   const dict = await getDictionary(lang);
 
   return (
