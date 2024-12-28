@@ -4,14 +4,14 @@ import { Hero } from "@/components/sections/hero";
 export default async function Home({
   params,
 }: {
-  params: { lang: "en-US" | "de" };
+  params: Promise<{ lang: string }>;
 }) {
-  const lang = params.lang;
-  const dict = await getDictionary(lang);
+  const { lang } = await params;
+  const dictionary = await getDictionary(lang);
 
   return (
     <main className="flex flex-col">
-      <Hero dict={dict} />
+      <Hero dictionary={dictionary} />
     </main>
   );
 }

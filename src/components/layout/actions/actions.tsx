@@ -7,7 +7,7 @@ import { MobileToggle } from "./mobile-toggle";
 import { useMobileMenu } from "@/stores/mobile-menu";
 
 interface ActionsProps {
-  dict: {
+  dictionary: {
     getQuote: string;
     nav: {
       features: string;
@@ -17,7 +17,7 @@ interface ActionsProps {
   };
 }
 
-export function Actions({ dict }: ActionsProps) {
+export function Actions({ dictionary }: ActionsProps) {
   const { toggle, isOpen } = useMobileMenu();
 
   return (
@@ -27,7 +27,7 @@ export function Actions({ dict }: ActionsProps) {
         <LanguageSwitcher />
         <ThemeToggle />
         <Button variant="default" size="sm">
-          {dict.getQuote}
+          {dictionary.getQuote}
         </Button>
       </div>
     </div>

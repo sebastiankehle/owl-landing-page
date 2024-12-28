@@ -15,14 +15,15 @@ const geistMono = Geist_Mono({
 
 type LayoutProps = {
   children: React.ReactNode;
-  params: { lang: "en" | "de" };
+  params: Promise<{ lang: string }>;
 };
 
 export default async function RootLayout({ children, params }: LayoutProps) {
-  const dict = await getDictionary(params.lang);
+  const { lang } = await params;
+  const dictionary = await getDictionary(lang);
 
   return (
-    <html lang={params.lang} suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
@@ -33,8 +34,8 @@ export default async function RootLayout({ children, params }: LayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          <Header dict={dict} />
-          <MobileMenu dict={dict} />
+          <Header dictionary={dictionary} />
+          <MobileMenu dictionary={dictionary} />
           {children}
         </ThemeProvider>
       </body>

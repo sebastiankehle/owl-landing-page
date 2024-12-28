@@ -7,7 +7,7 @@ import { Nav } from "./nav";
 import { SiGithub, SiX, SiLinkedin } from "@icons-pack/react-simple-icons";
 
 interface MobileMenuProps {
-  dict: {
+  dictionary: {
     header: {
       logo: string;
       nav: {
@@ -28,7 +28,7 @@ interface MobileMenuProps {
   };
 }
 
-export function MobileMenu({ dict }: MobileMenuProps) {
+export function MobileMenu({ dictionary }: MobileMenuProps) {
   const { isOpen } = useMobileMenu();
 
   return (
@@ -43,15 +43,15 @@ export function MobileMenu({ dict }: MobileMenuProps) {
         <div className="container flex h-full flex-col p-8">
           {/* Get in Touch Section */}
           <div className="mb-16 space-y-3">
-            <h3 className="text-lg">{dict.mobile.getInTouch.title}</h3>
+            <h3 className="text-lg">{dictionary.mobile.getInTouch.title}</h3>
             <p className="text-sm text-muted-foreground">
-              {dict.mobile.getInTouch.description}
+              {dictionary.mobile.getInTouch.description}
             </p>
           </div>
 
           {/* Navigation */}
           <div className="flex-1">
-            <Nav dict={dict.header.nav} variant="mobile" />
+            <Nav dictionary={dictionary.header.nav} variant="mobile" />
 
             {/* Social Icons */}
             <div className="mt-8 flex items-center gap-6">

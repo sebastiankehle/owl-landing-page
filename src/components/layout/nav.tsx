@@ -1,5 +1,5 @@
 interface NavProps {
-  dict: {
+  dictionary: {
     features: string;
     pricing: string;
     about: string;
@@ -7,7 +7,7 @@ interface NavProps {
   variant?: "desktop" | "mobile";
 }
 
-export function Nav({ dict, variant = "desktop" }: NavProps) {
+export function Nav({ dictionary, variant = "desktop" }: NavProps) {
   const baseStyles = "text-sm font-medium transition-colors hover:text-primary";
   const styles = {
     desktop: `${baseStyles} text-muted-foreground hidden md:flex items-center gap-6`,
@@ -16,9 +16,9 @@ export function Nav({ dict, variant = "desktop" }: NavProps) {
 
   return (
     <nav className={styles[variant]}>
-      <a href="#features">{dict.features}</a>
-      <a href="#pricing">{dict.pricing}</a>
-      <a href="#about">{dict.about}</a>
+      <a href="#features">{dictionary.features}</a>
+      <a href="#pricing">{dictionary.pricing}</a>
+      <a href="#about">{dictionary.about}</a>
     </nav>
   );
 }
