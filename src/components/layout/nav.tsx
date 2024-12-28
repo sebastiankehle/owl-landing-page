@@ -8,7 +8,7 @@ interface NavProps {
 
 export function Nav({ dict }: NavProps) {
   return (
-    <nav className="flex items-center gap-6">
+    <nav className="hidden items-center gap-6 md:flex">
       <a
         href="#"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"

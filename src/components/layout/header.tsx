@@ -1,4 +1,4 @@
-import { Actions } from "./actions";
+import { Actions } from "./actions/actions";
 import { Logo } from "./logo";
 import { Nav } from "./nav";
 
@@ -20,9 +20,9 @@ interface HeaderProps {
 
 export function Header({ dict }: HeaderProps) {
   return (
-    <header className="fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-14 items-center justify-between">
+    <header className="fixed left-0 right-0 top-2 z-50 mx-4 rounded-full border bg-background/60 backdrop-blur-md backdrop-saturate-150 supports-[backdrop-filter]:bg-background/60 sm:mx-6 lg:mx-8">
+      <div className="mx-auto max-w-screen-xl px-3">
+        <div className="flex h-11 items-center justify-between">
           <div className="flex items-center">
             <Logo text={dict.header.logo} />
           </div>
@@ -32,7 +32,12 @@ export function Header({ dict }: HeaderProps) {
           </div>
 
           <div className="flex items-center">
-            <Actions dict={dict.header.actions} />
+            <Actions
+              dict={{
+                getQuote: dict.header.actions.getQuote,
+                nav: dict.header.nav,
+              }}
+            />
           </div>
         </div>
       </div>

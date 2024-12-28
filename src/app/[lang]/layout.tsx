@@ -2,6 +2,7 @@ import { getDictionary } from "@/lib/dictionary";
 import { Header } from "@/components/layout/header";
 import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
+import { MobileMenu } from "@/components/layout/mobile-menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default async function Layout({
           disableTransitionOnChange
         >
           <Header dict={dict} />
+          <MobileMenu dict={dict.header.nav} />
           {children}
         </ThemeProvider>
       </body>
