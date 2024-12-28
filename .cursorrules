@@ -1,0 +1,159 @@
+# Next.js 15 & React 19 Development Guidelines
+
+## Core Technologies
+
+- Next.js 15 App Router
+- React 19
+- TypeScript
+- Shadcn UI / Radix UI
+- Tailwind CSS
+- PNPM Package Manager
+
+## Code Style & Structure
+
+### Component Patterns
+
+- Use functional components with TypeScript interfaces
+- Avoid classes; prefer functional and declarative patterns
+- One component per file with named exports
+- Structure: exports, subcomponents, helpers, types, static content
+
+### TypeScript Usage
+
+- Prefer interfaces over types
+- Use maps instead of enums
+- Strong typing with explicit interfaces
+- Avoid 'any' and 'unknown' types
+
+### Naming Conventions
+
+- Directories: lowercase with dashes (e.g., auth-wizard)
+- Components: PascalCase
+- Functions: camelCase with verb prefixes (e.g., handleSubmit)
+- Variables: descriptive with auxiliary verbs (e.g., isLoading)
+
+### File Structure
+
+/src
+├── app/ # Next.js App Router pages
+│ ├── (legal)/ # Legal pages (privacy, terms, cookies, imprint)
+│ ├── api/ # API routes
+├── components/ # React components
+│ ├── animations/ # Animation components
+│ ├── auth/ # Authentication components
+│ ├── cards/ # Dashboard cards
+│ ├── charts/ # Data visualization (recharts)
+│ ├── common/ # Shared components (breadcrumb, loading)
+│ ├── dialogs/ # Modal dialogs
+│ ├── drawers/ # Drawer components (vaul)
+│ ├── forms/ # Form components
+│ ├── icons/ # Icon components
+│ ├── layout/ # Layout components (header, footer, sidebar)
+│ ├── landing/ # Page sections (hero, benefits, features)
+│ └── ui/ # Base UI components (shadcn/ui)
+├── content/ # Static content
+│ ├── landing/ # Landing page content
+│ └── legal/ # Legal content
+├── hooks/ # Custom React hooks
+├── lib/ # Utilities and services
+│ └── utils.ts # Helper functions
+├── providers/ # React context providers
+├── styles/ # Global styles
+│ └── globals.css # Global Tailwind styles
+└── types/ # TypeScript types
+
+
+## UI & Styling
+
+- Use Shadcn UI components with Radix UI primitives
+- Tailwind CSS for styling (mobile-first approach)
+- Maintain consistent component interfaces
+- Follow accessibility best practices
+
+## Performance Guidelines
+
+- Default to React Server Components
+- Minimize client-side JavaScript:
+  - Limit 'use client' directives
+  - Reduce useEffect and setState usage
+  - Use Server Actions where possible
+- Image optimization:
+  - WebP format
+  - Include size attributes
+  - Implement lazy loading
+- Dynamic imports for non-critical components
+- Wrap client components in Suspense
+
+## State Management
+
+- URL state: Use 'nuqs' for search parameters
+- Server state: Prefer Server Components
+- Client state: Minimal, only when necessary
+- Forms: React Hook Form with Zod validation
+
+## Package Management
+
+- Use PNPM exclusively
+- React 19 installation:
+  - pnpm install --force
+  - Handle peer dependencies appropriately
+- Shadcn UI setup:
+  - Use CLI with React 19 flags
+  - Follow component installation guidelines
+
+## Development Workflow
+
+- Follow Next.js documentation for:
+  - Data fetching patterns
+  - Routing conventions
+  - Rendering strategies
+- Optimize for Core Web Vitals (LCP, CLS, FID)
+- Maintain existing configuration files:
+  - eslintrc.json
+  - prettierrc
+  - vscode settings
+
+## Code Quality
+
+- Write concise, self-documenting code
+- Modularize and avoid duplication
+- Use declarative patterns
+- Maintain consistent formatting
+
+## Database Schema
+
+### Core Tables
+- profiles: User profiles
+- subscriptions: User subscription data
+- ai_preferences: AI generation settings
+- content_schedule: Scheduled content
+- platforms: Platform-specific settings
+
+## API Structure
+
+### Content Generation
+- /api/content/quick-generate
+- /api/content/advanced-generate
+- /api/content/matrix-generate
+
+### Subscription Management
+- /api/subscriptions/create-checkout
+- /api/subscriptions/create-portal
+- /api/webhooks/stripe
+
+## Authentication Flow
+- Login/Signup via Supabase Auth
+- Password reset functionality
+- Protected routes in dashboard
+
+## Third-Party Integrations
+
+### Stripe
+- Subscription management
+- Webhook handling
+- Customer portal
+
+### Supabase
+- Authentication
+- Database
+- Row Level Security
