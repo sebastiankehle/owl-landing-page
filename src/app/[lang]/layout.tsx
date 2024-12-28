@@ -14,17 +14,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default async function Layout({
-  children,
-  params: { lang },
-}: {
+interface LayoutProps {
   children: React.ReactNode;
-  params: { lang: string };
-}) {
-  const dict = await getDictionary(lang);
+  params: {
+    lang: string;
+  };
+}
+
+export default async function Layout({ children, params }: LayoutProps) {
+  const dict = await getDictionary(params.lang);
 
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html lang={params.lang} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
