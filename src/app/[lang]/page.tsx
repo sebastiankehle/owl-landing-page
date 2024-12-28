@@ -1,14 +1,13 @@
-import { getDictionary } from "@/lib/dictionary";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 import { Hero } from "@/components/sections/hero";
 
-interface PageProps {
-  params: {
-    lang: string;
-  };
-}
-
-export default async function Home({ params }: PageProps) {
-  const dict = await getDictionary(params.lang);
+export default async function Home({
+  params,
+}: {
+  params: { lang: "en-US" | "de" };
+}) {
+  const lang = (await params).lang;
+  const dict = await getDictionary(lang);
 
   return (
     <main className="flex flex-col">
