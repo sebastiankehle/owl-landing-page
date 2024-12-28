@@ -1,0 +1,34 @@
+{
+  "header": {
+    "logo": "OLD WORLD LABS",
+    "nav": {
+      "features": "Funktionen",
+      "pricing": "Preise",
+      "about": "Über uns"
+    },
+    "actions": {
+      "getQuote": "Angebot"
+    }
+  },
+  "mobile": {
+    "getInTouch": {
+      "title": "Kontakt",
+      "description": "Lassen Sie uns über Ihr nächstes Projekt sprechen und Ihre Ideen zum Leben erwecken."
+    }
+  },
+  "hero": {
+    "badges": {
+      "engineering": "Ultrapräzisionsfertigung",
+      "digital": "Digitale Innovation"
+    },
+    "title": "Kompromisslose Präzision in Fertigung & Digitalen Lösungen",
+    "subtitle": "Von mikrofluidischen Geräten und Halbleiterverbindungen bis hin zu immersiven 3D-Umgebungen mit Unreal Engine 5. Wir erweitern die Grenzen wissenschaftlicher Forschung durch innovative Lösungen.",
+    "cta": {
+      "primary": "Lösungen entdecken",
+      "secondary": "Kontakt"
+    },
+    "trust": {
+      "title": "In Zusammenarbeit mit führenden Forschungseinrichtungen und Industrien"
+    }
+  }
+}

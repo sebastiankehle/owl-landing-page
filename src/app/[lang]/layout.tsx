@@ -16,16 +16,17 @@ const geistMono = Geist_Mono({
 
 interface LayoutProps {
   children: React.ReactNode;
-  params: {
+  params: Promise<{
     lang: string;
-  };
+  }>;
 }
 
 export default async function Layout({ children, params }: LayoutProps) {
-  const dict = await getDictionary(params.lang);
+  const resolvedParams = await params; // Await the params
+  const dict = await getDictionary(resolvedParams.lang);
 
   return (
-    <html lang={params.lang} suppressHydrationWarning>
+    <html lang={resolvedParams.lang} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning

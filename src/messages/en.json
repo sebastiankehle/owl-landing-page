@@ -15,5 +15,20 @@
       "title": "Get in Touch",
       "description": "Let's discuss your next project and bring your ideas to life."
     }
+  },
+  "hero": {
+    "badges": {
+      "engineering": "Ultra Precision Manufacturing",
+      "digital": "Digital Innovation"
+    },
+    "title": "Uncompromising Precision in Manufacturing & Digital Solutions",
+    "subtitle": "From microfluidic devices and semiconductor connectors to immersive 3D environments using Unreal Engine 5. Pushing the boundaries of scientific exploration through innovative solutions.",
+    "cta": {
+      "primary": "Explore Solutions",
+      "secondary": "Contact Us"
+    },
+    "trust": {
+      "title": "Collaborating with leading research institutions and industries"
+    }
   }
 }
