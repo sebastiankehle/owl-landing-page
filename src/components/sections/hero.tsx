@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { FadeIn } from "@/components/animations/fade-in";
+import { InView } from "@/components/ui/in-view";
 import { NetworkBackground } from "@/components/animations/network-background";
 
 interface HeroProps {
@@ -36,7 +36,13 @@ export function Hero({ dictionary }: HeroProps) {
     <div className="relative flex min-h-screen w-full items-center justify-center bg-zinc-100/80 px-4 pt-20 dark:bg-zinc-950/90 sm:px-6 lg:px-8">
       <div className="container relative">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
-          <FadeIn className="flex flex-col justify-center">
+          <InView
+            className="flex flex-col justify-center"
+            variants={{
+              hidden: { opacity: 0, filter: "blur(4px)" },
+              visible: { opacity: 1, filter: "blur(0px)" },
+            }}
+          >
             <div className="mb-8 inline-flex gap-3">
               <div className="w-fit">
                 <span className="inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-background/50 px-3 py-1 text-xs backdrop-blur transition-colors hover:border-violet-500/40">
@@ -79,9 +85,15 @@ export function Hero({ dictionary }: HeroProps) {
                 {dictionary.hero.trust.title}
               </p>
             </div>
-          </FadeIn>
+          </InView>
 
-          <div className="hidden lg:block">
+          <InView
+            className="hidden lg:block"
+            variants={{
+              hidden: { opacity: 0, filter: "blur(4px)" },
+              visible: { opacity: 1, filter: "blur(0px)" },
+            }}
+          >
             <div className="relative h-[500px] w-full overflow-hidden rounded-xl border bg-background/50 p-1 backdrop-blur supports-[backdrop-filter]:bg-background/50">
               <div className="absolute inset-6 z-10 flex flex-col justify-end">
                 <div className="space-y-2 rounded-lg border border-foreground/5 bg-background/30 p-4 backdrop-blur-md backdrop-saturate-150 supports-[backdrop-filter]:bg-background/30">
@@ -97,7 +109,7 @@ export function Hero({ dictionary }: HeroProps) {
                 <NetworkBackground />
               </div>
             </div>
-          </div>
+          </InView>
         </div>
       </div>
     </div>
