@@ -2,8 +2,6 @@
 
 import { InView } from "@/components/ui/in-view";
 import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
-import Image from "next/image";
-import industriesBg from "../../../public/industries-bg.webp";
 
 const INDUSTRY_CONFIG = [
   {
@@ -63,21 +61,7 @@ interface IndustriesProps {
 
 export function Industries({ dictionary }: IndustriesProps) {
   return (
-    <div className="relative overflow-hidden py-24">
-      <InView>
-        <div className="absolute inset-0 -z-20">
-          <Image
-            src={industriesBg}
-            alt="Industries background"
-            fill
-            className="object-cover"
-          />
-        </div>
-
-        {/* Color overlay - more subtle */}
-        <div className="absolute inset-0 -z-10 bg-zinc-100/50 dark:bg-zinc-950/40" />
-      </InView>
-
+    <div className="relative overflow-hidden bg-zinc-100/80 py-24 dark:bg-zinc-950/90">
       <div className="container relative">
         <InView
           className="text-center"

@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
-
 import { cn } from "@/lib/utils";
 
 type BentoGridProps = {
@@ -61,9 +60,8 @@ const BentoCard = ({
     href={href}
     className={cn(
       "group relative flex flex-col justify-between overflow-hidden rounded-xl p-6",
-      "bg-white/[0.2] dark:bg-black/[0.2]",
-      "backdrop-blur-[0.5px]",
-      "shadow-[0_4px_24px_-12px_rgba(0,0,0,0.2)]",
+      "bg-background/50 backdrop-blur supports-[backdrop-filter]:bg-background/50",
+      "border border-zinc-200 dark:border-zinc-800",
       "transition-all duration-500",
       className,
     )}
