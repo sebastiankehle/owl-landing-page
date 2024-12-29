@@ -76,5 +76,42 @@
         ]
       }
     }
+  },
+  "industries": {
+    "title": "Industries",
+    "subtitle": "Precision solutions across diverse sectors",
+    "items": {
+      "biotech": {
+        "title": "Biotech & Pharmaceuticals",
+        "description": "Enabling breakthroughs in drug discovery and diagnostics through microfluidic innovation."
+      },
+      "healthcare": {
+        "title": "Healthcare & Medical Devices",
+        "description": "Precision components advancing patient care and treatment outcomes."
+      },
+      "semiconductor": {
+        "title": "Semiconductor Manufacturing",
+        "description": "Driving innovation with high-precision semiconductor connectors."
+      },
+      "aerospace": {
+        "title": "Aerospace & Defense",
+        "description": "High-precision components ensuring reliability in critical applications."
+      },
+      "automotive": {
+        "title": "Automotive",
+        "description": "Advanced systems enhancing vehicle safety and efficiency."
+      },
+      "research": {
+        "title": "Research & Development",
+        "description": "Pushing scientific boundaries through institutional collaboration."
+      }
+    },
+    "cta": {
+      "biotech": "Learn More",
+      "healthcare": "Discover More",
+      "semiconductor": "View Details",
+      "aerospace": "Explore More",
+      "research": "Read More"
+    }
   }
 }

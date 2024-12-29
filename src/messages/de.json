@@ -76,5 +76,42 @@
         ]
       }
     }
+  },
+  "industries": {
+    "title": "Branchen",
+    "subtitle": "Präzisionslösungen für verschiedene Sektoren",
+    "items": {
+      "biotech": {
+        "title": "Biotechnologie & Pharma",
+        "description": "Durchbrüche in der Arzneimittelforschung durch mikrofluidische Innovation."
+      },
+      "healthcare": {
+        "title": "Gesundheitswesen & Medizintechnik",
+        "description": "Präzisionskomponenten für bessere Behandlungsergebnisse."
+      },
+      "semiconductor": {
+        "title": "Halbleiterproduktion",
+        "description": "Innovation durch hochpräzise Halbleiterverbindungen."
+      },
+      "aerospace": {
+        "title": "Luft- und Raumfahrt",
+        "description": "Hochpräzisionskomponenten für kritische Anwendungen."
+      },
+      "automotive": {
+        "title": "Automobilindustrie",
+        "description": "Fortschrittliche Systeme für mehr Sicherheit und Effizienz."
+      },
+      "research": {
+        "title": "Forschung & Entwicklung",
+        "description": "Wissenschaftliche Grenzen durch Zusammenarbeit erweitern."
+      }
+    },
+    "cta": {
+      "biotech": "Mehr erfahren",
+      "healthcare": "Entdecken",
+      "semiconductor": "Details ansehen",
+      "aerospace": "Erkunden",
+      "research": "Weiterlesen"
+    }
   }
 }
