@@ -113,5 +113,21 @@
       "aerospace": "Erkunden",
       "research": "Weiterlesen"
     }
+  },
+  "solutions": {
+    "slides": {
+      "robotics": {
+        "title": "Robotik & Automation",
+        "subtitle": "Wo Präzision auf intelligente Steuerung trifft"
+      },
+      "unreal": {
+        "title": "Unreal Development",
+        "subtitle": "Digitale Innovation durch immersive Technologie"
+      },
+      "additive": {
+        "title": "Advanced Additive Solutions",
+        "subtitle": "Ultrapräzise Fertigung im industriellen Maßstab"
+      }
+    }
   }
 }
