@@ -16,6 +16,8 @@ interface SolutionsProps {
         unreal: { title: string; subtitle: string };
         additive: { title: string; subtitle: string };
       };
+      description: string;
+      established: string;
     };
   };
 }
@@ -126,12 +128,11 @@ export function Solutions({ dictionary }: SolutionsProps) {
           {/* Right side - Text */}
           <div className="flex flex-col justify-center p-8 lg:p-16">
             <p className="text-2xl font-medium sm:text-3xl">
-              Over a decade of uncompromising precision and accuracy, capable of
-              satisfying the toughest industrial standards.
+              {dictionary.solutions.description}
             </p>
             <div className="mt-8 flex items-center gap-2 text-sm text-muted-foreground">
               <ArrowUpRight className="h-4 w-4" />
-              <span>Established 2012</span>
+              <span>{dictionary.solutions.established}</span>
             </div>
           </div>
         </div>

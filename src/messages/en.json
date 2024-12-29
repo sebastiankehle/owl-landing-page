@@ -1,6 +1,6 @@
 {
   "header": {
-    "logo": "OLD WORLD LABS",
+    "logo": "Old World Labs",
     "nav": {
       "features": "Features",
       "pricing": "Pricing",
@@ -128,6 +128,8 @@
         "title": "Advanced Additive Solutions",
         "subtitle": "Ultra-precise manufacturing at industrial scale"
       }
-    }
+    },
+    "description": "Over a decade of uncompromising precision and accuracy, capable of satisfying the toughest industrial standards.",
+    "established": "Established 2012"
   }
 }
