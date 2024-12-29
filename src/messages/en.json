@@ -37,5 +37,44 @@
     "trust": {
       "title": "Trusted by industry leaders and research institutions worldwide"
     }
+  },
+  "benefits": {
+    "title": "Our Expertise",
+    "subtitle": "Advanced Solutions for Complex Challenges",
+    "items": {
+      "speed": {
+        "metric": "3D",
+        "label": "Printing & Manufacturing",
+        "title": "Advanced Additive Solutions",
+        "description": "Custom printing solutions with industrial-scale capabilities, delivering unmatched speed and precision for your manufacturing needs.",
+        "features": [
+          "Custom Printing Solutions",
+          "Industrial-Scale Production",
+          "High-Volume Manufacturing"
+        ]
+      },
+      "scalability": {
+        "metric": "0.1µm",
+        "label": "Precision Level",
+        "title": "Microfluidic Innovation",
+        "description": "Specialized in microfluidic device fabrication for biotech, enabling breakthroughs in drug discovery and diagnostics.",
+        "features": [
+          "Semiconductor Connectors",
+          "Medical Device Components",
+          "Precision Engineering"
+        ]
+      },
+      "precision": {
+        "metric": "UE5",
+        "label": "Powered Solutions",
+        "title": "Digital Innovation",
+        "description": "Creating immersive 3D environments with Unreal Engine 5 for precise simulations and advanced modeling applications.",
+        "features": [
+          "Immersive Simulations",
+          "Advanced Modeling",
+          "Digital Twin Solutions"
+        ]
+      }
+    }
   }
 }

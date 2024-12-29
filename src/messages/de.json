@@ -37,5 +37,44 @@
     "trust": {
       "title": "Vertrauenspartner führender Unternehmen und Forschungseinrichtungen weltweit"
     }
+  },
+  "benefits": {
+    "title": "Unsere Expertise",
+    "subtitle": "Fortschrittliche Lösungen für komplexe Herausforderungen",
+    "items": {
+      "speed": {
+        "metric": "3D",
+        "label": "Druck & Fertigung",
+        "title": "Advanced Additive Solutions",
+        "description": "Maßgeschneiderte Drucklösungen mit industriellen Kapazitäten, die unübertroffene Geschwindigkeit und Präzision für Ihre Fertigungsanforderungen bieten.",
+        "features": [
+          "Individuelle Drucklösungen",
+          "Industrielle Produktion",
+          "Hochvolumen-Fertigung"
+        ]
+      },
+      "scalability": {
+        "metric": "0.1µm",
+        "label": "Präzisionsniveau",
+        "title": "Mikrofluidik-Innovation",
+        "description": "Spezialisiert auf die Herstellung mikrofluidischer Geräte für die Biotechnologie, ermöglichen wir Durchbrüche in der Medikamentenentwicklung und Diagnostik.",
+        "features": [
+          "Halbleiter-Verbindungen",
+          "Medizintechnik-Komponenten",
+          "Präzisionstechnik"
+        ]
+      },
+      "precision": {
+        "metric": "UE5",
+        "label": "Powered Solutions",
+        "title": "Digitale Innovation",
+        "description": "Entwicklung immersiver 3D-Umgebungen mit Unreal Engine 5 für präzise Simulationen und fortschrittliche Modellierungsanwendungen.",
+        "features": [
+          "Immersive Simulationen",
+          "Fortschrittliche Modellierung",
+          "Digital Twin Lösungen"
+        ]
+      }
+    }
   }
 }
