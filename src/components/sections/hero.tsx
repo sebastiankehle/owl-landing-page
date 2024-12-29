@@ -71,8 +71,12 @@ export function Hero({ dictionary }: HeroProps) {
             </div>
           </FadeIn>
 
-          <div className="hidden lg:flex lg:items-center lg:justify-center">
-            <NetworkBackground />
+          <div className="hidden lg:block">
+            <div className="aspect-square w-full overflow-hidden rounded-xl border bg-background/50 p-1 backdrop-blur supports-[backdrop-filter]:bg-background/50">
+              <div className="relative h-full w-full">
+                <NetworkBackground />
+              </div>
+            </div>
           </div>
         </div>
       </div>

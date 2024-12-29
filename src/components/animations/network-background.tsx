@@ -12,9 +12,13 @@ export function NetworkBackground() {
   useEffect(() => {
     if (!containerRef.current) return;
 
+    const container = containerRef.current;
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
     // Clear any existing content
-    while (containerRef.current.firstChild) {
-      containerRef.current.removeChild(containerRef.current.firstChild);
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
     }
 
     // Clear existing scene if any
@@ -27,7 +31,7 @@ export function NetworkBackground() {
     // Setup
     const scene = new THREE.Scene();
     sceneRef.current = scene;
-    const camera = new THREE.PerspectiveCamera(75, 16 / 9, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({
       alpha: true,
       antialias: true,
@@ -37,15 +41,15 @@ export function NetworkBackground() {
     });
 
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    containerRef.current.appendChild(renderer.domElement);
+    renderer.setSize(width, height);
+    container.appendChild(renderer.domElement);
 
-    // Move camera further back but maintain same angle
-    camera.position.set(24, 0, 24);
-    camera.lookAt(4, 0, 0);
+    // Adjust camera position to center the scene
+    camera.position.set(0, 0, 0); // Reduced from 24 to bring it closer
+    camera.lookAt(0, 0, 0); // Look at center instead of offset
 
     // Create points with connections
-    const particleCount = 150;
+    const particleCount = 134;
     const positions = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);
     const connections: THREE.Line[] = [];
@@ -229,10 +233,10 @@ export function NetworkBackground() {
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
       if (window.innerWidth >= 1024) {
-        camera.position.set(24, 0, 24);
-        camera.lookAt(4, 0, 0);
+        camera.position.set(12, 0, 12);
+        camera.lookAt(0, 0, 0);
       } else {
-        camera.position.set(0, 0, 24);
+        camera.position.set(0, 0, 12);
         camera.lookAt(0, 0, 0);
       }
     };
@@ -245,8 +249,8 @@ export function NetworkBackground() {
       window.removeEventListener("resize", handleResize);
 
       // Remove canvas
-      if (containerRef.current?.firstChild) {
-        containerRef.current.removeChild(containerRef.current.firstChild);
+      if (container.firstChild) {
+        container.removeChild(container.firstChild);
       }
 
       // Dispose of all materials and geometries
