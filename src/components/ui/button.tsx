@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -20,9 +20,9 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent/50 hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         gradient:
-          "border border-violet-500/50 bg-gradient-to-r from-violet-500/[0.08] to-blue-500/[0.08] text-foreground backdrop-blur-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_20px_rgba(124,58,237,0.15)] hover:border-violet-500/70 hover:from-violet-500/[0.12] hover:to-blue-500/[0.12] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_25px_rgba(124,58,237,0.2)] transition-all duration-300",
+          "relative border border-violet-500/50 bg-background text-foreground backdrop-blur-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_20px_rgba(124,58,237,0.15)] hover:border-violet-500/70 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_25px_rgba(124,58,237,0.2)] transition-all duration-300",
         gradientAlternative:
-          "border border-cyan-500/50 bg-gradient-to-r from-blue-500/[0.08] to-cyan-500/[0.08] text-foreground backdrop-blur-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_20px_rgba(6,182,212,0.15)] hover:border-cyan-500/70 hover:from-blue-500/[0.12] hover:to-cyan-500/[0.12] hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_25px_rgba(6,182,212,0.2)] transition-all duration-300",
+          "relative border border-cyan-500/50 bg-background text-foreground backdrop-blur-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_20px_rgba(6,182,212,0.15)] hover:border-cyan-500/70 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_25px_rgba(6,182,212,0.2)] transition-all duration-300",
       },
       size: {
         default: "h-9 px-4 py-2",

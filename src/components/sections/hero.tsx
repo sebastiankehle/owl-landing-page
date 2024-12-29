@@ -33,7 +33,7 @@ interface HeroProps {
 
 export function Hero({ dictionary }: HeroProps) {
   return (
-    <div className="relative flex min-h-screen w-full items-center justify-center px-4 pt-20 sm:px-6 lg:px-8">
+    <div className="relative flex min-h-screen w-full items-center justify-center bg-zinc-100/80 px-4 pt-20 dark:bg-zinc-950/90 sm:px-6 lg:px-8">
       <div className="container relative">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
           <FadeIn className="flex flex-col justify-center">

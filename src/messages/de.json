@@ -18,24 +18,24 @@
   },
   "hero": {
     "badges": {
-      "engineering": "Ultrapräzisionsfertigung",
-      "digital": "Digitale Innovation"
+      "engineering": "Advanced Additive Solutions",
+      "digital": "Robotik & Unreal Development"
     },
     "title": {
-      "main": "Kompromisslose",
-      "sub": "Präzisionstechnik"
+      "main": "Realität gestalten",
+      "sub": "Mit höchster Präzision"
     },
-    "subtitle": "Von mikrofluidischen Geräten bis hin zu immersiven 3D-Umgebungen – wir verschieben die Grenzen der wissenschaftlichen Erforschung durch innovative Lösungen.",
+    "subtitle": "Wir definieren das Mögliche neu – durch ultrapräzise Technologie, intelligente Systeme und immersive Lösungen. Heute erschaffen wir die Zukunft.",
     "cta": {
-      "primary": "Lösungen erkunden",
-      "secondary": "Kontakt"
+      "primary": "Lösungen entdecken",
+      "secondary": "Kontakt aufnehmen"
     },
     "network": {
-      "title": "Netzwerk-Intelligenz",
-      "subtitle": "Unsere vernetzten Systeme schaffen leistungsstarke Lösungen"
+      "title": "Intelligente Systeme",
+      "subtitle": "Wo Präzision auf digitale Innovation trifft"
     },
     "trust": {
-      "title": "Zusammenarbeit mit führenden Forschungseinrichtungen und Industrien"
+      "title": "Vertrauenspartner führender Unternehmen und Forschungseinrichtungen weltweit"
     }
   }
 }

@@ -18,24 +18,24 @@
   },
   "hero": {
     "badges": {
-      "engineering": "Ultra Precision Manufacturing",
-      "digital": "Digital Innovation"
+      "engineering": "Advanced Additive Solutions",
+      "digital": "Robotics & Unreal Development"
     },
     "title": {
-      "main": "Uncompromising",
-      "sub": "Precision Engineering"
+      "main": "Shaping Reality",
+      "sub": "With Unmatched Precision"
     },
-    "subtitle": "From microfluidic devices to immersive 3D environments—we're pushing the boundaries of scientific exploration through innovative solutions.",
+    "subtitle": "Redefining what's possible through ultra-precise engineering, intelligent systems, and immersive technologies. Creating tomorrow's solutions, today.",
     "cta": {
-      "primary": "Explore Solutions",
-      "secondary": "Contact Us"
+      "primary": "Discover Solutions",
+      "secondary": "Get in Touch"
     },
     "network": {
-      "title": "Network Intelligence",
-      "subtitle": "Our interconnected systems create powerful solutions"
+      "title": "Intelligent Systems",
+      "subtitle": "Where precision meets digital innovation"
     },
     "trust": {
-      "title": "Collaborating with leading research institutions and industries"
+      "title": "Trusted by industry leaders and research institutions worldwide"
     }
   }
 }
