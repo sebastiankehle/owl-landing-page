@@ -46,7 +46,6 @@ interface IndustriesProps {
   dictionary: {
     industries: {
       title: string;
-      subtitle: string;
       items: Record<
         string,
         {
@@ -61,7 +60,7 @@ interface IndustriesProps {
 
 export function Industries({ dictionary }: IndustriesProps) {
   return (
-    <div className="relative overflow-hidden bg-zinc-100/80 py-24 dark:bg-zinc-950/90">
+    <div className="relative overflow-hidden py-24">
       <div className="container relative">
         <InView
           className="text-center"
@@ -70,17 +69,9 @@ export function Industries({ dictionary }: IndustriesProps) {
             visible: { opacity: 1, filter: "blur(0px)" },
           }}
         >
-          <div className="inline-flex">
-            <span className="inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-background/50 px-3 py-1 text-xs backdrop-blur transition-colors hover:border-violet-500/40">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-violet-500" />
-              <span className="text-foreground">
-                {dictionary.industries.title}
-              </span>
-            </span>
-          </div>
-          <p className="mt-4 text-2xl font-medium sm:text-3xl">
-            {dictionary.industries.subtitle}
-          </p>
+          <h2 className="mt-4 text-2xl font-medium sm:text-3xl">
+            {dictionary.industries.title}
+          </h2>
         </InView>
 
         <div className="mt-16">

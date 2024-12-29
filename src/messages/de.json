@@ -17,10 +17,6 @@
     }
   },
   "hero": {
-    "badges": {
-      "engineering": "Advanced Additive Solutions",
-      "digital": "Robotik & Unreal Development"
-    },
     "title": {
       "main": "Realität gestalten",
       "sub": "Mit höchster Präzision"
@@ -33,14 +29,10 @@
     "network": {
       "title": "Intelligente Systeme",
       "subtitle": "Wo Präzision auf digitale Innovation trifft"
-    },
-    "trust": {
-      "title": "Vertrauenspartner führender Unternehmen und Forschungseinrichtungen weltweit"
     }
   },
   "benefits": {
-    "title": "Unsere Expertise",
-    "subtitle": "Fortschrittliche Lösungen für komplexe Herausforderungen",
+    "title": "Fortschrittliche Lösungen für komplexe Herausforderungen",
     "items": {
       "speed": {
         "metric": "3D",
@@ -78,8 +70,7 @@
     }
   },
   "industries": {
-    "title": "Branchen",
-    "subtitle": "Präzisionslösungen für verschiedene Sektoren",
+    "title": "Präzisionslösungen für verschiedene Sektoren",
     "items": {
       "biotech": {
         "title": "Biotechnologie & Pharma",

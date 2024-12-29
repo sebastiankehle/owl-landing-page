@@ -18,18 +18,12 @@ type BentoCardProps = {
 
 const COLORS = {
   violet: {
-    border: "border-zinc-200/50 dark:border-zinc-800/50",
-    text: "text-violet-500/80 dark:text-violet-400/80",
     hover: "group-hover:text-violet-500 dark:group-hover:text-violet-400",
   },
   cyan: {
-    border: "border-zinc-200/50 dark:border-zinc-800/50",
-    text: "text-cyan-500/80 dark:text-cyan-400/80",
     hover: "group-hover:text-cyan-500 dark:group-hover:text-cyan-400",
   },
   emerald: {
-    border: "border-zinc-200/50 dark:border-zinc-800/50",
-    text: "text-emerald-500/80 dark:text-emerald-400/80",
     hover: "group-hover:text-emerald-500 dark:group-hover:text-emerald-400",
   },
 } as const;
@@ -61,7 +55,6 @@ const BentoCard = ({
     className={cn(
       "group relative flex flex-col justify-between overflow-hidden rounded-xl p-6",
       "bg-background/50 backdrop-blur supports-[backdrop-filter]:bg-background/50",
-      "border border-zinc-200 dark:border-zinc-800",
       "transition-all duration-500",
       className,
     )}

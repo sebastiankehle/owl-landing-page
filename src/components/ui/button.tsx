@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -20,9 +20,9 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent/50 hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         gradient:
-          "relative border border-violet-500/50 bg-background text-foreground backdrop-blur-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_20px_rgba(124,58,237,0.15)] hover:border-violet-500/70 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_25px_rgba(124,58,237,0.2)] transition-all duration-300",
+          "relative border-violet-500/50 bg-background text-foreground backdrop-blur-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_20px_rgba(124,58,237,0.15)] hover:border-violet-500/70 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_25px_rgba(124,58,237,0.2)] transition-all duration-300",
         gradientAlternative:
-          "relative border border-cyan-500/50 bg-background text-foreground backdrop-blur-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_20px_rgba(6,182,212,0.15)] hover:border-cyan-500/70 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_25px_rgba(6,182,212,0.2)] transition-all duration-300",
+          "relative border-cyan-500/50 bg-background text-foreground backdrop-blur-sm shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),0_0_20px_rgba(6,182,212,0.15)] hover:border-cyan-500/70 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_0_25px_rgba(6,182,212,0.2)] transition-all duration-300",
       },
       size: {
         default: "h-9 px-4 py-2",

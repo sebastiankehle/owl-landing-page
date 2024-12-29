@@ -34,7 +34,6 @@ interface BenefitsProps {
   dictionary: {
     benefits: {
       title: string;
-      subtitle: string;
       items: {
         speed: {
           metric: string;
@@ -64,7 +63,7 @@ interface BenefitsProps {
 
 export function Benefits({ dictionary }: BenefitsProps) {
   return (
-    <div className="relative overflow-hidden bg-zinc-100/80 py-24 dark:bg-zinc-950/90">
+    <div className="relative overflow-hidden py-24">
       <div className="container relative">
         <InView
           className="text-center"
@@ -73,17 +72,9 @@ export function Benefits({ dictionary }: BenefitsProps) {
             visible: { opacity: 1, filter: "blur(0px)" },
           }}
         >
-          <div className="inline-flex">
-            <span className="inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-background/50 px-3 py-1 text-xs backdrop-blur transition-colors hover:border-violet-500/40">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-violet-500" />
-              <span className="text-foreground">
-                {dictionary.benefits.title}
-              </span>
-            </span>
-          </div>
-          <p className="mt-4 text-2xl font-medium sm:text-3xl">
-            {dictionary.benefits.subtitle}
-          </p>
+          <h2 className="mt-4 text-2xl font-medium sm:text-3xl">
+            {dictionary.benefits.title}
+          </h2>
         </InView>
 
         <div className="mt-16 grid gap-6 lg:grid-cols-3 lg:gap-8">
@@ -104,7 +95,7 @@ export function Benefits({ dictionary }: BenefitsProps) {
                 }}
                 transition={{ duration: 0.5, delay: 0.2 * (index + 1) }}
               >
-                <div className="h-full rounded-2xl border bg-background/50 p-8 backdrop-blur">
+                <div className="h-full rounded-2xl bg-background p-8">
                   <div className="flex items-start justify-between">
                     <Icon className={cn("h-8 w-8 stroke-[1.5]", colorClass)} />
                     <div className="text-xs text-muted-foreground">
