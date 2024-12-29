@@ -56,22 +56,20 @@ export function Hero({ dictionary }: HeroProps) {
               </div>
             </div>
 
-            <h1 className="mb-4 text-3xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl">
+            <h1 className="mb-4 text-3xl font-medium sm:text-3xl md:text-4xl lg:text-4xl">
               <span className="block">{dictionary.hero.title.main}</span>
               <span className="text-foreground">
                 {dictionary.hero.title.sub}
               </span>
             </h1>
 
-            <p className="mb-8 max-w-2xl text-base text-muted-foreground md:text-lg">
+            <p className="mb-8 max-w-2xl text-base text-muted-foreground">
               {dictionary.hero.subtitle}
             </p>
 
             <div className="mb-12 flex flex-wrap items-center gap-4">
-              <Button size="lg" variant="gradient">
-                {dictionary.hero.cta.primary}
-              </Button>
-              <Button size="lg" variant="gradientAlternative">
+              <Button variant="gradient">{dictionary.hero.cta.primary}</Button>
+              <Button variant="gradientAlternative">
                 {dictionary.hero.cta.secondary}
               </Button>
             </div>
@@ -84,7 +82,7 @@ export function Hero({ dictionary }: HeroProps) {
           </FadeIn>
 
           <div className="hidden lg:block">
-            <div className="relative aspect-square w-full overflow-hidden rounded-xl border bg-background/50 p-1 backdrop-blur supports-[backdrop-filter]:bg-background/50">
+            <div className="relative h-[500px] w-full overflow-hidden rounded-xl border bg-background/50 p-1 backdrop-blur supports-[backdrop-filter]:bg-background/50">
               <div className="absolute inset-6 z-10 flex flex-col justify-end">
                 <div className="space-y-2 rounded-lg border border-foreground/5 bg-background/30 p-4 backdrop-blur-md backdrop-saturate-150 supports-[backdrop-filter]:bg-background/30">
                   <p className="text-sm font-medium text-foreground">
