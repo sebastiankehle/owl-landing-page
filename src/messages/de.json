@@ -21,14 +21,21 @@
       "engineering": "Ultrapräzisionsfertigung",
       "digital": "Digitale Innovation"
     },
-    "title": "Kompromisslose Präzision in Fertigung & Digitalen Lösungen",
-    "subtitle": "Von mikrofluidischen Geräten und Halbleiterverbindungen bis hin zu immersiven 3D-Umgebungen mit Unreal Engine 5. Wir erweitern die Grenzen wissenschaftlicher Forschung durch innovative Lösungen.",
+    "title": {
+      "main": "Kompromisslose",
+      "sub": "Präzisionstechnik"
+    },
+    "subtitle": "Von mikrofluidischen Geräten bis hin zu immersiven 3D-Umgebungen – wir verschieben die Grenzen der wissenschaftlichen Erforschung durch innovative Lösungen.",
     "cta": {
-      "primary": "Lösungen entdecken",
+      "primary": "Lösungen erkunden",
       "secondary": "Kontakt"
     },
+    "network": {
+      "title": "Netzwerk-Intelligenz",
+      "subtitle": "Unsere vernetzten Systeme schaffen leistungsstarke Lösungen"
+    },
     "trust": {
-      "title": "In Zusammenarbeit mit führenden Forschungseinrichtungen und Industrien"
+      "title": "Zusammenarbeit mit führenden Forschungseinrichtungen und Industrien"
     }
   }
 }

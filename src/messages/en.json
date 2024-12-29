@@ -21,11 +21,18 @@
       "engineering": "Ultra Precision Manufacturing",
       "digital": "Digital Innovation"
     },
-    "title": "Uncompromising Precision in Manufacturing & Digital Solutions",
-    "subtitle": "From microfluidic devices and semiconductor connectors to immersive 3D environments using Unreal Engine 5. Pushing the boundaries of scientific exploration through innovative solutions.",
+    "title": {
+      "main": "Uncompromising",
+      "sub": "Precision Engineering"
+    },
+    "subtitle": "From microfluidic devices to immersive 3D environments—we're pushing the boundaries of scientific exploration through innovative solutions.",
     "cta": {
       "primary": "Explore Solutions",
       "secondary": "Contact Us"
+    },
+    "network": {
+      "title": "Network Intelligence",
+      "subtitle": "Our interconnected systems create powerful solutions"
     },
     "trust": {
       "title": "Collaborating with leading research institutions and industries"
