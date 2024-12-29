@@ -1,7 +1,7 @@
 "use client";
 
 import { FadeIn } from "@/components/animations/fade-in";
-import { Box, Ruler, Cpu } from "lucide-react";
+import { Boxes, Microscope, MonitorPlay } from "lucide-react";
 
 interface BenefitsProps {
   dictionary: {
@@ -37,7 +37,7 @@ interface BenefitsProps {
 
 export function Benefits({ dictionary }: BenefitsProps) {
   return (
-    <div className="relative overflow-hidden py-24">
+    <div className="relative overflow-hidden bg-zinc-100/80 py-24 dark:bg-zinc-950/90">
       <div className="container relative">
         <FadeIn className="text-center">
           <div className="inline-flex">
@@ -57,7 +57,7 @@ export function Benefits({ dictionary }: BenefitsProps) {
           {/* Speed Card */}
           <FadeIn className="rounded-2xl border bg-background/50 p-8 backdrop-blur">
             <div className="flex items-start justify-between">
-              <Box className="h-8 w-8 text-violet-500" />
+              <Boxes className="h-8 w-8 stroke-[1.5] text-violet-500" />
               <div className="text-xs text-muted-foreground">
                 {dictionary.benefits.items.speed.label} •{" "}
                 {dictionary.benefits.items.speed.metric}
@@ -82,7 +82,7 @@ export function Benefits({ dictionary }: BenefitsProps) {
           {/* Scalability Card */}
           <FadeIn className="rounded-2xl border bg-background/50 p-8 backdrop-blur">
             <div className="flex items-start justify-between">
-              <Ruler className="h-8 w-8 text-cyan-500" />
+              <Microscope className="h-8 w-8 stroke-[1.5] text-cyan-500" />
               <div className="text-xs text-muted-foreground">
                 {dictionary.benefits.items.scalability.label} •{" "}
                 {dictionary.benefits.items.scalability.metric}
@@ -107,7 +107,7 @@ export function Benefits({ dictionary }: BenefitsProps) {
           {/* Precision Card */}
           <FadeIn className="rounded-2xl border bg-background/50 p-8 backdrop-blur">
             <div className="flex items-start justify-between">
-              <Cpu className="h-8 w-8 text-emerald-500" />
+              <MonitorPlay className="h-8 w-8 stroke-[1.5] text-emerald-500" />
               <div className="text-xs text-muted-foreground">
                 {dictionary.benefits.items.precision.label} •{" "}
                 {dictionary.benefits.items.precision.metric}
