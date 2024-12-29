@@ -77,7 +77,7 @@ export function Benefits({ dictionary }: BenefitsProps) {
               </span>
             </span>
           </div>
-          <p className="mt-4 text-2xl font-medium sm:text-3xl md:text-4xl">
+          <p className="mt-4 text-2xl font-medium sm:text-3xl">
             {dictionary.benefits.subtitle}
           </p>
         </InView>
