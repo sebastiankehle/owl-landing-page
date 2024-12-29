@@ -83,24 +83,36 @@ export function Industries({ dictionary }: IndustriesProps) {
           </p>
         </InView>
 
-        <InView className="mt-16">
+        <div className="mt-16">
           <BentoGrid>
-            {INDUSTRY_CONFIG.map((config) => {
+            {INDUSTRY_CONFIG.map((config, index) => {
               const item = dictionary.industries.items[config.key];
               return (
-                <BentoCard
+                <InView
                   key={config.key}
-                  name={item.title}
-                  description={item.description}
-                  href={config.href}
-                  className={config.className || ""}
-                  cta={dictionary.industries.cta?.[config.key] || "Learn More"}
-                  color={config.color}
-                />
+                  className={config.className}
+                  variants={{
+                    hidden: { opacity: 0, y: 20, filter: "blur(4px)" },
+                    visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+                  }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewOptions={{ margin: "-100px" }}
+                >
+                  <BentoCard
+                    name={item.title}
+                    description={item.description}
+                    href={config.href}
+                    className="h-full"
+                    cta={
+                      dictionary.industries.cta?.[config.key] || "Learn More"
+                    }
+                    color={config.color}
+                  />
+                </InView>
               );
             })}
           </BentoGrid>
-        </InView>
+        </div>
       </div>
     </div>
   );
