@@ -33,83 +33,96 @@ interface HeroProps {
 
 export function Hero({ dictionary }: HeroProps) {
   return (
-    <div className="relative flex min-h-screen w-full items-center justify-center bg-zinc-100/80 px-4 pt-20 dark:bg-zinc-950/90 sm:px-6 lg:px-8">
-      <div className="container relative">
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
-          <InView
-            className="flex flex-col justify-center"
-            variants={{
-              hidden: { opacity: 0, filter: "blur(4px)" },
-              visible: { opacity: 1, filter: "blur(0px)" },
-            }}
-          >
-            <div className="mb-8 inline-flex gap-3">
-              <div className="w-fit">
-                <span className="inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-background/50 px-3 py-1 text-xs backdrop-blur transition-colors hover:border-violet-500/40">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-violet-500" />
-                  <span className="text-foreground">
-                    {dictionary.hero.badges.engineering}
+    <div className="relative min-h-screen overflow-hidden">
+      <InView>
+        {/* Subtle overlay */}
+        <div className="absolute inset-0 bg-zinc-100/80 dark:bg-zinc-950/90" />
+
+        {/* Network animation stays on top but contained */}
+        <div className="absolute inset-0 -z-10 h-full w-full">
+          <NetworkBackground />
+        </div>
+      </InView>
+      <div className="relative flex min-h-screen w-full items-center justify-center px-4 pt-20 sm:px-6 lg:px-8">
+        <div className="container relative">
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
+            <InView
+              className="flex flex-col justify-center"
+              variants={{
+                hidden: { opacity: 0, filter: "blur(4px)" },
+                visible: { opacity: 1, filter: "blur(0px)" },
+              }}
+            >
+              <div className="mb-8 inline-flex gap-3">
+                <div className="w-fit">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-background/50 px-3 py-1 text-xs backdrop-blur transition-colors hover:border-violet-500/40">
+                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-violet-500" />
+                    <span className="text-foreground">
+                      {dictionary.hero.badges.engineering}
+                    </span>
                   </span>
-                </span>
-              </div>
-              <div className="w-fit">
-                <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-background/50 px-3 py-1 text-xs backdrop-blur transition-colors hover:border-cyan-500/40">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-cyan-500" />
-                  <span className="text-foreground">
-                    {dictionary.hero.badges.digital}
+                </div>
+                <div className="w-fit">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/20 bg-background/50 px-3 py-1 text-xs backdrop-blur transition-colors hover:border-cyan-500/40">
+                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-cyan-500" />
+                    <span className="text-foreground">
+                      {dictionary.hero.badges.digital}
+                    </span>
                   </span>
-                </span>
-              </div>
-            </div>
-
-            <h1 className="mb-4 text-3xl font-medium sm:text-3xl md:text-4xl lg:text-4xl">
-              <span className="block">{dictionary.hero.title.main}</span>
-              <span className="text-foreground">
-                {dictionary.hero.title.sub}
-              </span>
-            </h1>
-
-            <p className="mb-8 max-w-2xl text-base text-muted-foreground">
-              {dictionary.hero.subtitle}
-            </p>
-
-            <div className="mb-12 flex flex-wrap items-center gap-4">
-              <Button variant="gradient">{dictionary.hero.cta.primary}</Button>
-              <Button variant="gradientAlternative">
-                {dictionary.hero.cta.secondary}
-              </Button>
-            </div>
-
-            <div className="border-t border-muted pt-8">
-              <p className="mb-4 text-sm font-medium text-muted-foreground">
-                {dictionary.hero.trust.title}
-              </p>
-            </div>
-          </InView>
-
-          <InView
-            className="hidden lg:block"
-            variants={{
-              hidden: { opacity: 0, filter: "blur(4px)" },
-              visible: { opacity: 1, filter: "blur(0px)" },
-            }}
-          >
-            <div className="relative h-[500px] w-full overflow-hidden rounded-xl border bg-background/50 p-1 backdrop-blur supports-[backdrop-filter]:bg-background/50">
-              <div className="absolute inset-6 z-10 flex flex-col justify-end">
-                <div className="space-y-2 rounded-lg border border-foreground/5 bg-background/30 p-4 backdrop-blur-md backdrop-saturate-150 supports-[backdrop-filter]:bg-background/30">
-                  <p className="text-sm font-medium text-foreground">
-                    {dictionary.hero.network.title}
-                  </p>
-                  <p className="text-xs text-muted-foreground/80">
-                    {dictionary.hero.network.subtitle}
-                  </p>
                 </div>
               </div>
-              <div className="relative h-full w-full">
-                <NetworkBackground />
+
+              <h1 className="mb-4 text-3xl font-medium sm:text-3xl md:text-4xl lg:text-4xl">
+                <span className="block">{dictionary.hero.title.main}</span>
+                <span className="text-foreground">
+                  {dictionary.hero.title.sub}
+                </span>
+              </h1>
+
+              <p className="mb-8 max-w-2xl text-base text-muted-foreground">
+                {dictionary.hero.subtitle}
+              </p>
+
+              <div className="mb-12 flex flex-wrap items-center gap-4">
+                <Button variant="gradient">
+                  {dictionary.hero.cta.primary}
+                </Button>
+                <Button variant="gradientAlternative">
+                  {dictionary.hero.cta.secondary}
+                </Button>
               </div>
-            </div>
-          </InView>
+
+              <div className="border-t border-muted pt-8">
+                <p className="mb-4 text-sm font-medium text-muted-foreground">
+                  {dictionary.hero.trust.title}
+                </p>
+              </div>
+            </InView>
+
+            <InView
+              className="hidden lg:block"
+              variants={{
+                hidden: { opacity: 0, filter: "blur(4px)" },
+                visible: { opacity: 1, filter: "blur(0px)" },
+              }}
+            >
+              <div className="relative h-[500px] w-full overflow-hidden rounded-xl border bg-background/50 p-1 backdrop-blur supports-[backdrop-filter]:bg-background/50">
+                <div className="absolute inset-6 z-10 flex flex-col justify-end">
+                  <div className="space-y-2 rounded-lg border border-foreground/5 bg-background/30 p-4 backdrop-blur-md backdrop-saturate-150 supports-[backdrop-filter]:bg-background/30">
+                    <p className="text-sm font-medium text-foreground">
+                      {dictionary.hero.network.title}
+                    </p>
+                    <p className="text-xs text-muted-foreground/80">
+                      {dictionary.hero.network.subtitle}
+                    </p>
+                  </div>
+                </div>
+                <div className="relative h-full w-full">
+                  <NetworkBackground />
+                </div>
+              </div>
+            </InView>
+          </div>
         </div>
       </div>
     </div>
