@@ -2,19 +2,23 @@
 
 import { InView } from "@/components/ui/in-view";
 import { Boxes, Microscope, MonitorPlay } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const BENEFIT_ITEMS = {
   speed: {
     Icon: Boxes,
-    color: "violet",
+    colorClass: "text-violet-500",
+    dotColorClass: "bg-violet-500",
   },
   scalability: {
     Icon: Microscope,
-    color: "cyan",
+    colorClass: "text-cyan-500",
+    dotColorClass: "bg-cyan-500",
   },
   precision: {
     Icon: MonitorPlay,
-    color: "emerald",
+    colorClass: "text-emerald-500",
+    dotColorClass: "bg-emerald-500",
   },
 } as const;
 
@@ -89,7 +93,7 @@ export function Benefits({ dictionary }: BenefitsProps) {
               BenefitItem,
             ][]
           ).map(([key, item], index) => {
-            const { Icon, color } = BENEFIT_ITEMS[key];
+            const { Icon, colorClass, dotColorClass } = BENEFIT_ITEMS[key];
             return (
               <InView
                 key={key}
@@ -102,9 +106,7 @@ export function Benefits({ dictionary }: BenefitsProps) {
               >
                 <div className="h-full rounded-2xl border bg-background/50 p-8 backdrop-blur">
                   <div className="flex items-start justify-between">
-                    <Icon
-                      className={`h-8 w-8 stroke-[1.5] text-${color}-500`}
-                    />
+                    <Icon className={cn("h-8 w-8 stroke-[1.5]", colorClass)} />
                     <div className="text-xs text-muted-foreground">
                       {item.label} • {item.metric}
                     </div>
@@ -120,7 +122,10 @@ export function Benefits({ dictionary }: BenefitsProps) {
                         className="flex items-center gap-3 text-sm"
                       >
                         <div
-                          className={`h-1.5 w-1.5 rounded-full bg-${color}-500`}
+                          className={cn(
+                            "h-1.5 w-1.5 rounded-full",
+                            dotColorClass,
+                          )}
                         />
                         {feature}
                       </li>
