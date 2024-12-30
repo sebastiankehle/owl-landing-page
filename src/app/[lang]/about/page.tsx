@@ -1,5 +1,6 @@
 import { getDictionary } from "@/app/[lang]/dictionaries";
 import { AboutHero } from "@/components/sections/about/hero";
+import { Story } from "@/components/sections/about/story";
 
 export default async function AboutPage({
   params,
@@ -12,6 +13,7 @@ export default async function AboutPage({
   return (
     <>
       <AboutHero dictionary={dictionary.about} />
+      <Story dictionary={dictionary.about} />
     </>
   );
 }

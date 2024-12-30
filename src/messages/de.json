@@ -140,6 +140,16 @@
     "hero": {
       "title": "Über Old World Labs",
       "subtitle": "Gegründet 2012 von Nick Liverman mit der Mission, innovative Lösungen für mikrofluidische Geräte, Medizinprodukte, Halbleiterverbindungen, Steckverbinder und automatisierte Tests zu entwickeln."
+    },
+    "story": {
+      "quote": "Sein Ziel war klar: Einen 3D-Drucker von kompromissloser Präzision und Genauigkeit zu schaffen, der den höchsten industriellen Standards gerecht wird.",
+      "early": {
+        "title": "Frühe Jahre und Praktika bei der NASA",
+        "description": "Im Alter von 12 Jahren entdeckte Nick Liverman seine Begeisterung für Robotik. Seine Reise begann mit der Entwicklung seines ersten virtuellen Roboters, programmiert in der digitalen Welt von Ultima Online. Dieser rudimentäre Automat war darauf programmiert, Erz abzubauen und Gegenstände herzustellen. Ein frühes Verständnis für kartesische Robotik führte zu Praktika bei der NASA und einer frühen Einführung in den 3D-Druck."
+      },
+      "journey": {
+        "description": "Vor einem Jahrzehnt, als der 3D-Druck für Verbraucher an Bedeutung gewann, war Nick von der Aussicht fasziniert, 3D-Design zu demokratisieren. Er investierte in einen der ersten verfügbaren 3D-Drucker-Bausätze für Verbraucher, war jedoch von dessen mangelhafter Auflösung und Genauigkeit enttäuscht. Trotz monatelanger unermüdlicher Optimierung erfüllte die Maschine seine Erwartungen nicht. Mit seiner umfangreichen Expertise in Robotik und Fertigung gründete Nick Old World Labs. Sein Ziel war klar: einen 3D-Drucker von kompromissloser Präzision und Genauigkeit zu schaffen, der den höchsten industriellen Standards gerecht wird."
+      }
     }
   }
 }

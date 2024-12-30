@@ -140,6 +140,16 @@
     "hero": {
       "title": "About Old World Labs",
       "subtitle": "Founded in 2012 by Nick Liverman, our mission is to provide innovative solutions for microfluidic devices, medical devices, semiconductor connectors, interconnectors, and automated testing."
+    },
+    "story": {
+      "quote": "His goal was clear: To create a 3D printer of uncompromising precision and accuracy, capable of satisfying the toughest industrial standards.",
+      "early": {
+        "title": "Early stages and internships at Nasa",
+        "description": "From the age of 12, Nick Liverman discovered a fervor for robotics. His journey began with the creation of his first virtual robot, scripted within the digital world of Ultima Online. This rudimentary automaton, programmed to mine ore and craft items. An early understanding of cartesian robotics led to internships at NASA and an early introduction to 3D printing."
+      },
+      "journey": {
+        "description": "A decade ago, as consumer 3D printing started gaining traction, Nick was captivated by the prospect of democratizing 3D design. He invested in one of the pioneering 3D printer kits available to consumers, only to be disheartened by its lackluster resolution and accuracy. Despite months of relentless tweaking, the machine fell short of his expectations. Leveraging his substantial expertise in robotics and fabrication, Nick founded Old World Labs. His goal was clear: to create a 3D printer of uncompromising precision and accuracy, capable of satisfying the toughest industrial standards."
+      }
     }
   }
 }
