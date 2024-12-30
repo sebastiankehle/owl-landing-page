@@ -3,9 +3,9 @@
 import { Button } from "@/components/ui/button";
 import { ImageSlider, type Slide } from "@/components/ui/image-slider";
 import { SectionContainer } from "@/components/ui/section-container";
-import robotics from "./../../../public/images/robotics.webp";
-import unreal from "./../../../public/images/unreal.webp";
-import threed from "./../../../public/images/3d.webp";
+import advancedAdditiveSolutions from "../../../public/images/hero/advanced-additive-solutions-hero.webp";
+import robotics from "../../../public/images/hero/robotics-hero.webp";
+import unrealDevelopment from "../../../public/images/hero/unreal-development-hero.webp";
 
 interface HeroProps {
   dictionary: {
@@ -23,13 +23,13 @@ interface HeroProps {
         title: string;
         subtitle: string;
       };
-    };
-    solutions: {
-      slides: {
-        robotics: { image: string };
-        unreal: { image: string };
-        additive: { image: string };
-      };
+      slides: Record<
+        "first" | "second" | "third",
+        {
+          title: string;
+          description: string;
+        }
+      >;
     };
   };
 }
@@ -37,13 +37,16 @@ interface HeroProps {
 export function Hero({ dictionary }: HeroProps) {
   const slides: Slide[] = [
     {
-      image: threed,
+      image: advancedAdditiveSolutions,
+      info: dictionary.hero.slides.first,
     },
     {
       image: robotics,
+      info: dictionary.hero.slides.second,
     },
     {
-      image: unreal,
+      image: unrealDevelopment,
+      info: dictionary.hero.slides.third,
     },
   ];
 

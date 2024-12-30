@@ -3,18 +3,20 @@
 import { ImageSlider, type Slide } from "@/components/ui/image-slider";
 import { SectionContainer } from "@/components/ui/section-container";
 import { ArrowUpRight } from "lucide-react";
-import robotics from "./../../../public/images/robotics.webp";
-import unreal from "./../../../public/images/unreal.webp";
-import threed from "./../../../public/images/3d.webp";
+import printingAsService from "../../../public/images/solutions/printing-as-service-solutions.webp";
+import microfluidics from "../../../public/images/solutions/microfluidics-solutions.webp";
+import modelingSimulation from "../../../public/images/solutions/modeling-simulation-solutions.webp";
 
 interface SolutionsProps {
   dictionary: {
     solutions: {
-      slides: {
-        robotics: { image: string };
-        unreal: { image: string };
-        additive: { image: string };
-      };
+      slides: Record<
+        "first" | "second" | "third",
+        {
+          title: string;
+          description: string;
+        }
+      >;
       description: string;
       established: string;
     };
@@ -24,13 +26,16 @@ interface SolutionsProps {
 export function Solutions({ dictionary }: SolutionsProps) {
   const slides: Slide[] = [
     {
-      image: robotics,
+      image: printingAsService,
+      info: dictionary.solutions.slides.first,
     },
     {
-      image: unreal,
+      image: microfluidics,
+      info: dictionary.solutions.slides.second,
     },
     {
-      image: threed,
+      image: modelingSimulation,
+      info: dictionary.solutions.slides.third,
     },
   ];
 

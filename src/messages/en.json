@@ -29,6 +29,20 @@
     "network": {
       "title": "Intelligent Systems",
       "subtitle": "Where precision meets digital innovation"
+    },
+    "slides": {
+      "first": {
+        "title": "Advanced Additive Solutions",
+        "description": "Ultra-precise 3D printing and additive manufacturing for industrial applications"
+      },
+      "second": {
+        "title": "Robotics & Automation",
+        "description": "Advanced control systems and precision robotics for industrial automation"
+      },
+      "third": {
+        "title": "Unreal Engine Development",
+        "description": "Custom game development and interactive experiences powered by Unreal Engine"
+      }
     }
   },
   "benefits": {
@@ -86,14 +100,17 @@
   },
   "solutions": {
     "slides": {
-      "robotics": {
-        "image": "robotics"
+      "first": {
+        "title": "3D Printing as a Service",
+        "description": "Customized printing solutions tailored to your unique needs, ensuring precision and quality in every print"
       },
-      "unreal": {
-        "image": "unreal"
+      "second": {
+        "title": "Microfluidic Solutions",
+        "description": "Advanced microfluidic device fabrication enabling breakthroughs in drug discovery and diagnostics"
       },
-      "additive": {
-        "image": "additive"
+      "third": {
+        "title": "Modeling & Simulation",
+        "description": "Creating immersive 3D environments with Unreal Engine 5 for precise simulations and testing"
       }
     },
     "description": "Over a decade of uncompromising precision and accuracy, capable of satisfying the toughest industrial standards.",

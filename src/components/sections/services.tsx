@@ -2,9 +2,9 @@
 
 import { InView } from "@/components/ui/in-view";
 import Image from "next/image";
-import robotics from "../../../public/images/robotics.webp";
-import unreal from "../../../public/images/unreal.webp";
-import threed from "../../../public/images/3d.webp";
+import advancedAdditiveSolutions from "../../../public/images/hero/advanced-additive-solutions-hero.webp";
+import robotics from "../../../public/images/hero/robotics-hero.webp";
+import unrealDevelopment from "../../../public/images/hero/unreal-development-hero.webp";
 
 interface ServicesProps {
   dictionary: {
@@ -37,9 +37,9 @@ export function Services({ dictionary }: ServicesProps) {
 
         <div className="mt-16 grid gap-8 md:grid-cols-3">
           {[
-            { key: "additive", image: threed },
+            { key: "additive", image: advancedAdditiveSolutions },
             { key: "robotics", image: robotics },
-            { key: "unreal", image: unreal },
+            { key: "unreal", image: unrealDevelopment },
           ].map((service, index) => {
             const item =
               dictionary.services.items[

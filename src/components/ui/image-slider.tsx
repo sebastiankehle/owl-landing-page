@@ -8,6 +8,10 @@ import Image from "next/image";
 
 export interface Slide {
   image: { src: string };
+  info: {
+    title: string;
+    description: string;
+  };
 }
 
 interface ImageSliderProps {
@@ -59,12 +63,23 @@ export function ImageSlider({ slides, interval = 10000 }: ImageSliderProps) {
             sizes="(max-width: 768px) 100vw, 50vw"
             priority={currentIndex === 0}
           />
+
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent pb-12 pt-24">
+            <div className="container">
+              <div className="space-y-2">
+                <h3 className="text-lg font-medium text-white">
+                  {slides[currentIndex].info.title}
+                </h3>
+                <p className="text-sm text-white/80">
+                  {slides[currentIndex].info.description}
+                </p>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute inset-x-0 bottom-0 h-48" />
-
-      <div className="absolute bottom-6 right-6 flex gap-2">
+      <div className="absolute bottom-4 right-6 flex gap-2">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -72,8 +87,8 @@ export function ImageSlider({ slides, interval = 10000 }: ImageSliderProps) {
             className={cn(
               "h-1.5 w-8 rounded-full transition-all",
               currentIndex === index
-                ? "bg-foreground"
-                : "bg-foreground/20 hover:bg-foreground/40",
+                ? "bg-white"
+                : "bg-white/20 hover:bg-white/40",
             )}
           />
         ))}
@@ -84,17 +99,17 @@ export function ImageSlider({ slides, interval = 10000 }: ImageSliderProps) {
           onClick={() =>
             setSlide((currentIndex - 1 + slides.length) % slides.length)
           }
-          className="group rounded-full bg-background/20 p-2 backdrop-blur hover:bg-background/40"
+          className="group rounded-full bg-black/20 p-2 backdrop-blur hover:bg-black/40"
         >
-          <ChevronLeft className="h-6 w-6 text-foreground transition-transform group-hover:-translate-x-0.5" />
+          <ChevronLeft className="h-6 w-6 text-white transition-transform group-hover:-translate-x-0.5" />
         </button>
       </div>
       <div className="absolute inset-y-0 right-4 flex items-center">
         <button
           onClick={() => setSlide((currentIndex + 1) % slides.length)}
-          className="group rounded-full bg-background/20 p-2 backdrop-blur hover:bg-background/40"
+          className="group rounded-full bg-black/20 p-2 backdrop-blur hover:bg-black/40"
         >
-          <ChevronRight className="h-6 w-6 text-foreground transition-transform group-hover:translate-x-0.5" />
+          <ChevronRight className="h-6 w-6 text-white transition-transform group-hover:translate-x-0.5" />
         </button>
       </div>
     </div>

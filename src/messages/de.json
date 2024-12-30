@@ -29,6 +29,20 @@
     "network": {
       "title": "Intelligente Systeme",
       "subtitle": "Wo Präzision auf digitale Innovation trifft"
+    },
+    "slides": {
+      "first": {
+        "title": "Advanced Additive Solutions",
+        "description": "Ultrapräziser 3D-Druck und additive Fertigung für industrielle Anwendungen"
+      },
+      "second": {
+        "title": "Robotik & Automation",
+        "description": "Fortschrittliche Steuerungssysteme und Präzisionsrobotik für industrielle Automation"
+      },
+      "third": {
+        "title": "Unreal Engine Development",
+        "description": "Individuelle Spieleentwicklung und interaktive Erlebnisse mit Unreal Engine"
+      }
     }
   },
   "benefits": {
@@ -86,14 +100,17 @@
   },
   "solutions": {
     "slides": {
-      "robotics": {
-        "image": "robotics"
+      "first": {
+        "title": "3D-Druck als Service",
+        "description": "Maßgeschneiderte Drucklösungen für Ihre individuellen Anforderungen, mit Präzision und Qualität bei jedem Druck"
       },
-      "unreal": {
-        "image": "unreal"
+      "second": {
+        "title": "Mikrofluidik-Lösungen",
+        "description": "Fortschrittliche Mikrofluidik-Gerätefertigung für Durchbrüche in der Arzneimittelforschung und Diagnostik"
       },
-      "additive": {
-        "image": "additive"
+      "third": {
+        "title": "Modellierung & Simulation",
+        "description": "Entwicklung immersiver 3D-Umgebungen mit Unreal Engine 5 für präzise Simulationen und Tests"
       }
     },
     "description": "Über ein Jahrzehnt kompromissloser Präzision und Genauigkeit, die den höchsten industriellen Standards gerecht wird.",
