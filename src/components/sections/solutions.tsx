@@ -3,6 +3,8 @@
 import { ImageSlider, type Slide } from "@/components/ui/image-slider";
 import { SectionContainer } from "@/components/ui/section-container";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import printingAsService from "../../../public/images/solutions/printing-as-service-solutions.webp";
 import microfluidics from "../../../public/images/solutions/microfluidics-solutions.webp";
 import modelingSimulation from "../../../public/images/solutions/modeling-simulation-solutions.webp";
@@ -24,6 +26,9 @@ interface SolutionsProps {
 }
 
 export function Solutions({ dictionary }: SolutionsProps) {
+  const params = useParams();
+  const lang = params.lang as string;
+
   const slides: Slide[] = [
     {
       image: printingAsService,
@@ -46,10 +51,13 @@ export function Solutions({ dictionary }: SolutionsProps) {
         <p className="text-2xl font-medium sm:text-3xl">
           {dictionary.solutions.description}
         </p>
-        <div className="mt-8 flex items-center gap-2 text-sm text-muted-foreground">
+        <Link
+          href={`/${lang}/about`}
+          className="mt-8 flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+        >
           <ArrowUpRight className="h-4 w-4" />
           <span>{dictionary.solutions.established}</span>
-        </div>
+        </Link>
       </div>
     </SectionContainer>
   );

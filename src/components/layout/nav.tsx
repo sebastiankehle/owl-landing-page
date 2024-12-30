@@ -1,3 +1,8 @@
+"use client";
+
+import Link from "next/link";
+import { useParams } from "next/navigation";
+
 interface NavProps {
   dictionary: {
     about: string;
@@ -8,12 +13,15 @@ interface NavProps {
 }
 
 const navItems = [
-  { href: "#about", key: "about" },
-  { href: "#blog", key: "blog" },
-  { href: "#contact", key: "contact" },
+  { href: "/about", key: "about" },
+  { href: "/blog", key: "blog" },
+  { href: "/contact", key: "contact" },
 ] as const;
 
 export function Nav({ dictionary, variant = "desktop" }: NavProps) {
+  const params = useParams();
+  const lang = params.lang as string;
+
   const baseStyles =
     "relative transition-colors after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:bg-violet-500/50 after:transition-[width] hover:after:w-full";
   const styles = {
@@ -31,13 +39,13 @@ export function Nav({ dictionary, variant = "desktop" }: NavProps) {
   return (
     <nav className={styles[variant]}>
       {navItems.map((item) => (
-        <a
+        <Link
           key={item.key}
-          href={item.href}
+          href={`/${lang}${item.href}`}
           className={`${baseStyles} ${itemStyles[variant]}`}
         >
           {dictionary[item.key]}
-        </a>
+        </Link>
       ))}
     </nav>
   );

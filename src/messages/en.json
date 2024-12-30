@@ -135,5 +135,11 @@
   },
   "footer": {
     "copyright": "Old World Labs © 2024. All Rights Reserved."
+  },
+  "about": {
+    "hero": {
+      "title": "About Old World Labs",
+      "subtitle": "Founded in 2012 by Nick Liverman, our mission is to provide innovative solutions for microfluidic devices, medical devices, semiconductor connectors, interconnectors, and automated testing."
+    }
   }
 }
