@@ -31,17 +31,21 @@ export function ImageSlider({ slides, interval = 10000 }: ImageSliderProps) {
 
   return (
     <div className="relative aspect-square">
-      <AnimatePresence mode="wait">
-        <motion.img
+      <AnimatePresence initial={false} mode="wait">
+        <motion.div
           key={currentIndex}
-          src={slides[currentIndex].image.src}
-          alt="Work Showcase"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-        />
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+        >
+          <img
+            src={slides[currentIndex].image.src}
+            alt="Work Showcase"
+            className="h-full w-full object-cover"
+          />
+        </motion.div>
       </AnimatePresence>
 
       <div className="absolute inset-x-0 bottom-0 h-48" />
