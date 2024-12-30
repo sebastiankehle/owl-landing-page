@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export interface Slide {
   image: { src: string };
@@ -18,32 +19,49 @@ interface ImageSliderProps {
   interval?: number;
 }
 
-export function ImageSlider({ slides, interval = 10000 }: ImageSliderProps) {
+function useSlideTimer(slides: Slide[], interval: number) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
+  const startTimer = useCallback(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
     }, interval);
+    return timer;
+  }, [interval, slides.length]);
 
+  useEffect(() => {
+    const timer = startTimer();
     return () => clearInterval(timer);
-  }, [slides.length, interval]);
+  }, [startTimer]);
+
+  const setSlide = useCallback((index: number) => {
+    setCurrentIndex(index);
+  }, []);
+
+  return { currentIndex, setSlide };
+}
+
+export function ImageSlider({ slides, interval = 10000 }: ImageSliderProps) {
+  const { currentIndex, setSlide } = useSlideTimer(slides, interval);
 
   return (
     <div className="relative aspect-square">
-      <AnimatePresence initial={false} mode="wait">
+      <AnimatePresence initial={false}>
         <motion.div
           key={currentIndex}
           className="absolute inset-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+          transition={{ duration: 0.75, ease: "easeInOut" }}
         >
-          <img
+          <Image
             src={slides[currentIndex].image.src}
             alt="Work Showcase"
-            className="h-full w-full object-cover"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority={currentIndex === 0}
           />
         </motion.div>
       </AnimatePresence>
@@ -65,7 +83,7 @@ export function ImageSlider({ slides, interval = 10000 }: ImageSliderProps) {
         {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentIndex(index)}
+            onClick={() => setSlide(index)}
             className={cn(
               "h-1.5 w-8 rounded-full transition-all",
               currentIndex === index
@@ -79,9 +97,7 @@ export function ImageSlider({ slides, interval = 10000 }: ImageSliderProps) {
       <div className="absolute inset-y-0 left-4 flex items-center">
         <button
           onClick={() =>
-            setCurrentIndex(
-              (prev) => (prev - 1 + slides.length) % slides.length,
-            )
+            setSlide((currentIndex - 1 + slides.length) % slides.length)
           }
           className="group rounded-full bg-background/20 p-2 backdrop-blur hover:bg-background/40"
         >
@@ -90,7 +106,7 @@ export function ImageSlider({ slides, interval = 10000 }: ImageSliderProps) {
       </div>
       <div className="absolute inset-y-0 right-4 flex items-center">
         <button
-          onClick={() => setCurrentIndex((prev) => (prev + 1) % slides.length)}
+          onClick={() => setSlide((currentIndex + 1) % slides.length)}
           className="group rounded-full bg-background/20 p-2 backdrop-blur hover:bg-background/40"
         >
           <ChevronRight className="h-6 w-6 text-foreground transition-transform group-hover:translate-x-0.5" />
