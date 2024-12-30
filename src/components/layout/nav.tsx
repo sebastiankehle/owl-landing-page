@@ -4,7 +4,7 @@ interface NavProps {
     blog: string;
     contact: string;
   };
-  variant?: "desktop" | "mobile";
+  variant?: "desktop" | "mobile" | "footer";
 }
 
 const navItems = [
@@ -19,11 +19,13 @@ export function Nav({ dictionary, variant = "desktop" }: NavProps) {
   const styles = {
     desktop: "hidden md:flex items-center gap-6",
     mobile: "flex flex-col items-start gap-8 text-2xl",
+    footer: "flex items-center gap-6",
   };
 
   const itemStyles = {
     desktop: "text-sm font-base text-muted-foreground hover:text-foreground",
     mobile: "text-sm font-base text-foreground",
+    footer: "text-sm text-muted-foreground hover:text-foreground",
   };
 
   return (

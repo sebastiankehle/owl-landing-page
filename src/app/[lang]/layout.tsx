@@ -3,6 +3,7 @@ import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import { MobileMenu } from "@/components/layout/mobile-menu";
 import { getDictionary } from "@/app/[lang]/dictionaries";
+import { Footer } from "@/components/layout/footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
           <Header dictionary={dictionary} />
           <MobileMenu dictionary={dictionary} />
           <main className="bg-zinc-100 dark:bg-zinc-950">{children}</main>
+          <Footer dictionary={dictionary} />
         </ThemeProvider>
       </body>
     </html>

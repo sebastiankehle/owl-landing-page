@@ -132,5 +132,8 @@
         "description": "Individuelle Spieleentwicklung und interaktive Erlebnisse mit Unreal Engine"
       }
     }
+  },
+  "footer": {
+    "copyright": "Old World Labs © 2024. Alle Rechte vorbehalten."
   }
 }
