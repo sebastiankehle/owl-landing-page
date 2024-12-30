@@ -4,6 +4,7 @@ interface FooterProps {
   dictionary: {
     header: {
       nav: {
+        home: string;
         about: string;
         blog: string;
         contact: string;
