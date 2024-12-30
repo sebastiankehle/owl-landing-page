@@ -7,6 +7,7 @@ interface HeaderProps {
     header: {
       logo: string;
       nav: {
+        home: string;
         about: string;
         blog: string;
         contact: string;

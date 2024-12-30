@@ -2,6 +2,7 @@
   "header": {
     "logo": "Old World Labs",
     "nav": {
+      "home": "Home",
       "about": "About",
       "blog": "Blog",
       "contact": "Contact"
@@ -222,6 +223,14 @@
           ]
         }
       ]
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Latest updates and announcements",
+    "error": {
+      "title": "Temporarily Unavailable",
+      "description": "We're having trouble loading the latest updates. Please check back later."
     }
   }
 }
