@@ -18,8 +18,8 @@ export default async function Home({
       <Hero dictionary={dictionary} />
       <TechSlider />
       <Benefits dictionary={dictionary} />
-      <Solutions dictionary={dictionary} />
       <Industries dictionary={dictionary} />
+      <Solutions dictionary={dictionary} />
     </main>
   );
 }

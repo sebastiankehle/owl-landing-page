@@ -11,8 +11,6 @@ type BentoCardProps = {
   name: string;
   className: string;
   description: string;
-  href: string;
-  cta: string;
   color?: "violet" | "cyan" | "emerald";
 };
 
@@ -28,7 +26,7 @@ const COLORS = {
   },
 } as const;
 
-const BentoGrid = ({ children, className }: BentoGridProps) => {
+export function BentoGrid({ children, className }: BentoGridProps) {
   return (
     <div
       className={cn(
@@ -40,44 +38,35 @@ const BentoGrid = ({ children, className }: BentoGridProps) => {
       {children}
     </div>
   );
-};
+}
 
-const BentoCard = ({
+export function BentoCard({
   name,
-  className,
   description,
-  href,
-  cta,
+  className,
   color = "violet",
-}: BentoCardProps) => (
-  <a
-    href={href}
-    className={cn(
-      "group relative flex flex-col justify-between overflow-hidden rounded-xl p-6",
-      "bg-background/50 backdrop-blur supports-[backdrop-filter]:bg-background/50",
-      "transition-all duration-500",
-      className,
-    )}
-  >
-    <div className="flex flex-col gap-3">
-      <h3 className="text-lg font-medium text-foreground/90">{name}</h3>
-      <p className="text-sm leading-relaxed text-muted-foreground/80">
-        {description}
-      </p>
+}: BentoCardProps) {
+  return (
+    <div
+      className={cn(
+        "group relative overflow-hidden rounded-xl bg-background/50 p-6 backdrop-blur transition-colors hover:bg-background/80",
+        className,
+      )}
+    >
+      <div className="flex h-full flex-col justify-between">
+        <div>
+          <h3 className="text-lg font-medium">{name}</h3>
+          <p className="mt-2 text-sm text-muted-foreground">{description}</p>
+        </div>
+        <div className="mt-4 flex justify-end">
+          <ArrowRightIcon
+            className={cn(
+              "h-5 w-5 transition-transform group-hover:translate-x-1",
+              COLORS[color].hover,
+            )}
+          />
+        </div>
+      </div>
     </div>
-
-    <div className="mt-4 flex items-center text-sm text-muted-foreground/70">
-      <span
-        className={cn(
-          "transition-all duration-500 ease-out group-hover:translate-x-1",
-          COLORS[color].hover,
-        )}
-      >
-        {cta}
-        <ArrowRightIcon className="ml-1 inline-block h-4 w-4 transition-all duration-500 ease-out group-hover:translate-x-1" />
-      </span>
-    </div>
-  </a>
-);
-
-export { BentoCard, BentoGrid };
+  );
+}

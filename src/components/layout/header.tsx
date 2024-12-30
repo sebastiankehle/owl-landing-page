@@ -7,9 +7,9 @@ interface HeaderProps {
     header: {
       logo: string;
       nav: {
-        features: string;
-        pricing: string;
         about: string;
+        blog: string;
+        contact: string;
       };
       actions: {
         getQuote: string;

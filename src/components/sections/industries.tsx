@@ -92,11 +92,7 @@ export function Industries({ dictionary }: IndustriesProps) {
                   <BentoCard
                     name={item.title}
                     description={item.description}
-                    href={config.href}
                     className="h-full"
-                    cta={
-                      dictionary.industries.cta?.[config.key] || "Learn More"
-                    }
                     color={config.color}
                   />
                 </InView>

@@ -2,9 +2,9 @@
   "header": {
     "logo": "Old World Labs",
     "nav": {
-      "features": "Funktionen",
-      "pricing": "Preise",
-      "about": "Über uns"
+      "about": "Über uns",
+      "blog": "Blog",
+      "contact": "Kontakt"
     },
     "actions": {
       "getQuote": "Angebot"
@@ -32,40 +32,19 @@
     }
   },
   "benefits": {
-    "title": "Fortschrittliche Lösungen für komplexe Herausforderungen",
+    "title": "Ihre Vorteile",
     "items": {
-      "speed": {
-        "metric": "3D",
-        "label": "Druck & Fertigung",
-        "title": "Advanced Additive Solutions",
-        "description": "Maßgeschneiderte Drucklösungen mit industriellen Kapazitäten, die unübertroffene Geschwindigkeit und Präzision für Ihre Fertigungsanforderungen bieten.",
-        "features": [
-          "Individuelle Drucklösungen",
-          "Industrielle Produktion",
-          "Hochvolumen-Fertigung"
-        ]
+      "innovation": {
+        "title": "Innovation beschleunigen",
+        "description": "Verwandeln Sie Ideen schneller in Realität mit unserem umfassenden Technologie-Stack. Beschleunigen Sie Ihren Entwicklungszyklus durch effiziente Arbeitsabläufe."
       },
-      "scalability": {
-        "metric": "0.1µm",
-        "label": "Präzisionsniveau",
-        "title": "Mikrofluidik-Innovation",
-        "description": "Spezialisiert auf die Herstellung mikrofluidischer Geräte für die Biotechnologie, ermöglichen wir Durchbrüche in der Medikamentenentwicklung und Diagnostik.",
-        "features": [
-          "Halbleiter-Verbindungen",
-          "Medizintechnik-Komponenten",
-          "Präzisionstechnik"
-        ]
+      "integration": {
+        "title": "Nahtlose Integration",
+        "description": "Unsere Lösungen arbeiten nahtlos zusammen, vom digitalen Zwilling bis zum physischen Produkt. Schaffen Sie einen einheitlichen Workflow, der mit Ihren Anforderungen wächst."
       },
       "precision": {
-        "metric": "UE5",
-        "label": "Powered Solutions",
-        "title": "Digitale Innovation",
-        "description": "Entwicklung immersiver 3D-Umgebungen mit Unreal Engine 5 für präzise Simulationen und fortschrittliche Modellierungsanwendungen.",
-        "features": [
-          "Immersive Simulationen",
-          "Fortschrittliche Modellierung",
-          "Digital Twin Lösungen"
-        ]
+        "title": "Präzision erreichen",
+        "description": "Vertrauen Sie auf unsere bewährte Erfolgsbilanz bei der Bereitstellung präziser Lösungen. Profitieren Sie von unserer ultrapräzisen Fertigung und Qualitätskontrolle."
       }
     }
   },

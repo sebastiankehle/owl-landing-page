@@ -1,16 +1,16 @@
 interface NavProps {
   dictionary: {
-    features: string;
-    pricing: string;
     about: string;
+    blog: string;
+    contact: string;
   };
   variant?: "desktop" | "mobile";
 }
 
 const navItems = [
-  { href: "#features", key: "features" },
-  { href: "#pricing", key: "pricing" },
   { href: "#about", key: "about" },
+  { href: "#blog", key: "blog" },
+  { href: "#contact", key: "contact" },
 ] as const;
 
 export function Nav({ dictionary, variant = "desktop" }: NavProps) {
@@ -22,8 +22,8 @@ export function Nav({ dictionary, variant = "desktop" }: NavProps) {
   };
 
   const itemStyles = {
-    desktop: "text-sm font-medium text-muted-foreground hover:text-foreground",
-    mobile: "text-sm font-medium text-foreground",
+    desktop: "text-sm font-base text-muted-foreground hover:text-foreground",
+    mobile: "text-sm font-base text-foreground",
   };
 
   return (

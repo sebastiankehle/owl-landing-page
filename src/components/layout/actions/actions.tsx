@@ -10,9 +10,9 @@ interface ActionsProps {
   dictionary: {
     getQuote: string;
     nav: {
-      features: string;
-      pricing: string;
       about: string;
+      blog: string;
+      contact: string;
     };
   };
 }
