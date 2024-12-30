@@ -24,7 +24,7 @@ export function Header({ dictionary }: HeaderProps) {
       <div className="container">
         <div className="rounded-full bg-background/60 backdrop-blur-md backdrop-saturate-150 supports-[backdrop-filter]:bg-background/60">
           <div className="mx-auto px-4">
-            <div className="grid h-12 grid-cols-[auto,1fr,auto] items-center gap-4">
+            <div className="grid h-12 grid-cols-[10rem,1fr,10rem] items-center">
               <div>
                 <Logo text={dictionary.header.logo} />
               </div>

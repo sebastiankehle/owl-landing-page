@@ -150,6 +150,78 @@
       "journey": {
         "description": "Vor einem Jahrzehnt, als der 3D-Druck für Verbraucher an Bedeutung gewann, war Nick von der Aussicht fasziniert, 3D-Design zu demokratisieren. Er investierte in einen der ersten verfügbaren 3D-Drucker-Bausätze für Verbraucher, war jedoch von dessen mangelhafter Auflösung und Genauigkeit enttäuscht. Trotz monatelanger unermüdlicher Optimierung erfüllte die Maschine seine Erwartungen nicht. Mit seiner umfangreichen Expertise in Robotik und Fertigung gründete Nick Old World Labs. Sein Ziel war klar: einen 3D-Drucker von kompromissloser Präzision und Genauigkeit zu schaffen, der den höchsten industriellen Standards gerecht wird."
       }
+    },
+    "timeline": {
+      "title": "Unsere Geschichte",
+      "events": [
+        {
+          "year": "2012",
+          "title": "OWL Gründung",
+          "details": ["Gründung von Old World Labs"]
+        },
+        {
+          "year": "2013",
+          "title": "Patentanmeldungen",
+          "details": ["Erste Patentanmeldungen eingereicht"]
+        },
+        {
+          "year": "2014",
+          "title": "Ultrapräzisions-3D-Drucker",
+          "details": ["Patent angemeldet", "Erste Präsentation auf der CES"]
+        },
+        {
+          "year": "2015",
+          "title": "MC Drucker-Serie vorgestellt",
+          "details": ["Premiere auf der CES 2015"]
+        },
+        {
+          "year": "2016",
+          "title": "Produktreife",
+          "details": [
+            "CES 2016",
+            "Künstliche Lungen-Projekt",
+            "Venostent-Projekt"
+          ]
+        },
+        {
+          "year": "2017",
+          "title": "Patent erteilt",
+          "details": [
+            "Patent für die Produktion von 3D-Objekten durch Stereolithographie"
+          ]
+        },
+        {
+          "year": "2018",
+          "title": "Wichtige Meilensteine",
+          "details": [
+            "Publikation zur Hochvolumen-Fertigungstechnologie: SPIE Advanced Lithography",
+            "Vertrag mit dem Department of Veterans Affairs",
+            "Anerkennung durch das National Institute of Standards & Technology",
+            "Beginn der Massenproduktion von Clear Alignern für die Dentalindustrie"
+          ]
+        },
+        {
+          "year": "2019",
+          "title": "Entwicklung der Fertigung",
+          "details": [
+            "Vollautomatische Fertigungslinie",
+            "Partnerschaft Clear Forward",
+            "Vertrag mit VersAbility für Massenproduktion im ISO-zertifizierten Reinraum"
+          ]
+        },
+        {
+          "year": "2020",
+          "title": "Digital Twins Experimente",
+          "details": ["Entwicklung digitaler Welten mit Unreal Engine 5"]
+        },
+        {
+          "year": "2021",
+          "title": "Abyss Online",
+          "details": [
+            "Integration modernster Forschungsprojekte in Unterhaltungsmedien: www.abyssonline.com"
+          ]
+        }
+      ]
     }
   }
 }

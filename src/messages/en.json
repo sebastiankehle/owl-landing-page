@@ -150,6 +150,78 @@
       "journey": {
         "description": "A decade ago, as consumer 3D printing started gaining traction, Nick was captivated by the prospect of democratizing 3D design. He invested in one of the pioneering 3D printer kits available to consumers, only to be disheartened by its lackluster resolution and accuracy. Despite months of relentless tweaking, the machine fell short of his expectations. Leveraging his substantial expertise in robotics and fabrication, Nick founded Old World Labs. His goal was clear: to create a 3D printer of uncompromising precision and accuracy, capable of satisfying the toughest industrial standards."
       }
+    },
+    "timeline": {
+      "title": "Our Journey",
+      "events": [
+        {
+          "year": "2012",
+          "title": "OWL Founded",
+          "details": ["Foundation of Old World Labs"]
+        },
+        {
+          "year": "2013",
+          "title": "Patents Submitted",
+          "details": ["Initial patent applications filed"]
+        },
+        {
+          "year": "2014",
+          "title": "Ultra Precision 3D Printer",
+          "details": ["Patent pending", "First showcase at CES"]
+        },
+        {
+          "year": "2015",
+          "title": "MC Printer Line Unveiled",
+          "details": ["Debut at CES 2015"]
+        },
+        {
+          "year": "2016",
+          "title": "Product Maturity",
+          "details": [
+            "CES 2016",
+            "Artificial Lung Project",
+            "Venostent Project"
+          ]
+        },
+        {
+          "year": "2017",
+          "title": "Patent Granted",
+          "details": [
+            "Patent for production of 3D objects by stereolithography"
+          ]
+        },
+        {
+          "year": "2018",
+          "title": "Major Milestones",
+          "details": [
+            "Publication on High Volume Manufacturing Technology: SPIE Advanced Lithography",
+            "Department of Veterans Affairs Contract",
+            "Recognition by National Institute of Standards & Technology",
+            "Begin mass production of clear aligners for dental industry"
+          ]
+        },
+        {
+          "year": "2019",
+          "title": "Manufacturing Evolution",
+          "details": [
+            "Fully Automated Manufacturing Line",
+            "Partnership Clear Forward",
+            "Contract with VersAbility for mass production in ISO Certified clean room"
+          ]
+        },
+        {
+          "year": "2020",
+          "title": "Digital Twins Experiments",
+          "details": ["Development of digital worlds using Unreal Engine 5"]
+        },
+        {
+          "year": "2021",
+          "title": "Abyss Online",
+          "details": [
+            "Integration of cutting edge research into entertainment: www.abyssonline.com"
+          ]
+        }
+      ]
     }
   }
 }
