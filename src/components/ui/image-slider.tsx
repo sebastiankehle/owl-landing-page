@@ -8,10 +8,6 @@ import Image from "next/image";
 
 export interface Slide {
   image: { src: string };
-  info: {
-    title: string;
-    subtitle: string;
-  };
 }
 
 interface ImageSliderProps {
@@ -67,17 +63,6 @@ export function ImageSlider({ slides, interval = 10000 }: ImageSliderProps) {
       </AnimatePresence>
 
       <div className="absolute inset-x-0 bottom-0 h-48" />
-
-      <div className="absolute bottom-6 left-6 max-w-[480px]">
-        <div className="space-y-2 rounded-lg bg-background/30 p-4 backdrop-blur-md backdrop-saturate-150">
-          <p className="text-sm font-medium text-foreground">
-            {slides[currentIndex].info.title}
-          </p>
-          <p className="text-xs text-muted-foreground">
-            {slides[currentIndex].info.subtitle}
-          </p>
-        </div>
-      </div>
 
       <div className="absolute bottom-6 right-6 flex gap-2">
         {slides.map((_, index) => (

@@ -87,19 +87,33 @@
   "solutions": {
     "slides": {
       "robotics": {
-        "title": "Robotik & Automation",
-        "subtitle": "Wo Präzision auf intelligente Steuerung trifft"
+        "image": "robotics"
       },
       "unreal": {
-        "title": "Unreal Development",
-        "subtitle": "Digitale Innovation durch immersive Technologie"
+        "image": "unreal"
       },
       "additive": {
-        "title": "Advanced Additive Solutions",
-        "subtitle": "Ultrapräzise Fertigung im industriellen Maßstab"
+        "image": "additive"
       }
     },
     "description": "Über ein Jahrzehnt kompromissloser Präzision und Genauigkeit, die den höchsten industriellen Standards gerecht wird.",
     "established": "Gegründet 2012"
+  },
+  "services": {
+    "title": "Unsere Kernkompetenzen",
+    "items": {
+      "additive": {
+        "title": "Advanced Additive Solutions",
+        "description": "Ultrapräziser 3D-Druck und additive Fertigung für industrielle Anwendungen"
+      },
+      "robotics": {
+        "title": "Robotik & Automation",
+        "description": "Fortschrittliche Steuerungssysteme und Präzisionsrobotik für industrielle Automation"
+      },
+      "unreal": {
+        "title": "Unreal Engine Development",
+        "description": "Individuelle Spieleentwicklung und interaktive Erlebnisse mit Unreal Engine"
+      }
+    }
   }
 }

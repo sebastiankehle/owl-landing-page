@@ -11,9 +11,9 @@ interface SolutionsProps {
   dictionary: {
     solutions: {
       slides: {
-        robotics: { title: string; subtitle: string };
-        unreal: { title: string; subtitle: string };
-        additive: { title: string; subtitle: string };
+        robotics: { image: string };
+        unreal: { image: string };
+        additive: { image: string };
       };
       description: string;
       established: string;
@@ -25,15 +25,12 @@ export function Solutions({ dictionary }: SolutionsProps) {
   const slides: Slide[] = [
     {
       image: robotics,
-      info: dictionary.solutions.slides.robotics,
     },
     {
       image: unreal,
-      info: dictionary.solutions.slides.unreal,
     },
     {
       image: threed,
-      info: dictionary.solutions.slides.additive,
     },
   ];
 

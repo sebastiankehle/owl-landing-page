@@ -26,9 +26,9 @@ interface HeroProps {
     };
     solutions: {
       slides: {
-        robotics: { title: string; subtitle: string };
-        unreal: { title: string; subtitle: string };
-        additive: { title: string; subtitle: string };
+        robotics: { image: string };
+        unreal: { image: string };
+        additive: { image: string };
       };
     };
   };
@@ -37,16 +37,13 @@ interface HeroProps {
 export function Hero({ dictionary }: HeroProps) {
   const slides: Slide[] = [
     {
+      image: threed,
+    },
+    {
       image: robotics,
-      info: dictionary.solutions.slides.robotics,
     },
     {
       image: unreal,
-      info: dictionary.solutions.slides.unreal,
-    },
-    {
-      image: threed,
-      info: dictionary.solutions.slides.additive,
     },
   ];
 
