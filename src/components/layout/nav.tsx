@@ -12,6 +12,7 @@ interface NavProps {
     home: string;
   };
   variant?: "desktop" | "mobile" | "footer";
+  onNavigate?: () => void;
 }
 
 const navItems = [
@@ -20,7 +21,7 @@ const navItems = [
   { href: "/contact", key: "contact" },
 ] as const;
 
-export function Nav({ dictionary, variant = "desktop" }: NavProps) {
+export function Nav({ dictionary, variant = "desktop", onNavigate }: NavProps) {
   const params = useParams();
   const pathname = usePathname();
   const lang = params.lang as string;
@@ -48,6 +49,7 @@ export function Nav({ dictionary, variant = "desktop" }: NavProps) {
           itemStyles[variant],
           pathname === `/${lang}` && "text-foreground after:w-full",
         )}
+        onClick={onNavigate}
       >
         {dictionary.home}
       </Link>
@@ -61,6 +63,7 @@ export function Nav({ dictionary, variant = "desktop" }: NavProps) {
             pathname === `/${lang}${item.href}` &&
               "text-foreground after:w-full",
           )}
+          onClick={onNavigate}
         >
           {dictionary[item.key]}
         </Link>

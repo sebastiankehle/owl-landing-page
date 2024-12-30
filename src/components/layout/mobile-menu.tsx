@@ -11,6 +11,7 @@ interface MobileMenuProps {
     header: {
       logo: string;
       nav: {
+        home: string;
         about: string;
         blog: string;
         contact: string;
@@ -29,7 +30,7 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu({ dictionary }: MobileMenuProps) {
-  const { isOpen } = useMobileMenu();
+  const { isOpen, close } = useMobileMenu();
 
   return (
     <div
@@ -51,7 +52,11 @@ export function MobileMenu({ dictionary }: MobileMenuProps) {
 
           {/* Navigation */}
           <div className="flex-1">
-            <Nav dictionary={dictionary.header.nav} variant="mobile" />
+            <Nav
+              dictionary={dictionary.header.nav}
+              variant="mobile"
+              onNavigate={close}
+            />
 
             {/* Social Icons */}
             <div className="mt-8 flex items-center gap-6">
