@@ -135,7 +135,13 @@
     }
   },
   "footer": {
-    "copyright": "Old World Labs © 2024. Alle Rechte vorbehalten."
+    "nav": {
+      "home": "Start",
+      "about": "Über uns",
+      "blog": "Blog",
+      "contact": "Kontakt"
+    },
+    "copyright": "© 2024 Old World Labs. Alle Rechte vorbehalten."
   },
   "about": {
     "hero": {
