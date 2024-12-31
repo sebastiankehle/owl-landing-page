@@ -17,7 +17,7 @@ export function AboutHero({ dictionary }: AboutHeroProps) {
   return (
     <SectionContainer className="relative flex min-h-screen w-full items-center justify-center pt-20">
       <div className="flex flex-col justify-center p-8 lg:p-16">
-        <h1 className="mb-4 text-3xl font-medium sm:text-3xl md:text-4xl lg:text-4xl">
+        <h1 className="mb-4 text-3xl font-semibold sm:text-3xl md:text-4xl lg:text-4xl">
           {dictionary.hero.title}
         </h1>
         <p className="mb-8 max-w-2xl text-base text-muted-foreground">

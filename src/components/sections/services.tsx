@@ -30,7 +30,7 @@ export function Services({ dictionary }: ServicesProps) {
             visible: { opacity: 1, filter: "blur(0px)" },
           }}
         >
-          <h2 className="text-2xl font-medium sm:text-3xl">
+          <h2 className="text-2xl font-semibold sm:text-3xl">
             {dictionary.services.title}
           </h2>
         </InView>
@@ -65,7 +65,7 @@ export function Services({ dictionary }: ServicesProps) {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-0 p-6">
-                      <h3 className="text-xl font-medium text-white">
+                      <h3 className="text-xl font-semibold text-white">
                         {item.title}
                       </h3>
                       <p className="mt-2 text-sm text-white/90">

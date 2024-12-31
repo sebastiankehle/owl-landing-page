@@ -67,7 +67,7 @@ export function ImageSlider({ slides, interval = 10000 }: ImageSliderProps) {
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent pb-12 pt-24">
             <div className="container">
               <div className="space-y-2">
-                <h3 className="text-lg font-medium text-white">
+                <h3 className="text-lg font-semibold text-white">
                   {slides[currentIndex].info.title}
                 </h3>
                 <p className="text-sm text-white/80">

@@ -48,7 +48,7 @@ export function Solutions({ dictionary }: SolutionsProps) {
     <SectionContainer className="relative py-32">
       <ImageSlider slides={slides} />
       <div className="flex flex-col justify-center p-8 lg:p-16">
-        <p className="text-2xl font-medium sm:text-3xl">
+        <p className="text-2xl font-semibold sm:text-3xl">
           {dictionary.solutions.description}
         </p>
         <Link

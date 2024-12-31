@@ -53,7 +53,7 @@ export function Hero({ dictionary }: HeroProps) {
   return (
     <SectionContainer className="relative flex min-h-screen w-full items-center justify-center pt-20">
       <div className="flex flex-col justify-center p-8 lg:p-16">
-        <h1 className="mb-4 text-3xl font-medium sm:text-3xl md:text-4xl lg:text-4xl">
+        <h1 className="mb-4 text-3xl font-semibold sm:text-3xl md:text-4xl lg:text-4xl">
           <span className="block">{dictionary.hero.title.main}</span>
           <span className="text-foreground">{dictionary.hero.title.sub}</span>
         </h1>

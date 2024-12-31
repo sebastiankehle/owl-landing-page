@@ -33,7 +33,7 @@ export function Logo({ text }: LogoProps) {
         height={24}
         className="h-6 w-6"
       />
-      <span className="text-sm font-medium">{text}</span>
+      <span className="text-sm font-semibold">{text}</span>
     </Link>
   );
 }

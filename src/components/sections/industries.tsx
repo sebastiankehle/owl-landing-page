@@ -69,7 +69,7 @@ export function Industries({ dictionary }: IndustriesProps) {
             visible: { opacity: 1, filter: "blur(0px)" },
           }}
         >
-          <h2 className="mt-4 text-2xl font-medium sm:text-3xl">
+          <h2 className="mt-4 text-2xl font-semibold sm:text-3xl">
             {dictionary.industries.title}
           </h2>
         </InView>

@@ -16,7 +16,7 @@ interface FooterProps {
 
 export function Footer({ dictionary }: FooterProps) {
   return (
-    <footer className="border-t border-border/10 bg-background">
+    <footer className="bg-background">
       <div className="container flex flex-col items-center py-16">
         <Nav dictionary={dictionary.footer.nav} variant="footer" />
         <div className="mt-8 text-sm text-muted-foreground">

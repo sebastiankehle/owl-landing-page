@@ -15,7 +15,7 @@ export default async function BlogPage({
   return (
     <div className="container py-32">
       <div className="mx-auto mb-32 max-w-3xl text-center">
-        <h1 className="text-3xl font-medium sm:text-4xl">
+        <h1 className="text-3xl font-semibold sm:text-4xl">
           {dictionary.blog.title}
         </h1>
         <p className="mt-6 text-lg text-muted-foreground">

@@ -55,7 +55,7 @@ export function BentoCard({
     >
       <div className="flex h-full flex-col justify-between">
         <div>
-          <h3 className="text-lg font-medium">{name}</h3>
+          <h3 className="text-lg font-semibold">{name}</h3>
           <p className="mt-2 text-sm text-muted-foreground">{description}</p>
         </div>
         <div className="mt-4 flex justify-end">

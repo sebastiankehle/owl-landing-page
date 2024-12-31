@@ -27,7 +27,7 @@ export function Story({ dictionary }: StoryProps) {
             <div className="pointer-events-none absolute -left-4 -top-4 select-none text-6xl text-muted-foreground/20">
               &ldquo;
             </div>
-            <p className="text-2xl font-medium leading-relaxed text-muted-foreground">
+            <p className="text-2xl font-semibold leading-relaxed text-muted-foreground">
               {dictionary.story.quote}
             </p>
             <div className="pointer-events-none absolute -bottom-8 -right-4 select-none text-6xl text-muted-foreground/20">
@@ -39,7 +39,7 @@ export function Story({ dictionary }: StoryProps) {
         {/* Story Section */}
         <div className="mx-auto max-w-4xl space-y-12">
           <InView>
-            <h3 className="mb-4 text-xl font-medium">
+            <h3 className="mb-4 text-xl font-semibold">
               {dictionary.story.early.title}
             </h3>
             <p className="text-pretty text-muted-foreground">

@@ -48,7 +48,7 @@ export function Timeline({ dictionary }: TimelineProps) {
           viewport={{ once: true }}
           className="mb-32 text-center"
         >
-          <h2 className="text-2xl font-medium sm:text-3xl">
+          <h2 className="text-2xl font-semibold sm:text-3xl">
             {dictionary.timeline.title}
           </h2>
         </motion.div>
@@ -69,7 +69,7 @@ export function Timeline({ dictionary }: TimelineProps) {
                 }`}
               >
                 {/* Content Card - Matching BentoCard styling */}
-                <div className="relative ml-12 w-full overflow-hidden rounded-xl bg-background/50 p-6 backdrop-blur transition-colors hover:bg-background/80 sm:ml-0 sm:w-[calc(50%-3rem)]">
+                <div className="relative ml-12 w-full overflow-hidden rounded-xl bg-background/50 p-6 transition-colors sm:ml-0 sm:w-[calc(50%-3rem)]">
                   <div className="flex h-full flex-col justify-between">
                     <div>
                       {/* Year Badge */}
@@ -80,7 +80,7 @@ export function Timeline({ dictionary }: TimelineProps) {
                             : "sm:absolute sm:right-6 sm:top-6 sm:justify-end"
                         }`}
                       >
-                        <span className="text-base font-medium text-foreground/80 transition-colors group-hover:text-violet-500 dark:group-hover:text-violet-400">
+                        <span className="text-base font-semibold text-foreground/80 transition-colors">
                           {event.year}
                         </span>
                       </div>
@@ -93,7 +93,7 @@ export function Timeline({ dictionary }: TimelineProps) {
                             : "sm:justify-start"
                         }`}
                       >
-                        <h3 className="text-lg font-medium tracking-tight">
+                        <h3 className="text-lg font-semibold tracking-tight">
                           {event.title}
                         </h3>
                       </div>
@@ -114,7 +114,7 @@ export function Timeline({ dictionary }: TimelineProps) {
 
                     {/* Optional: Visual indicator for hover */}
                     <div
-                      className={`absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-violet-500/0 via-violet-500/50 to-violet-500/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${
+                      className={`absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-violet-500/0 via-violet-500/50 to-violet-500/0 opacity-100 transition-opacity duration-300 ${
                         index % 2 === 0 ? "rotate-0" : "rotate-180"
                       }`}
                     />
@@ -123,7 +123,7 @@ export function Timeline({ dictionary }: TimelineProps) {
 
                 {/* Timeline Node */}
                 <div className="absolute left-4 top-10 flex h-8 w-8 -translate-x-1/2 items-center justify-center sm:left-1/2 sm:top-1/2 sm:-translate-y-1/2">
-                  <div className="absolute h-4 w-4 rounded-full bg-background shadow-[0_0_0_4px_hsl(var(--background)),0_0_0_6px_hsl(var(--violet-500))] transition-transform duration-200 group-hover:scale-125" />
+                  <div className="absolute h-4 w-4 rounded-full bg-background/80 shadow-[0_0_0_4px_hsl(var(--background)),0_0_0_6px_hsl(var(--violet-500))] transition-transform duration-200 group-hover:scale-125" />
                   <div
                     className="absolute h-2 w-2 rounded-full bg-violet-500 transition-all duration-200 group-hover:scale-125"
                     style={{

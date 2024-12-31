@@ -54,7 +54,7 @@ export function Benefits({ dictionary }: BenefitsProps) {
             visible: { opacity: 1, filter: "blur(0px)" },
           }}
         >
-          <h2 className="text-2xl font-medium sm:text-3xl">
+          <h2 className="text-2xl font-semibold sm:text-3xl">
             {dictionary.benefits.title}
           </h2>
         </InView>
