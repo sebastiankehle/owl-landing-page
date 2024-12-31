@@ -42,6 +42,7 @@
 ### Naming Conventions
 
 - Directories: lowercase with dashes (e.g., auth-wizard)
+- Files: lowercase with dashes (e.g., auth-wizard.tsx)
 - Components: PascalCase
 - Functions: camelCase with verb prefixes (e.g., handleSubmit)
 - Variables: descriptive with auxiliary verbs (e.g., isLoading)
