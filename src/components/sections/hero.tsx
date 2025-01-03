@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { SectionContainer } from "@/components/ui/section-container";
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,6 +8,7 @@ import { cn } from "@/lib/utils";
 import advancedAdditiveSolutions from "../../../public/images/hero/advanced-additive-solutions-hero.webp";
 import robotics from "../../../public/images/hero/robotics-hero.webp";
 import unrealDevelopment from "../../../public/images/hero/unreal-development-hero.webp";
+import { InView } from "../ui/in-view";
 
 interface HeroProps {
   dictionary: {
@@ -65,8 +65,14 @@ export function Hero({ dictionary }: HeroProps) {
   ];
 
   return (
-    <SectionContainer className="relative min-h-[80vh] pt-20">
-      <div className="relative flex min-h-[calc(60vh-5rem)] flex-col px-6 pb-20 lg:container lg:min-h-[calc(80vh-5rem)] lg:flex-row lg:pb-0">
+    <InView
+      className="relative min-h-[80vh] pt-20"
+      variants={{
+        hidden: { opacity: 0, filter: "blur(4px)" },
+        visible: { opacity: 1, filter: "blur(0px)" },
+      }}
+    >
+      <div className="container relative flex min-h-[calc(60vh-5rem)] flex-col pb-20 lg:min-h-[calc(80vh-5rem)] lg:flex-row lg:pb-0">
         <div className="relative flex w-full flex-col-reverse rounded-3xl bg-background shadow-sm lg:flex-row">
           {/* Left Content */}
           <div className="flex w-full flex-col justify-center p-8 lg:w-1/2">
@@ -137,9 +143,11 @@ export function Hero({ dictionary }: HeroProps) {
               key={index}
               onClick={() => setActiveSlide(index)}
               className={cn(
-                "group relative h-16 overflow-hidden rounded-lg transition-all duration-500 lg:h-20",
+                "duration-250 group relative h-16 overflow-hidden rounded-lg transition-all ease-out lg:h-20",
                 "w-full lg:w-32",
-                activeSlide === index && "ring-2 ring-[#7c3aed]",
+                activeSlide === index
+                  ? "ring-2 ring-[#7c3aed]"
+                  : "hover:ring-2 hover:ring-[#7c3aed]/30",
               )}
               data-active={activeSlide === index}
             >
@@ -148,11 +156,10 @@ export function Hero({ dictionary }: HeroProps) {
                 alt={slide.title}
                 fill
                 className={cn(
-                  "object-cover transition-all duration-500 ease-out",
-                  "group-hover:scale-110",
+                  "duration-250 object-cover transition-all ease-out",
                   activeSlide === index
-                    ? "brightness-100"
-                    : "brightness-50 group-hover:brightness-75",
+                    ? "blur-0 brightness-100"
+                    : "blur-[1px] group-hover:blur-0",
                 )}
                 sizes="(max-width: 768px) 100vw, 128px"
               />
@@ -160,6 +167,6 @@ export function Hero({ dictionary }: HeroProps) {
           ))}
         </div>
       </div>
-    </SectionContainer>
+    </InView>
   );
 }

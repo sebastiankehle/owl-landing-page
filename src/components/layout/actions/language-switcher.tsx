@@ -29,13 +29,13 @@ export function LanguageSwitcher() {
       <DropdownMenuContent align="end" className="group">
         <DropdownMenuItem
           onClick={() => switchLanguage("en")}
-          className="hover:text-[#7c3aed] focus:text-[#7c3aed] focus:ring-[#7c3aed]"
+          className="cursor-pointer hover:text-[#7c3aed] focus:text-[#7c3aed]"
         >
           English
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => switchLanguage("de")}
-          className="hover:text-[#7c3aed] focus:text-[#7c3aed] focus:ring-[#7c3aed]"
+          className="cursor-pointer hover:text-[#7c3aed] focus:text-[#7c3aed]"
         >
           Deutsch
         </DropdownMenuItem>

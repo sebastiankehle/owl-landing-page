@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { MobileMenu } from "@/components/layout/mobile-menu";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 import { Footer } from "@/components/layout/footer";
+import { Preloader } from "@/components/layout/preloader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
+          <Preloader />
           <Header dictionary={dictionary} />
           <MobileMenu dictionary={dictionary} />
           <main className="bg-zinc-100 dark:bg-zinc-950">{children}</main>
