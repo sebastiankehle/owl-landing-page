@@ -95,7 +95,7 @@ export function Benefits({ dictionary }: BenefitsProps) {
                   <BentoCard
                     name={item.title}
                     description={item.description}
-                    className="h-[500px]"
+                    className="h-[600px]"
                     topContent={getTopContent(config.animation)}
                   />
                 </InView>

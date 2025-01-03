@@ -43,8 +43,8 @@ export function BentoCard({
       )}
     >
       <div className="flex h-full flex-col">
-        <div className="relative h-1/2 overflow-hidden">{topContent}</div>
-        <div className="flex h-1/2 flex-col justify-center p-6">
+        <div className="relative h-2/3 overflow-hidden">{topContent}</div>
+        <div className="flex h-1/3 flex-col p-6 pt-8">
           {children || (
             <>
               <h3 className="mb-2 text-lg font-semibold">{name}</h3>
