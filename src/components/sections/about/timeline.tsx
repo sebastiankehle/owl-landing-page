@@ -69,7 +69,7 @@ export function Timeline({ dictionary }: TimelineProps) {
                 }`}
               >
                 {/* Content Card - Matching BentoCard styling */}
-                <div className="relative ml-12 w-full overflow-hidden rounded-xl bg-background/50 p-6 transition-colors sm:ml-0 sm:w-[calc(50%-3rem)]">
+                <div className="relative ml-12 w-full overflow-hidden rounded-xl bg-background p-6 transition-colors sm:ml-0 sm:w-[calc(50%-3rem)]">
                   <div className="flex h-full flex-col justify-between">
                     <div>
                       {/* Year Badge */}

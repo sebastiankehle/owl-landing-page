@@ -49,7 +49,7 @@ export function BentoCard({
   return (
     <div
       className={cn(
-        "group relative overflow-hidden rounded-xl bg-background/50 p-6 backdrop-blur transition-colors hover:bg-background/80",
+        "group relative overflow-hidden rounded-xl bg-background p-6 backdrop-blur transition-colors",
         className,
       )}
     >

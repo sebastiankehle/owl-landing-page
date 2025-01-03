@@ -10,7 +10,7 @@ export function SectionContainer({
   return (
     <div className={className}>
       <div className="container">
-        <div className="grid overflow-hidden rounded-3xl bg-background/50 backdrop-blur lg:grid-cols-2">
+        <div className="grid overflow-hidden rounded-3xl bg-background lg:grid-cols-2">
           {children}
         </div>
       </div>
