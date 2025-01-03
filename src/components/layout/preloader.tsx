@@ -17,7 +17,7 @@ export function Preloader() {
     setTimeout(() => {
       setIsLoading(false);
       document.body.style.overflow = "auto";
-    }, 2500);
+    }, 1000);
 
     document.body.style.overflow = "hidden";
   }, []);
@@ -29,13 +29,19 @@ export function Preloader() {
       className="fixed inset-0 z-[100] flex items-center justify-center bg-background dark:bg-black"
       initial={{ opacity: 1 }}
       animate={{ opacity: 0 }}
-      transition={{ duration: 0.6, delay: 1.9, ease: "easeInOut" }}
+      transition={{ duration: 0.3, delay: 0.7, ease: "easeInOut" }}
       onAnimationComplete={() => setIsLoading(false)}
     >
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.3 }}
+        initial={{ opacity: 0, scale: 0.98 }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+          transition: {
+            duration: 0.2,
+            ease: "easeOut",
+          },
+        }}
       >
         <Image
           src={
