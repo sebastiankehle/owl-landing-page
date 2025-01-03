@@ -76,28 +76,28 @@
     "title": "Präzisionslösungen für verschiedene Sektoren",
     "items": {
       "biotech": {
-        "title": "Biotechnologie & Pharma",
-        "description": "Durchbrüche in der Arzneimittelforschung durch mikrofluidische Innovation."
+        "title": "Life Sciences",
+        "description": "Ultrapräzise Mikrofluidik-Systeme für moderne Arzneimittelforschung und Diagnostik."
       },
       "healthcare": {
-        "title": "Gesundheitswesen & Medizintechnik",
-        "description": "Präzisionskomponenten für bessere Behandlungsergebnisse."
+        "title": "Medizintechnik",
+        "description": "Präzisionsgefertigte Medizinprodukte für moderne Patientenversorgung."
       },
       "semiconductor": {
-        "title": "Halbleiterproduktion",
-        "description": "Innovation durch hochpräzise Halbleiterverbindungen."
+        "title": "Mikroelektronik",
+        "description": "Hochpräzise Komponenten für moderne Halbleiterfertigung."
       },
       "aerospace": {
-        "title": "Luft- und Raumfahrt",
-        "description": "Hochpräzisionskomponenten für kritische Anwendungen."
+        "title": "Luft- & Raumfahrt",
+        "description": "Missionskritische Komponenten für Luft- und Raumfahrtanwendungen."
       },
       "automotive": {
-        "title": "Automobilindustrie",
-        "description": "Fortschrittliche Systeme für mehr Sicherheit und Effizienz."
+        "title": "Mobilität",
+        "description": "Fortschrittliche Prototyping-Lösungen für automotive Innovation."
       },
       "research": {
-        "title": "Forschung & Entwicklung",
-        "description": "Wissenschaftliche Grenzen durch Zusammenarbeit erweitern."
+        "title": "Innovationslabor",
+        "description": "Maßgeschneiderte Lösungen für Forschung und Entwicklung."
       }
     },
     "cta": {

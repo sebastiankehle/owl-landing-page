@@ -76,28 +76,28 @@
     "title": "Precision solutions across diverse sectors",
     "items": {
       "biotech": {
-        "title": "Biotech & Pharmaceuticals",
-        "description": "Enabling breakthroughs in drug discovery and diagnostics through microfluidic innovation."
+        "title": "Life Sciences",
+        "description": "Ultra-precise microfluidic devices powering next-gen drug discovery and diagnostics."
       },
       "healthcare": {
-        "title": "Healthcare & Medical Devices",
-        "description": "Precision components advancing patient care and treatment outcomes."
+        "title": "Medical Tech",
+        "description": "Precision-engineered medical devices advancing modern patient care."
       },
       "semiconductor": {
-        "title": "Semiconductor Manufacturing",
-        "description": "Driving innovation with high-precision semiconductor connectors."
+        "title": "Microelectronics",
+        "description": "High-precision components for advanced semiconductor manufacturing."
       },
       "aerospace": {
-        "title": "Aerospace & Defense",
-        "description": "High-precision components ensuring reliability in critical applications."
+        "title": "Space & Defense",
+        "description": "Mission-critical components for aerospace and defense applications."
       },
       "automotive": {
-        "title": "Automotive",
-        "description": "Advanced systems enhancing vehicle safety and efficiency."
+        "title": "Mobility",
+        "description": "Advanced prototyping solutions for automotive innovation."
       },
       "research": {
-        "title": "Research & Development",
-        "description": "Pushing scientific boundaries through institutional collaboration."
+        "title": "Innovation Lab",
+        "description": "Custom solutions pushing research and development boundaries."
       }
     },
     "cta": {

@@ -54,21 +54,22 @@ export function Services({ dictionary }: ServicesProps) {
                 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="group h-full space-y-4">
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-                    <Image
-                      src={service.image}
-                      alt={item.title}
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-0 p-6">
-                      <h3 className="text-xl font-semibold text-white">
+                <div className="relative h-[500px] overflow-hidden rounded-xl bg-background">
+                  <div className="flex h-full flex-col">
+                    <div className="relative h-[65%] overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={item.title}
+                        className="object-cover transition-transform duration-500 hover:scale-105"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    </div>
+                    <div className="flex h-[35%] flex-col p-6 pt-8">
+                      <h3 className="mb-2 text-lg font-semibold">
                         {item.title}
                       </h3>
-                      <p className="mt-2 text-sm text-white/90">
+                      <p className="text-sm text-muted-foreground">
                         {item.description}
                       </p>
                     </div>

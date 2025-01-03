@@ -24,7 +24,7 @@ interface CarouselProps {
 type Card = {
   src: string;
   title: string;
-  category: string;
+  description: string;
   content: React.ReactNode;
 };
 
@@ -215,14 +215,8 @@ export const Card = ({
                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
               <motion.p
-                layoutId={layout ? `category-${card.title}` : undefined}
-                className="text-base font-medium text-black dark:text-white"
-              >
-                {card.category}
-              </motion.p>
-              <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
-                className="mt-4 text-2xl font-semibold text-neutral-700 dark:text-white md:text-3xl"
+                className="text-base font-medium text-black dark:text-white"
               >
                 {card.title}
               </motion.p>
@@ -234,29 +228,27 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="relative z-10 flex h-56 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 dark:bg-neutral-900 md:h-[24rem] md:w-96"
+        className="relative z-10 flex h-[500px] w-96 flex-col overflow-hidden rounded-xl bg-background"
       >
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-gradient-to-b from-black/50 via-transparent to-transparent" />
-        <div className="relative z-40 p-8">
-          <motion.p
-            layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-left font-sans text-sm font-medium text-white md:text-base"
-          >
-            {card.category}
-          </motion.p>
+        <div className="relative h-[65%] w-full overflow-hidden">
+          <BlurImage
+            src={card.src}
+            alt={card.title}
+            fill
+            className="absolute inset-0 object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+        <div className="flex h-[35%] flex-col justify-start p-6 pt-8">
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="mt-2 max-w-xs text-left font-sans text-xl font-semibold text-white [text-wrap:balance] md:text-2xl"
+            className="text-left text-lg font-semibold"
           >
             {card.title}
           </motion.p>
+          <motion.p className="mt-2 line-clamp-2 text-left text-sm text-muted-foreground">
+            {card.description}
+          </motion.p>
         </div>
-        <BlurImage
-          src={card.src}
-          alt={card.title}
-          fill
-          className="absolute inset-0 z-10 object-cover"
-        />
       </motion.button>
     </>
   );

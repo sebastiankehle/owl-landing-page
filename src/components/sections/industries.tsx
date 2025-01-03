@@ -12,32 +12,26 @@ import semiconductor from "../../../public/images/industries/semiconductor.webp"
 const INDUSTRY_CONFIG = [
   {
     key: "biotech",
-    category: "Life Sciences",
     image: biotech,
   },
   {
     key: "healthcare",
-    category: "Medical Tech",
     image: medical,
   },
   {
     key: "semiconductor",
-    category: "Microelectronics",
     image: semiconductor,
   },
   {
     key: "aerospace",
-    category: "Space & Defense",
     image: space,
   },
   {
     key: "automotive",
-    category: "Mobility",
     image: automotive,
   },
   {
     key: "research",
-    category: "Innovation Lab",
     image: researchDevelopment,
   },
 ] as const;
@@ -62,7 +56,7 @@ export function Industries({ dictionary }: IndustriesProps) {
   const cards = INDUSTRY_CONFIG.map((config) => ({
     src: config.image.src,
     title: dictionary.industries.items[config.key].title,
-    category: config.category,
+    description: dictionary.industries.items[config.key].description,
     content: (
       <div className="space-y-4">
         <p className="text-neutral-700 dark:text-neutral-300">
