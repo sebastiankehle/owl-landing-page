@@ -26,7 +26,7 @@ export function Preloader() {
 
   return (
     <motion.div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-background"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-background dark:bg-black"
       initial={{ opacity: 1 }}
       animate={{ opacity: 0 }}
       transition={{ duration: 0.6, delay: 1.9, ease: "easeInOut" }}
