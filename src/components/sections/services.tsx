@@ -64,7 +64,7 @@ export function Services({ dictionary }: ServicesProps) {
                 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="relative h-[500px] overflow-hidden rounded-xl bg-background">
+                <div className="relative h-[500px] overflow-hidden rounded-xl bg-background shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]">
                   <div className="flex h-full flex-col">
                     <div className="relative h-[65%] overflow-hidden">
                       <Image

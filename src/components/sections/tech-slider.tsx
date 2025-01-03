@@ -44,24 +44,26 @@ export function TechSlider() {
   return (
     <div className="py-20">
       <InfiniteSlider duration={30} durationOnHover={120} className="py-8">
-        {technologies.map(({ icon: Icon, name, href }) => (
-          <a
-            key={name}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-              "group relative flex items-center justify-center px-8",
-              "text-muted-foreground/60 hover:text-foreground",
-              "transition-colors duration-200",
-            )}
-          >
-            <Icon className="h-8 w-8" />
-            <span className="absolute -bottom-6 scale-0 rounded-md bg-background px-3 py-1 text-xs shadow-sm transition-transform group-hover:scale-100">
-              {name}
-            </span>
-          </a>
-        ))}
+        {[...technologies, ...technologies, ...technologies].map(
+          ({ icon: Icon, name, href }, index) => (
+            <a
+              key={name + index}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                "group relative flex items-center justify-center px-8",
+                "text-muted-foreground/60 hover:text-foreground",
+                "transition-colors duration-200",
+              )}
+            >
+              <Icon className="h-8 w-8" />
+              <span className="absolute -bottom-6 scale-0 rounded-md bg-background px-3 py-1 text-xs shadow-sm transition-transform group-hover:scale-100">
+                {name}
+              </span>
+            </a>
+          ),
+        )}
       </InfiniteSlider>
     </div>
   );

@@ -35,7 +35,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
           <Preloader />
           <Header dictionary={dictionary} />
           <MobileMenu dictionary={dictionary} />
-          <main className="bg-zinc-100 dark:bg-zinc-950">{children}</main>
+          <main className="bg-zinc-100 dark:bg-black">{children}</main>
           <Footer dictionary={dictionary} />
         </ThemeProvider>
       </body>

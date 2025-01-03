@@ -150,7 +150,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
 export const Card = ({ card }: { card: Card }) => {
   return (
-    <div className="relative z-10 flex h-[500px] w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-xl bg-background sm:w-[calc(100vw-4rem)] md:w-96">
+    <div className="relative z-10 flex h-[500px] w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-xl bg-background shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)] sm:w-[calc(100vw-4rem)] md:w-96">
       <div className="relative h-[65%] w-full overflow-hidden">
         <BlurImage
           src={card.src}

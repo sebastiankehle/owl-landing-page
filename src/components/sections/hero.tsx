@@ -67,7 +67,7 @@ export function Hero({ dictionary }: HeroProps) {
   return (
     <section className="relative min-h-[80vh] pt-20">
       <div className="container pb-20 lg:pb-0">
-        <div className="relative flex min-h-[calc(60vh-5rem)] flex-col-reverse rounded-3xl bg-background lg:min-h-[calc(80vh-5rem)] lg:flex-row">
+        <div className="relative flex min-h-[calc(60vh-5rem)] flex-col-reverse rounded-3xl bg-background shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)] lg:min-h-[calc(80vh-5rem)] lg:flex-row">
           {/* Left Content */}
           <div className="flex w-full flex-col justify-center p-8 lg:w-1/2">
             <AnimatePresence mode="sync" initial={false}>
