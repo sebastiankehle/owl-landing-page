@@ -47,19 +47,19 @@
     }
   },
   "benefits": {
-    "title": "Ihre Vorteile",
+    "title": "Warum Old World Labs",
     "items": {
       "innovation": {
-        "title": "Innovation beschleunigen",
-        "description": "Verwandeln Sie Ideen schneller in Realität mit unserem umfassenden Technologie-Stack. Beschleunigen Sie Ihren Entwicklungszyklus durch effiziente Arbeitsabläufe."
+        "title": "Fortschrittliche Fertigung & Technologie",
+        "description": "Ultrapräzise 3D-Drucktechnologie mit branchenführender Genauigkeit für Medizinprodukte, Mikrofluidik und industrielle Anwendungen. Unser ganzheitlicher Ansatz verbindet additive Fertigung mit Unreal Engine Visualisierung und Robotik und ermöglicht vollständige Lösungen vom Prototyp bis zur Produktion."
       },
       "integration": {
-        "title": "Nahtlose Integration",
-        "description": "Unsere Lösungen arbeiten nahtlos zusammen, vom digitalen Zwilling bis zum physischen Produkt. Schaffen Sie einen einheitlichen Workflow, der mit Ihren Anforderungen wächst."
+        "title": "Integrierte Lösungen",
+        "description": "Ihre Automatisierungssysteme in einem effizienten Workflow vereint. Unsere systematische Herangehensweise optimiert komplexe Prozesse."
       },
       "precision": {
-        "title": "Präzision erreichen",
-        "description": "Vertrauen Sie auf unsere bewährte Erfolgsbilanz bei der Bereitstellung präziser Lösungen. Profitieren Sie von unserer ultrapräzisen Fertigung und Qualitätskontrolle."
+        "title": "Verlässliches Netzwerk",
+        "description": "Zusammenarbeit mit bewährten Branchenpartnern für termingerechte Lösungen. Unser Netzwerk garantiert konstante Qualität in jedem Projekt."
       }
     }
   },

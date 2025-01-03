@@ -63,46 +63,44 @@ export function Benefits({ dictionary }: BenefitsProps) {
   };
 
   return (
-    <div className="relative py-32">
-      <div className="container">
-        <InView
-          className="text-center"
-          variants={{
-            hidden: { opacity: 0, filter: "blur(4px)" },
-            visible: { opacity: 1, filter: "blur(0px)" },
-          }}
-        >
-          <h2 className="text-2xl font-semibold sm:text-3xl">
-            {dictionary.benefits.title}
-          </h2>
-        </InView>
+    <div className="container">
+      <InView
+        className="text-center"
+        variants={{
+          hidden: { opacity: 0, filter: "blur(4px)" },
+          visible: { opacity: 1, filter: "blur(0px)" },
+        }}
+      >
+        <h2 className="text-2xl font-semibold sm:text-3xl">
+          {dictionary.benefits.title}
+        </h2>
+      </InView>
 
-        <div className="mt-16">
-          <BentoGrid>
-            {BENEFIT_CONFIG.map((config, index) => {
-              const item = dictionary.benefits.items[config.key];
-              return (
-                <InView
-                  key={config.key}
-                  className={config.className}
-                  variants={{
-                    hidden: { opacity: 0, y: 20, filter: "blur(4px)" },
-                    visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-                  }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewOptions={{ margin: "-100px" }}
-                >
-                  <BentoCard
-                    name={item.title}
-                    description={item.description}
-                    className="h-[600px]"
-                    topContent={getTopContent(config.animation)}
-                  />
-                </InView>
-              );
-            })}
-          </BentoGrid>
-        </div>
+      <div className="mt-16">
+        <BentoGrid>
+          {BENEFIT_CONFIG.map((config, index) => {
+            const item = dictionary.benefits.items[config.key];
+            return (
+              <InView
+                key={config.key}
+                className={config.className}
+                variants={{
+                  hidden: { opacity: 0, y: 20, filter: "blur(4px)" },
+                  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+                }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewOptions={{ margin: "-100px" }}
+              >
+                <BentoCard
+                  name={item.title}
+                  description={item.description}
+                  className="h-[600px]"
+                  topContent={getTopContent(config.animation)}
+                />
+              </InView>
+            );
+          })}
+        </BentoGrid>
       </div>
     </div>
   );

@@ -47,19 +47,19 @@
     }
   },
   "benefits": {
-    "title": "Why Partner With Us",
+    "title": "Why Choose Old World Labs",
     "items": {
       "innovation": {
-        "title": "Accelerate Innovation",
-        "description": "Transform ideas into reality faster with our comprehensive technology stack and expertise in rapid prototyping. Speed up your development cycle with efficient workflows."
+        "title": "Advanced Manufacturing & Technology",
+        "description": "Ultra-precise 3D printing technology delivering industry-leading accuracy for medical devices, microfluidics, and industrial applications. Our integrated approach combines additive manufacturing with Unreal Engine visualization and robotics, enabling complete solutions from prototype to production."
       },
       "integration": {
-        "title": "Seamless Integration",
-        "description": "Our solutions work together seamlessly, from digital twins to physical products. Create a unified workflow that scales with your needs while maintaining quality."
+        "title": "Integrated Solutions",
+        "description": "Connecting your automation systems into one efficient workflow. Our methodical approach helps streamline complex processes."
       },
       "precision": {
-        "title": "Achieve Precision",
-        "description": "Trust in our proven track record of delivering precise, high-quality solutions that meet industry standards. Benefit from our ultra-precise manufacturing processes."
+        "title": "Reliable Network",
+        "description": "Working with trusted industry partners to deliver solutions on time. Our network ensures consistent quality across projects of any scale."
       }
     }
   },
