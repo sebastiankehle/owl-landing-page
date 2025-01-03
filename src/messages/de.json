@@ -19,13 +19,13 @@
   },
   "hero": {
     "title": {
-      "main": "Realität gestalten",
-      "sub": "Mit höchster Präzision"
+      "main": "Ultrapräzise Technologie",
+      "sub": "Für Industrieführer"
     },
-    "subtitle": "Wir definieren das Mögliche neu – durch ultrapräzise Technologie, intelligente Systeme und immersive Lösungen. Heute erschaffen wir die Zukunft.",
+    "subtitle": "Fortschrittliche Fertigungslösungen, die ultrapräzisen 3D-Druck, Robotik und Unreal Engine Visualisierung vereinen. Neue Maßstäbe in Präzision und Automation.",
     "cta": {
       "primary": "Lösungen entdecken",
-      "secondary": "Kontakt aufnehmen"
+      "secondary": "Kontakt"
     },
     "network": {
       "title": "Intelligente Systeme",
@@ -34,15 +34,24 @@
     "slides": {
       "first": {
         "title": "Advanced Additive Solutions",
-        "description": "Ultrapräziser 3D-Druck und additive Fertigung für industrielle Anwendungen"
+        "description": {
+          "highlight": "Wegweisender ultrapräziser 3D-Druck im Mikrobereich.",
+          "detail": "Unerreichte Genauigkeit für Medizinprodukte und industrielle Anwendungen mit branchenführender Präzision."
+        }
       },
       "second": {
         "title": "Robotik & Automation",
-        "description": "Fortschrittliche Steuerungssysteme und Präzisionsrobotik für industrielle Automation"
+        "description": {
+          "highlight": "Maßgeschneiderte Automatisierungslösungen, die Präzisionsrobotik mit fortschrittlichen Steuerungssystemen verbinden.",
+          "detail": "Verwandlung komplexer Fertigungsprozesse in optimierte Abläufe."
+        }
       },
       "third": {
-        "title": "Unreal Engine Development",
-        "description": "Individuelle Spieleentwicklung und interaktive Erlebnisse mit Unreal Engine"
+        "title": "Unreal Engine Entwicklung",
+        "description": {
+          "highlight": "Fortschrittliche Echtzeit-Visualisierung und Simulation für industrielle Anwendungen.",
+          "detail": "Entwicklung immersiver Trainingsumgebungen und interaktiver Erlebnisse mit Unreal Engine 5."
+        }
       }
     }
   },

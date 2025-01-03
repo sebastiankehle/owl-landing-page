@@ -26,11 +26,17 @@ export function LanguageSwitcher() {
           <Globe className="h-4 w-4 text-foreground" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => switchLanguage("en")}>
+      <DropdownMenuContent align="end" className="group">
+        <DropdownMenuItem
+          onClick={() => switchLanguage("en")}
+          className="hover:text-[#7c3aed] focus:text-[#7c3aed] focus:ring-[#7c3aed]"
+        >
           English
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => switchLanguage("de")}>
+        <DropdownMenuItem
+          onClick={() => switchLanguage("de")}
+          className="hover:text-[#7c3aed] focus:text-[#7c3aed] focus:ring-[#7c3aed]"
+        >
           Deutsch
         </DropdownMenuItem>
       </DropdownMenuContent>

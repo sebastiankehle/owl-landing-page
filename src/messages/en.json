@@ -19,13 +19,13 @@
   },
   "hero": {
     "title": {
-      "main": "Shaping Reality",
-      "sub": "With Unmatched Precision"
+      "main": "Ultra-Precise Engineering",
+      "sub": "For Industry Leaders"
     },
-    "subtitle": "Redefining what's possible through ultra-precise engineering, intelligent systems, and immersive technologies. Creating tomorrow's solutions, today.",
+    "subtitle": "Advanced manufacturing solutions combining ultra-precise 3D printing, robotics, and Unreal Engine visualization. Setting new standards in precision and automation.",
     "cta": {
-      "primary": "Discover Solutions",
-      "secondary": "Get in Touch"
+      "primary": "Explore Solutions",
+      "secondary": "Contact Us"
     },
     "network": {
       "title": "Intelligent Systems",
@@ -34,15 +34,24 @@
     "slides": {
       "first": {
         "title": "Advanced Additive Solutions",
-        "description": "Ultra-precise 3D printing and additive manufacturing for industrial applications"
+        "description": {
+          "highlight": "Pioneering ultra-precise 3D printing at the microscale.",
+          "detail": "Delivering unmatched accuracy for medical devices and industrial applications with industry-leading precision."
+        }
       },
       "second": {
         "title": "Robotics & Automation",
-        "description": "Advanced control systems and precision robotics for industrial automation"
+        "description": {
+          "highlight": "Custom automation solutions integrating precision robotics with advanced control systems.",
+          "detail": "Transforming complex manufacturing processes into streamlined operations."
+        }
       },
       "third": {
         "title": "Unreal Engine Development",
-        "description": "Custom game development and interactive experiences powered by Unreal Engine"
+        "description": {
+          "highlight": "Advanced real-time visualization and simulation for industrial applications.",
+          "detail": "Creating immersive training environments and interactive experiences with Unreal Engine 5."
+        }
       }
     }
   },
