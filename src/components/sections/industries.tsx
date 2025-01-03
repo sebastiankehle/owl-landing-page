@@ -61,7 +61,7 @@ export function Industries({ dictionary }: IndustriesProps) {
     title: dictionary.industries.items[config.key].title,
     description: dictionary.industries.items[config.key].description,
     content: (
-      <div className="space-y-4">
+      <div>
         <p className="text-neutral-700 dark:text-neutral-300">
           {dictionary.industries.items[config.key].description}
         </p>
@@ -73,7 +73,7 @@ export function Industries({ dictionary }: IndustriesProps) {
   }));
 
   return (
-    <div className="relative py-32">
+    <div className="relative">
       <div className="container">
         <InView
           className="text-left"
@@ -95,7 +95,7 @@ export function Industries({ dictionary }: IndustriesProps) {
         </InView>
 
         <InView
-          className="mx-auto max-w-[1400px]"
+          className="mx-auto mt-16 max-w-[1400px]"
           variants={{
             hidden: { opacity: 0, y: 20, filter: "blur(4px)" },
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
