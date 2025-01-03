@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { useTheme } from "next-themes";
 
-export function NetworkBackground() {
+export function AnimatedNetworkBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { theme, resolvedTheme } = useTheme();
   const sceneRef = useRef<THREE.Scene | null>(null);

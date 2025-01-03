@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { cn } from "@/lib/utils";
 
 type BentoGridProps = {
@@ -9,22 +8,11 @@ type BentoGridProps = {
 
 type BentoCardProps = {
   name: string;
-  className: string;
   description: string;
-  color?: "violet" | "cyan" | "emerald";
+  className?: string;
+  topContent?: React.ReactNode;
+  children?: React.ReactNode;
 };
-
-const COLORS = {
-  violet: {
-    hover: "group-hover:text-violet-500 dark:group-hover:text-violet-400",
-  },
-  cyan: {
-    hover: "group-hover:text-cyan-500 dark:group-hover:text-cyan-400",
-  },
-  emerald: {
-    hover: "group-hover:text-emerald-500 dark:group-hover:text-emerald-400",
-  },
-} as const;
 
 export function BentoGrid({ children, className }: BentoGridProps) {
   return (
@@ -44,27 +32,25 @@ export function BentoCard({
   name,
   description,
   className,
-  color = "violet",
+  topContent,
+  children,
 }: BentoCardProps) {
   return (
     <div
       className={cn(
-        "group relative overflow-hidden rounded-xl bg-background p-6 backdrop-blur transition-colors",
+        "relative overflow-hidden rounded-xl bg-background",
         className,
       )}
     >
-      <div className="flex h-full flex-col justify-between">
-        <div>
-          <h3 className="text-lg font-semibold">{name}</h3>
-          <p className="mt-2 text-sm text-muted-foreground">{description}</p>
-        </div>
-        <div className="mt-4 flex justify-end">
-          <ArrowRightIcon
-            className={cn(
-              "h-5 w-5 transition-transform group-hover:translate-x-1",
-              COLORS[color].hover,
-            )}
-          />
+      <div className="flex h-full flex-col">
+        <div className="relative h-1/2 overflow-hidden">{topContent}</div>
+        <div className="flex h-1/2 flex-col justify-center p-6">
+          {children || (
+            <>
+              <h3 className="mb-2 text-lg font-semibold">{name}</h3>
+              <p className="text-sm text-muted-foreground">{description}</p>
+            </>
+          )}
         </div>
       </div>
     </div>
