@@ -39,7 +39,10 @@ const INDUSTRY_CONFIG = [
 interface IndustriesProps {
   dictionary: {
     industries: {
-      title: string;
+      title: {
+        main: string;
+        sub: string;
+      };
       items: Record<
         string,
         {
@@ -70,22 +73,29 @@ export function Industries({ dictionary }: IndustriesProps) {
   }));
 
   return (
-    <div className="relative overflow-hidden py-16">
-      <div className="container relative">
+    <div className="relative py-32">
+      <div className="container">
         <InView
-          className="text-center"
+          className="text-left"
           variants={{
             hidden: { opacity: 0, filter: "blur(4px)" },
             visible: { opacity: 1, filter: "blur(0px)" },
           }}
         >
-          <h2 className="text-2xl font-semibold sm:text-3xl">
-            {dictionary.industries.title}
+          <h2 className="text-xl font-semibold sm:text-2xl md:text-3xl">
+            <span className="flex flex-col">
+              <span className="text-foreground">
+                {dictionary.industries.title.main}
+              </span>
+              <span className="text-muted-foreground">
+                {dictionary.industries.title.sub}
+              </span>
+            </span>
           </h2>
         </InView>
 
         <InView
-          className="mx-auto mt-16 max-w-[1400px]"
+          className="mx-auto max-w-[1400px]"
           variants={{
             hidden: { opacity: 0, y: 20, filter: "blur(4px)" },
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },

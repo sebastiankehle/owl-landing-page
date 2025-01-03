@@ -29,7 +29,10 @@ const BENEFIT_CONFIG = [
 interface BenefitsProps {
   dictionary: {
     benefits: {
-      title: string;
+      title: {
+        main: string;
+        sub: string;
+      };
       items: {
         innovation: {
           title: string;
@@ -65,14 +68,21 @@ export function Benefits({ dictionary }: BenefitsProps) {
   return (
     <div className="container">
       <InView
-        className="text-center"
+        className="text-left"
         variants={{
           hidden: { opacity: 0, filter: "blur(4px)" },
           visible: { opacity: 1, filter: "blur(0px)" },
         }}
       >
-        <h2 className="text-2xl font-semibold sm:text-3xl">
-          {dictionary.benefits.title}
+        <h2 className="text-xl font-semibold sm:text-2xl md:text-3xl">
+          <span className="flex flex-col">
+            <span className="text-foreground">
+              {dictionary.benefits.title.main}
+            </span>
+            <span className="text-muted-foreground">
+              {dictionary.benefits.title.sub}
+            </span>
+          </span>
         </h2>
       </InView>
 

@@ -19,8 +19,8 @@
   },
   "hero": {
     "title": {
-      "main": "Ultrapräzise Technologie",
-      "sub": "Für Industrieführer"
+      "main": "Ultrapräzise Technologie.",
+      "sub": "Für Industrieführer."
     },
     "subtitle": "Fortschrittliche Fertigungslösungen, die ultrapräzisen 3D-Druck, Robotik und Unreal Engine Visualisierung vereinen. Neue Maßstäbe in Präzision und Automation.",
     "cta": {
@@ -33,30 +33,24 @@
     },
     "slides": {
       "first": {
-        "title": "Advanced Additive Solutions",
-        "description": {
-          "highlight": "Wegweisender ultrapräziser 3D-Druck im Mikrobereich.",
-          "detail": "Unerreichte Genauigkeit für Medizinprodukte und industrielle Anwendungen mit branchenführender Präzision."
-        }
+        "title": "Advanced Additive Solutions.",
+        "subtitle": "Ultrapräzise im Mikrobereich."
       },
       "second": {
-        "title": "Robotik & Automation",
-        "description": {
-          "highlight": "Maßgeschneiderte Automatisierungslösungen, die Präzisionsrobotik mit fortschrittlichen Steuerungssystemen verbinden.",
-          "detail": "Verwandlung komplexer Fertigungsprozesse in optimierte Abläufe."
-        }
+        "title": "Robotik & Automation.",
+        "subtitle": "Präzision trifft Effizienz."
       },
       "third": {
-        "title": "Unreal Engine Entwicklung",
-        "description": {
-          "highlight": "Fortschrittliche Echtzeit-Visualisierung und Simulation für industrielle Anwendungen.",
-          "detail": "Entwicklung immersiver Trainingsumgebungen und interaktiver Erlebnisse mit Unreal Engine 5."
-        }
+        "title": "Unreal Engine Entwicklung.",
+        "subtitle": "Visualisierung neu definiert."
       }
     }
   },
   "benefits": {
-    "title": "Warum Old World Labs",
+    "title": {
+      "main": "Warum Old World Labs.",
+      "sub": "Neue Maßstäbe in Präzision."
+    },
     "items": {
       "innovation": {
         "title": "Fortschrittliche Fertigung & Technologie",
@@ -73,18 +67,21 @@
     }
   },
   "industries": {
-    "title": "Präzisionslösungen für verschiedene Sektoren",
+    "title": {
+      "main": "Präzisionslösungen.",
+      "sub": "Für verschiedene Sektoren."
+    },
     "items": {
       "biotech": {
-        "title": "Life Sciences",
+        "title": "Biotech & Pharma",
         "description": "Ultrapräzise Mikrofluidik-Systeme für moderne Arzneimittelforschung und Diagnostik."
       },
       "healthcare": {
-        "title": "Medizintechnik",
+        "title": "Healthcare & Medizintechnik",
         "description": "Präzisionsgefertigte Medizinprodukte für moderne Patientenversorgung."
       },
       "semiconductor": {
-        "title": "Mikroelektronik",
+        "title": "Halbleiterproduktion",
         "description": "Hochpräzise Komponenten für moderne Halbleiterfertigung."
       },
       "aerospace": {
@@ -92,11 +89,11 @@
         "description": "Missionskritische Komponenten für Luft- und Raumfahrtanwendungen."
       },
       "automotive": {
-        "title": "Mobilität",
+        "title": "Automotive & Mobilität",
         "description": "Fortschrittliche Prototyping-Lösungen für automotive Innovation."
       },
       "research": {
-        "title": "Innovationslabor",
+        "title": "Forschung & Entwicklung",
         "description": "Maßgeschneiderte Lösungen für Forschung und Entwicklung."
       }
     },
@@ -109,7 +106,10 @@
     }
   },
   "services": {
-    "title": "Unsere Kernkompetenzen",
+    "title": {
+      "main": "Unsere Kernkompetenzen.",
+      "sub": "Präzision trifft Innovation."
+    },
     "items": {
       "additive": {
         "title": "Advanced Additive Solutions",

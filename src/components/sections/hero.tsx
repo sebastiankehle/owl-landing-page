@@ -25,16 +25,20 @@ interface HeroProps {
         title: string;
         subtitle: string;
       };
-      slides: Record<
-        "first" | "second" | "third",
-        {
+      slides: {
+        first: {
           title: string;
-          description: {
-            highlight: string;
-            detail: string;
-          };
-        }
-      >;
+          subtitle: string;
+        };
+        second: {
+          title: string;
+          subtitle: string;
+        };
+        third: {
+          title: string;
+          subtitle: string;
+        };
+      };
     };
   };
 }
@@ -45,21 +49,18 @@ export function Hero({ dictionary }: HeroProps) {
   const slides = [
     {
       image: advancedAdditiveSolutions,
-      info: dictionary.hero.slides.first,
       title: dictionary.hero.slides.first.title,
-      description: dictionary.hero.slides.first.description,
+      subtitle: dictionary.hero.slides.first.subtitle,
     },
     {
       image: robotics,
-      info: dictionary.hero.slides.second,
       title: dictionary.hero.slides.second.title,
-      description: dictionary.hero.slides.second.description,
+      subtitle: dictionary.hero.slides.second.subtitle,
     },
     {
       image: unrealDevelopment,
-      info: dictionary.hero.slides.third,
       title: dictionary.hero.slides.third.title,
-      description: dictionary.hero.slides.third.description,
+      subtitle: dictionary.hero.slides.third.subtitle,
     },
   ];
 
@@ -79,17 +80,15 @@ export function Hero({ dictionary }: HeroProps) {
                 className="space-y-8"
               >
                 <h1 className="text-3xl font-semibold sm:text-3xl md:text-4xl lg:text-4xl">
-                  <span className="block">{slides[activeSlide].title}</span>
-                </h1>
-
-                <p className="max-w-xl text-base">
-                  <span className="text-foreground">
-                    {slides[activeSlide].description.highlight}
-                  </span>{" "}
-                  <span className="text-muted-foreground">
-                    {slides[activeSlide].description.detail}
+                  <span className="flex flex-col">
+                    <span className="text-foreground">
+                      {slides[activeSlide].title}
+                    </span>
+                    <span className="text-muted-foreground">
+                      {slides[activeSlide].subtitle}
+                    </span>
                   </span>
-                </p>
+                </h1>
 
                 <div className="flex items-center gap-4">
                   <Button variant="default" showArrow>

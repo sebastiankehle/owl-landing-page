@@ -19,8 +19,8 @@
   },
   "hero": {
     "title": {
-      "main": "Ultra-Precise Engineering",
-      "sub": "For Industry Leaders"
+      "main": "Ultra-Precise Engineering.",
+      "sub": "For industry leaders."
     },
     "subtitle": "Advanced manufacturing solutions combining ultra-precise 3D printing, robotics, and Unreal Engine visualization. Setting new standards in precision and automation.",
     "cta": {
@@ -33,30 +33,24 @@
     },
     "slides": {
       "first": {
-        "title": "Advanced Additive Solutions",
-        "description": {
-          "highlight": "Pioneering ultra-precise 3D printing at the microscale.",
-          "detail": "Delivering unmatched accuracy for medical devices and industrial applications with industry-leading precision."
-        }
+        "title": "Advanced Additive Solutions.",
+        "subtitle": "Ultra-precise at microscale."
       },
       "second": {
-        "title": "Robotics & Automation",
-        "description": {
-          "highlight": "Custom automation solutions integrating precision robotics with advanced control systems.",
-          "detail": "Transforming complex manufacturing processes into streamlined operations."
-        }
+        "title": "Robotics & Automation.",
+        "subtitle": "Precision meets efficiency."
       },
       "third": {
-        "title": "Unreal Engine Development",
-        "description": {
-          "highlight": "Advanced real-time visualization and simulation for industrial applications.",
-          "detail": "Creating immersive training environments and interactive experiences with Unreal Engine 5."
-        }
+        "title": "Unreal Engine Development.",
+        "subtitle": "Visualization redefined."
       }
     }
   },
   "benefits": {
-    "title": "Why Choose Old World Labs",
+    "title": {
+      "main": "Why Choose Old World Labs.",
+      "sub": "Setting new standards in precision."
+    },
     "items": {
       "innovation": {
         "title": "Advanced Manufacturing & Technology",
@@ -73,30 +67,33 @@
     }
   },
   "industries": {
-    "title": "Precision solutions across diverse sectors",
+    "title": {
+      "main": "Precision solutions.",
+      "sub": "Across diverse sectors."
+    },
     "items": {
       "biotech": {
-        "title": "Life Sciences",
+        "title": "Biotech & Pharmaceuticals",
         "description": "Ultra-precise microfluidic devices powering next-gen drug discovery and diagnostics."
       },
       "healthcare": {
-        "title": "Medical Tech",
+        "title": "Healthcare & Medical Devices",
         "description": "Precision-engineered medical devices advancing modern patient care."
       },
       "semiconductor": {
-        "title": "Microelectronics",
+        "title": "Semiconductor Manufacturing",
         "description": "High-precision components for advanced semiconductor manufacturing."
       },
       "aerospace": {
-        "title": "Space & Defense",
+        "title": "Aerospace & Defense",
         "description": "Mission-critical components for aerospace and defense applications."
       },
       "automotive": {
-        "title": "Mobility",
+        "title": "Automotive & Mobility",
         "description": "Advanced prototyping solutions for automotive innovation."
       },
       "research": {
-        "title": "Innovation Lab",
+        "title": "Research & Development",
         "description": "Custom solutions pushing research and development boundaries."
       }
     },
@@ -109,7 +106,10 @@
     }
   },
   "services": {
-    "title": "Our Core Services",
+    "title": {
+      "main": "Our Core Services.",
+      "sub": "Precision meets innovation."
+    },
     "items": {
       "additive": {
         "title": "Advanced Additive Solutions",

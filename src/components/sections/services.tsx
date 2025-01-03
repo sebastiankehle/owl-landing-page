@@ -9,7 +9,10 @@ import unrealDevelopment from "../../../public/images/hero/unreal-development-he
 interface ServicesProps {
   dictionary: {
     services: {
-      title: string;
+      title: {
+        main: string;
+        sub: string;
+      };
       items: {
         robotics: { title: string; description: string };
         unreal: { title: string; description: string };
@@ -24,14 +27,21 @@ export function Services({ dictionary }: ServicesProps) {
     <div className="relative py-32">
       <div className="container">
         <InView
-          className="text-center"
+          className="text-left"
           variants={{
             hidden: { opacity: 0, filter: "blur(4px)" },
             visible: { opacity: 1, filter: "blur(0px)" },
           }}
         >
-          <h2 className="text-2xl font-semibold sm:text-3xl">
-            {dictionary.services.title}
+          <h2 className="text-xl font-semibold sm:text-2xl md:text-3xl">
+            <span className="flex flex-col">
+              <span className="text-foreground">
+                {dictionary.services.title.main}
+              </span>
+              <span className="text-muted-foreground">
+                {dictionary.services.title.sub}
+              </span>
+            </span>
           </h2>
         </InView>
 

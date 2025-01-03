@@ -5,6 +5,7 @@ import React, {
   useState,
   createContext,
   useContext,
+  useCallback,
 } from "react";
 import {
   IconArrowNarrowLeft,
@@ -90,18 +91,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
           ref={carouselRef}
           onScroll={checkScrollability}
         >
-          <div
-            className={cn(
-              "absolute right-0 z-[1000] h-auto w-[5%] overflow-hidden bg-gradient-to-l",
-            )}
-          ></div>
-
-          <div
-            className={cn(
-              "flex flex-row justify-start gap-4 pl-4",
-              "mx-auto max-w-7xl", // remove max-w-4xl if you want the carousel to span the full width of its container
-            )}
-          >
+          <div className={cn("flex flex-row justify-start gap-4", "w-full")}>
             {items.map((item, index) => (
               <motion.div
                 initial={{
@@ -119,7 +109,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                   },
                 }}
                 key={"card" + index}
-                className="rounded-3xl last:pr-[5%] md:last:pr-[33%]"
+                className="rounded-3xl"
               >
                 {item}
               </motion.div>
@@ -160,10 +150,10 @@ export const Card = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const { onCardClose } = useContext(CarouselContext);
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     setOpen(false);
     onCardClose(index);
-  };
+  }, [index, onCardClose]);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
