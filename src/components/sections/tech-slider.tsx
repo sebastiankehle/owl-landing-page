@@ -57,7 +57,7 @@ export function TechSlider() {
             )}
           >
             <Icon className="h-8 w-8" />
-            <span className="absolute -bottom-6 scale-0 rounded-md px-3 py-1 text-xs transition-transform group-hover:scale-100">
+            <span className="absolute -bottom-6 scale-0 rounded-md bg-background px-3 py-1 text-xs shadow-sm transition-transform group-hover:scale-100">
               {name}
             </span>
           </a>
