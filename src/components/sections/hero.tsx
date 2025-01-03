@@ -93,10 +93,10 @@ export function Hero({ dictionary }: HeroProps) {
                 </p>
 
                 <div className="flex items-center gap-4">
-                  <Button variant="default">
+                  <Button variant="default" showArrow>
                     {dictionary.hero.cta.primary}
                   </Button>
-                  <Button variant="outline">
+                  <Button variant="outline" showArrow>
                     {dictionary.hero.cta.secondary}
                   </Button>
                 </div>

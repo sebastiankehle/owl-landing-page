@@ -45,7 +45,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       variant,
       size,
       asChild = false,
-      showArrow = true,
+      showArrow = false,
       children,
       ...props
     },
