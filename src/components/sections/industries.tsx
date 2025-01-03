@@ -1,44 +1,38 @@
 "use client";
 
 import { InView } from "@/components/ui/in-view";
-import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
+import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 
 const INDUSTRY_CONFIG = [
   {
     key: "biotech",
-    href: "#biotech",
-    className: "col-span-2",
-    color: "violet",
+    category: "Biotech & Pharma",
+    image: "/images/industries/biotech.webp",
   },
   {
     key: "healthcare",
-    href: "#healthcare",
-    className: undefined,
-    color: "violet",
+    category: "Healthcare",
+    image: "/images/industries/healthcare.webp",
   },
   {
     key: "semiconductor",
-    href: "#semiconductor",
-    className: undefined,
-    color: "cyan",
+    category: "Semiconductor",
+    image: "/images/industries/semiconductor.webp",
   },
   {
     key: "aerospace",
-    href: "#aerospace",
-    className: undefined,
-    color: "cyan",
+    category: "Aerospace",
+    image: "/images/industries/aerospace.webp",
   },
   {
     key: "automotive",
-    href: "#automotive",
-    className: undefined,
-    color: "emerald",
+    category: "Automotive",
+    image: "/images/industries/automotive.webp",
   },
   {
     key: "research",
-    href: "#research",
-    className: "col-span-2",
-    color: "emerald",
+    category: "Research",
+    image: "/images/industries/research.webp",
   },
 ] as const;
 
@@ -59,6 +53,22 @@ interface IndustriesProps {
 }
 
 export function Industries({ dictionary }: IndustriesProps) {
+  const cards = INDUSTRY_CONFIG.map((config) => ({
+    src: config.image,
+    title: dictionary.industries.items[config.key].title,
+    category: config.category,
+    content: (
+      <div className="space-y-4">
+        <p className="text-neutral-700 dark:text-neutral-300">
+          {dictionary.industries.items[config.key].description}
+        </p>
+        <button className="text-sm text-[#7c3aed] hover:text-[#9f75ff]">
+          {dictionary.industries.cta[config.key]}
+        </button>
+      </div>
+    ),
+  }));
+
   return (
     <div className="relative overflow-hidden py-24">
       <div className="container relative">
@@ -74,31 +84,12 @@ export function Industries({ dictionary }: IndustriesProps) {
           </h2>
         </InView>
 
-        <div className="mt-16">
-          <BentoGrid>
-            {INDUSTRY_CONFIG.map((config, index) => {
-              const item = dictionary.industries.items[config.key];
-              return (
-                <InView
-                  key={config.key}
-                  className={config.className}
-                  variants={{
-                    hidden: { opacity: 0, y: 20, filter: "blur(4px)" },
-                    visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-                  }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewOptions={{ margin: "-100px" }}
-                >
-                  <BentoCard
-                    name={item.title}
-                    description={item.description}
-                    className="h-full"
-                    color={config.color}
-                  />
-                </InView>
-              );
-            })}
-          </BentoGrid>
+        <div className="mx-auto mt-16 max-w-[1400px]">
+          <Carousel
+            items={cards.map((card, index) => (
+              <Card key={card.title} card={card} index={index} layout />
+            ))}
+          />
         </div>
       </div>
     </div>

@@ -108,24 +108,6 @@
       "research": "Read More"
     }
   },
-  "solutions": {
-    "slides": {
-      "first": {
-        "title": "3D Printing as a Service",
-        "description": "Customized printing solutions tailored to your unique needs, ensuring precision and quality in every print"
-      },
-      "second": {
-        "title": "Microfluidic Solutions",
-        "description": "Advanced microfluidic device fabrication enabling breakthroughs in drug discovery and diagnostics"
-      },
-      "third": {
-        "title": "Modeling & Simulation",
-        "description": "Creating immersive 3D environments with Unreal Engine 5 for precise simulations and testing"
-      }
-    },
-    "description": "Over a decade of uncompromising precision and accuracy, capable of satisfying the toughest industrial standards.",
-    "established": "Established 2012"
-  },
   "services": {
     "title": "Our Core Services",
     "items": {

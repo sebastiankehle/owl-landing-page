@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 import advancedAdditiveSolutions from "../../../public/images/hero/advanced-additive-solutions-hero.webp";
 import robotics from "../../../public/images/hero/robotics-hero.webp";
 import unrealDevelopment from "../../../public/images/hero/unreal-development-hero.webp";
-import { InView } from "../ui/in-view";
 
 interface HeroProps {
   dictionary: {
@@ -65,15 +64,9 @@ export function Hero({ dictionary }: HeroProps) {
   ];
 
   return (
-    <InView
-      className="relative min-h-[80vh] pt-20"
-      variants={{
-        hidden: { opacity: 0, filter: "blur(4px)" },
-        visible: { opacity: 1, filter: "blur(0px)" },
-      }}
-    >
-      <div className="container relative flex min-h-[calc(60vh-5rem)] flex-col pb-20 lg:min-h-[calc(80vh-5rem)] lg:flex-row lg:pb-0">
-        <div className="relative flex w-full flex-col-reverse rounded-3xl bg-background shadow-sm lg:flex-row">
+    <section className="relative min-h-[80vh] pt-20">
+      <div className="container pb-20 lg:pb-0">
+        <div className="relative flex min-h-[calc(60vh-5rem)] flex-col-reverse rounded-3xl bg-background lg:min-h-[calc(80vh-5rem)] lg:flex-row">
           {/* Left Content */}
           <div className="flex w-full flex-col justify-center p-8 lg:w-1/2">
             <AnimatePresence mode="sync" initial={false}>
@@ -137,7 +130,7 @@ export function Hero({ dictionary }: HeroProps) {
         </div>
 
         {/* Bottom Thumbnails */}
-        <div className="absolute bottom-0 left-1/2 flex w-[calc(100%-4rem)] -translate-x-1/2 gap-2 lg:-bottom-4 lg:w-auto lg:gap-4">
+        <div className="absolute -bottom-4 left-1/2 flex w-[calc(100%-4rem)] -translate-x-1/2 gap-2 lg:w-auto lg:gap-4">
           {slides.map((slide, index) => (
             <button
               key={index}
@@ -167,6 +160,6 @@ export function Hero({ dictionary }: HeroProps) {
           ))}
         </div>
       </div>
-    </InView>
+    </section>
   );
 }

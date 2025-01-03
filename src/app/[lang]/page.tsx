@@ -4,7 +4,6 @@ import { TechSlider } from "@/components/sections/tech-slider";
 import { Benefits } from "@/components/sections/benefits";
 import { Services } from "@/components/sections/services";
 import { Industries } from "@/components/sections/industries";
-import { Solutions } from "@/components/sections/solutions";
 
 export default async function Home({
   params,
@@ -21,7 +20,6 @@ export default async function Home({
       <Benefits dictionary={dictionary} />
       <Services dictionary={dictionary} />
       <Industries dictionary={dictionary} />
-      <Solutions dictionary={dictionary} />
     </main>
   );
 }

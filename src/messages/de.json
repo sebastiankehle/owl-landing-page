@@ -108,24 +108,6 @@
       "research": "Weiterlesen"
     }
   },
-  "solutions": {
-    "slides": {
-      "first": {
-        "title": "3D-Druck als Service",
-        "description": "Maßgeschneiderte Drucklösungen für Ihre individuellen Anforderungen, mit Präzision und Qualität bei jedem Druck"
-      },
-      "second": {
-        "title": "Mikrofluidik-Lösungen",
-        "description": "Fortschrittliche Mikrofluidik-Gerätefertigung für Durchbrüche in der Arzneimittelforschung und Diagnostik"
-      },
-      "third": {
-        "title": "Modellierung & Simulation",
-        "description": "Entwicklung immersiver 3D-Umgebungen mit Unreal Engine 5 für präzise Simulationen und Tests"
-      }
-    },
-    "description": "Über ein Jahrzehnt kompromissloser Präzision und Genauigkeit, die den höchsten industriellen Standards gerecht wird.",
-    "established": "Gegründet 2012"
-  },
   "services": {
     "title": "Unsere Kernkompetenzen",
     "items": {
