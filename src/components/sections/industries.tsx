@@ -60,16 +60,6 @@ export function Industries({ dictionary }: IndustriesProps) {
     src: config.image.src,
     title: dictionary.industries.items[config.key].title,
     description: dictionary.industries.items[config.key].description,
-    content: (
-      <div>
-        <p className="text-neutral-700 dark:text-neutral-300">
-          {dictionary.industries.items[config.key].description}
-        </p>
-        <button className="text-sm text-[#7c3aed] hover:text-[#9f75ff]">
-          {dictionary.industries.cta[config.key]}
-        </button>
-      </div>
-    ),
   }));
 
   return (
@@ -95,7 +85,7 @@ export function Industries({ dictionary }: IndustriesProps) {
         </InView>
 
         <InView
-          className="mx-auto mt-16 max-w-[1400px]"
+          className="mx-auto max-w-[1400px]"
           variants={{
             hidden: { opacity: 0, y: 20, filter: "blur(4px)" },
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
@@ -103,8 +93,8 @@ export function Industries({ dictionary }: IndustriesProps) {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Carousel
-            items={cards.map((card, index) => (
-              <Card key={card.title} card={card} index={index} layout />
+            items={cards.map((card) => (
+              <Card key={card.title} card={card} />
             ))}
           />
         </InView>
