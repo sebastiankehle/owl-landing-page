@@ -4,11 +4,9 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Carousel } from "@/components/ui/apple-cards-carousel";
 import advancedAdditiveSolutions from "../../../public/images/hero/advanced-additive-solutions-hero.webp";
 import robotics from "../../../public/images/hero/robotics-hero.webp";
 import unrealDevelopment from "../../../public/images/hero/unreal-development-hero.webp";
-import { Card } from "@/components/ui/apple-cards-carousel";
 
 interface HeroProps {
   dictionary: {
@@ -22,12 +20,17 @@ interface HeroProps {
         second: { title: string; subtitle: string };
         third: { title: string; subtitle: string };
       };
+      cta: {
+        primary: string;
+        secondary: string;
+      };
     };
   };
 }
 
 export function Hero({ dictionary }: HeroProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [activeSlide, setActiveSlide] = useState<number>(0);
 
   const services = [
     {
@@ -117,31 +120,78 @@ export function Hero({ dictionary }: HeroProps) {
       </div>
 
       {/* Mobile Version */}
-      <div className="relative pt-20 md:hidden">
-        <div className="container">
-          <h2 className="text-xl font-semibold sm:text-2xl md:text-3xl">
-            <span className="flex flex-col">
-              <span className="text-foreground">
-                {dictionary.hero.title.main}
-              </span>
-              <span className="text-muted-foreground">
-                {dictionary.hero.title.sub}
-              </span>
-            </span>
-          </h2>
+      <div className="relative md:hidden">
+        <div className="container py-20">
+          {/* Slides Container */}
+          <div className="relative h-[80vh]">
+            <div className="relative h-full w-full overflow-hidden rounded-3xl shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]">
+              {services.map((service, index) => (
+                <motion.div
+                  key={service.title}
+                  className="absolute inset-0"
+                  initial={false}
+                  animate={{
+                    opacity: activeSlide === index ? 1 : 0,
+                    scale: activeSlide === index ? 1 : 1.1,
+                  }}
+                  transition={{ duration: 0.7 }}
+                >
+                  {/* Background Image */}
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-black/60 transition-opacity duration-500" />
 
-          <Carousel
-            items={services.map((service) => (
-              <Card
-                key={service.title}
-                card={{
-                  src: service.image.src,
-                  title: service.title,
-                  description: service.subtitle,
-                }}
-              />
-            ))}
-          />
+                  {/* Content */}
+                  <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
+                    <motion.div
+                      key={activeSlide}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="max-w-[300px]"
+                    >
+                      <h2 className="text-2xl font-bold text-white sm:text-3xl">
+                        {service.title}
+                      </h2>
+                      <p className="mx-auto mt-2 text-sm text-white sm:text-base">
+                        {service.subtitle}
+                      </p>
+                      <motion.div
+                        className="mx-auto mt-4 h-[2px] w-0 bg-white"
+                        animate={{ width: "100px" }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    </motion.div>
+                  </div>
+                </motion.div>
+              ))}
+
+              {/* Navigation */}
+              <div className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-4">
+                <div className="flex gap-2">
+                  {services.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActiveSlide(index)}
+                      className={cn(
+                        "h-1 rounded-full transition-all",
+                        activeSlide === index
+                          ? "w-8 bg-white"
+                          : "w-2 bg-white/40",
+                      )}
+                    />
+                  ))}
+                </div>
+                <span className="text-xs font-light uppercase tracking-widest text-white/80">
+                  Swipe to explore
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
