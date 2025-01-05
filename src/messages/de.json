@@ -479,6 +479,14 @@
           "answer": "Wir bedienen verschiedene Sektoren, darunter Biotechnologie, Gesundheitswesen, Halbleiterfertigung, Luft- und Raumfahrt, Automotive und Forschungseinrichtungen. Jede Lösung wird auf branchenspezifische Anforderungen zugeschnitten."
         }
       ]
+    },
+    "teaser": {
+      "title": {
+        "main": "Lassen Sie uns zusammenarbeiten.",
+        "sub": "Verwirklichen Sie Ihre Ideen."
+      },
+      "description": "Ob Sie ein neues Produkt entwickeln, Ihren Fertigungsprozess optimieren oder fortschrittliche Robotik integrieren möchten - wir sind für Sie da. Unser Team verbindet Expertise in Präzisionsfertigung, Robotik und digitalen Lösungen, um Ergebnisse zu liefern, die Ihre Erwartungen übertreffen.",
+      "cta": "Kontakt aufnehmen"
     }
   }
 }

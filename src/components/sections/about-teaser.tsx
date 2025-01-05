@@ -77,7 +77,7 @@ export function AboutTeaser({ dictionary, lang }: AboutTeaserProps) {
               </span>
             </h2>
             <p className="text-pretty text-base text-muted-foreground">
-              <span className="text-sm text-muted-foreground">
+              <span className="text-sm font-semibold">
                 {new Date(dictionary.blog.latest.date).toLocaleDateString(
                   lang,
                   {

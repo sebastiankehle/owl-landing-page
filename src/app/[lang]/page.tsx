@@ -4,6 +4,7 @@ import { TechSlider } from "@/components/sections/tech-slider";
 import { Benefits } from "@/components/sections/benefits";
 import { Industries } from "@/components/sections/industries";
 import { AboutTeaser } from "@/components/sections/about-teaser";
+import { ContactTeaser } from "@/components/sections/contact/contact-teaser";
 
 export default async function Home({
   params,
@@ -20,6 +21,7 @@ export default async function Home({
       <Benefits dictionary={dictionary} />
       <AboutTeaser dictionary={dictionary} lang={lang} />
       <Industries dictionary={dictionary} />
+      <ContactTeaser dictionary={dictionary.contact} lang={lang} />
     </div>
   );
 }

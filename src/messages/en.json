@@ -400,6 +400,14 @@
           "answer": "We serve various sectors including biotech, healthcare, semiconductor manufacturing, aerospace, automotive, and research institutions. Each solution is tailored to industry-specific requirements."
         }
       ]
+    },
+    "teaser": {
+      "title": {
+        "main": "Let's collaborate.",
+        "sub": "Bring your ideas to life."
+      },
+      "description": "Whether you're looking to develop a new product, optimize your manufacturing process, or integrate advanced robotics, we're here to help. Our team combines expertise in precision manufacturing, robotics, and digital solutions to deliver results that exceed expectations.",
+      "cta": "Get in touch"
     }
   }
 }

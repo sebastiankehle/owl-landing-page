@@ -155,7 +155,7 @@ export function ContactForm({ dictionary }: ContactFormProps) {
             </FormItem>
           )}
         />
-        <Button type="submit" disabled={isSubmitting}>
+        <Button variant="outline" type="submit" disabled={isSubmitting}>
           {isSubmitting ? (
             <>
               <span className="mr-2">{dictionary.sending}</span>
