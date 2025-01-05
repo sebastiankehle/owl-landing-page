@@ -337,7 +337,8 @@
     "readMore": "Read more",
     "article": "Article",
     "share": {
-      "share": "Share"
+      "share": "Share",
+      "title": "Share"
     },
     "sidebar": {
       "connect": "Connect",

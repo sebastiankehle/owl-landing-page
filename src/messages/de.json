@@ -360,7 +360,8 @@
     "readMore": "Weiterlesen",
     "article": "Artikel",
     "share": {
-      "share": "Teilen"
+      "share": "Teilen",
+      "title": "Teilen"
     },
     "sidebar": {
       "connect": "Kontakt",

@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { InView } from "@/components/ui/in-view";
 
 interface AboutTeaserProps {
   dictionary: {
@@ -47,12 +47,7 @@ export function AboutTeaser({ dictionary, lang }: AboutTeaserProps) {
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {/* About Section */}
         <div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
+          <InView className="space-y-8">
             <h2 className="text-xl font-semibold sm:text-2xl">
               <span className="flex flex-col">
                 <span className="text-foreground">
@@ -73,17 +68,12 @@ export function AboutTeaser({ dictionary, lang }: AboutTeaserProps) {
               {dictionary.about.teaser.learnMore}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
-          </motion.div>
+          </InView>
         </div>
 
         {/* Blog Section */}
         <div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="space-y-8"
-          >
+          <InView className="space-y-8">
             <h2 className="text-xl font-semibold sm:text-2xl">
               <span className="flex flex-col">
                 <span className="text-foreground">
@@ -115,7 +105,7 @@ export function AboutTeaser({ dictionary, lang }: AboutTeaserProps) {
               {dictionary.about.teaser.readMore}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
-          </motion.div>
+          </InView>
         </div>
       </div>
     </section>

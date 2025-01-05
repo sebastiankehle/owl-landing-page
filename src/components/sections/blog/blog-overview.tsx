@@ -40,25 +40,22 @@ export function BlogOverview({ posts, dictionary, lang }: BlogOverviewProps) {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative mt-8 overflow-hidden rounded-3xl bg-background p-6 shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]"
+          className="relative mt-8 overflow-hidden rounded-3xl bg-background shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]"
         >
           {posts[0] && (
             <Link
-              href={`/${lang}/blog/${posts[0].date
-                .split("-")
-                .slice(0, 2)
-                .join("/")}/${posts[0].id}`}
-              className="group grid gap-8 md:grid-cols-2"
+              href={`/${lang}/blog/${posts[0].date.split("-").slice(0, 2).join("/")}/${posts[0].id}`}
+              className="group grid md:grid-cols-2"
             >
-              <div className="relative aspect-video md:aspect-auto">
+              <div className="relative aspect-video md:aspect-auto md:h-full">
                 <Image
                   src={posts[0].image}
                   alt={posts[0].metadata.title}
                   fill
-                  className="rounded-2xl object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-cover transition-transform duration-300"
                 />
               </div>
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center p-6 md:p-8">
                 <p className="text-sm text-muted-foreground">
                   {new Date(posts[0].date).toLocaleDateString(lang, {
                     year: "numeric",

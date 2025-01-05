@@ -37,7 +37,7 @@ export function BlogSidebar({ dictionary, title, url }: BlogSidebarProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
-      className="rounded-3xl bg-background p-6 shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]"
+      className="mt-24 rounded-3xl bg-background p-6 shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]"
     >
       <h3 className="text-lg font-semibold">{dictionary.connect}</h3>
       <div className="mt-4 flex flex-col gap-3">

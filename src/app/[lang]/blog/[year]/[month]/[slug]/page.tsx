@@ -23,18 +23,20 @@ export default async function BlogPost({
 
   return (
     <div>
-      <div className="mb-8 flex items-center justify-between">
-        <h1 className="text-xl font-semibold sm:text-2xl">
-          <span className="flex flex-col">
-            <span className="text-foreground">{postData.title}</span>
-            <span className="text-muted-foreground">
-              {dictionary.blog.article}
-            </span>
+      <h1 className="mb-8 text-xl font-semibold sm:text-2xl">
+        <span className="flex flex-col">
+          <span className="text-foreground">{postData.title}</span>
+          <span className="text-muted-foreground">
+            {dictionary.blog.article}
           </span>
-        </h1>
-        <BlogShare title={postData.title} url={url} />
-      </div>
+        </span>
+      </h1>
       <BlogPostContent post={post} postData={postData} lang={lang} />
+      <BlogShare
+        title={postData.title}
+        url={url}
+        dictionary={dictionary.blog.share}
+      />
     </div>
   );
 }
