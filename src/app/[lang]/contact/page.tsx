@@ -1,4 +1,5 @@
 import { getDictionary } from "@/app/[lang]/dictionaries";
+import { ContactContent } from "@/components/sections/contact/contact-content";
 
 export default async function ContactPage({
   params,
@@ -7,6 +8,6 @@ export default async function ContactPage({
 }) {
   const { lang } = await params;
   const dictionary = await getDictionary(lang);
-  console.log(dictionary);
-  return <>{/* <BlogHero dictionary={dictionary} /> */}</>;
+
+  return <ContactContent dictionary={dictionary.contact} />;
 }

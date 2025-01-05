@@ -375,8 +375,110 @@
     "latest": {
       "title": "OWL auf der CES 2025",
       "excerpt": "Old World Labs präsentiert 'Agents as a Service'-Technologie, die KI-Agenten nahtlos in humanoide Roboter und virtuelle Umgebungen durch unser bahnbrechendes 'Replicants'-System integriert.",
-      "link": "ces-2025-agents-as-a-service",
+      "link": "ces-2025-agents-as-service",
       "date": "2025-01-01"
+    },
+    "contact": {
+      "title": {
+        "main": "Kontakt aufnehmen.",
+        "sub": "Lassen Sie uns über Ihr Projekt sprechen."
+      },
+      "form": {
+        "name": "Ihr Name",
+        "company": "Unternehmen (optional)",
+        "email": "Ihre E-Mail",
+        "subject": "Betreff",
+        "message": "Ihre Nachricht (optional)",
+        "submit": "Nachricht senden",
+        "success": "Nachricht erfolgreich gesendet!",
+        "error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+        "sending": "Wird gesendet..."
+      },
+      "faq": {
+        "title": "Häufig gestellte Fragen",
+        "items": [
+          {
+            "question": "Mit welchen Materialien können Sie arbeiten?",
+            "answer": "Unsere Anlagen können die meisten Materialien verarbeiten, einschließlich Hochtemperaturmaterialien für den Formenbau, langlebige Materialien für die Grundkonstruktion, biokompatible Materialien und spezielle Kunstmaterialien."
+          },
+          {
+            "question": "Welche Toleranzen können Sie einhalten?",
+            "answer": "Wir handhaben verschiedene Präzisionsanforderungen. Zum Beispiel unterscheidet sich ein 10-Mikrometer-Innendurchmesser eines mikrofluidischen Kanals von einer 10-Mikrometer-Oberflächengüte. Bitte geben Sie Ihre spezifischen Anforderungen in Ihrer Nachricht an."
+          },
+          {
+            "question": "Unterstützen Sie sicheren Dateiaustausch?",
+            "answer": "Ja, wir unterstützen sicheren Dateiaustausch einschließlich NDAs und physischer Datenträgerübertragung. Bitte erwähnen Sie Ihre Sicherheitsanforderungen in Ihrer Nachricht."
+          },
+          {
+            "question": "Wie ist Ihr typischer Projektzeitplan?",
+            "answer": "Projektzeitpläne variieren je nach Komplexität und Anforderungen. Einfache Prototypen können in 1-2 Wochen fertiggestellt werden, während komplexe Systeme mehrere Monate in Anspruch nehmen können. Wir erstellen einen detaillierten Zeitplan während der ersten Beratung."
+          },
+          {
+            "question": "Bieten Sie Beratungsdienstleistungen an?",
+            "answer": "Ja, wir bieten Beratung für fortschrittliche Fertigung, Robotik-Integration und Digital-Twin-Entwicklung. Unser Team kann Ihnen helfen, bestehende Prozesse zu optimieren oder neue Lösungen zu entwickeln."
+          },
+          {
+            "question": "Welche Branchen bedienen Sie?",
+            "answer": "Wir bedienen verschiedene Sektoren, darunter Biotechnologie, Gesundheitswesen, Halbleiterfertigung, Luft- und Raumfahrt, Automotive und Forschungseinrichtungen. Jede Lösung wird auf branchenspezifische Anforderungen zugeschnitten."
+          }
+        ]
+      }
+    }
+  },
+  "form": {
+    "name": "Ihr Name",
+    "email": "Ihre E-Mail",
+    "subject": "Betreff",
+    "message": "Ihre Nachricht (optional)",
+    "submit": "Nachricht senden",
+    "success": "Nachricht erfolgreich gesendet!",
+    "error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+    "sending": "Wird gesendet..."
+  },
+  "contact": {
+    "title": {
+      "main": "Kontakt aufnehmen.",
+      "sub": "Lassen Sie uns über Ihr Projekt sprechen."
+    },
+    "form": {
+      "name": "Ihr Name",
+      "company": "Unternehmen (optional)",
+      "email": "Ihre E-Mail",
+      "subject": "Betreff",
+      "message": "Ihre Nachricht (optional)",
+      "submit": "Nachricht senden",
+      "success": "Nachricht erfolgreich gesendet!",
+      "error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+      "sending": "Wird gesendet..."
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "items": [
+        {
+          "question": "Mit welchen Materialien können Sie arbeiten?",
+          "answer": "Unsere Anlagen können die meisten Materialien verarbeiten, einschließlich Hochtemperaturmaterialien für den Formenbau, langlebige Materialien für die Grundkonstruktion, biokompatible Materialien und spezielle Kunstmaterialien."
+        },
+        {
+          "question": "Welche Toleranzen können Sie einhalten?",
+          "answer": "Wir handhaben verschiedene Präzisionsanforderungen. Zum Beispiel unterscheidet sich ein 10-Mikrometer-Innendurchmesser eines mikrofluidischen Kanals von einer 10-Mikrometer-Oberflächengüte. Bitte geben Sie Ihre spezifischen Anforderungen in Ihrer Nachricht an."
+        },
+        {
+          "question": "Unterstützen Sie sicheren Dateiaustausch?",
+          "answer": "Ja, wir unterstützen sicheren Dateiaustausch einschließlich NDAs und physischer Datenträgerübertragung. Bitte erwähnen Sie Ihre Sicherheitsanforderungen in Ihrer Nachricht."
+        },
+        {
+          "question": "Wie ist Ihr typischer Projektzeitplan?",
+          "answer": "Projektzeitpläne variieren je nach Komplexität und Anforderungen. Einfache Prototypen können in 1-2 Wochen fertiggestellt werden, während komplexe Systeme mehrere Monate in Anspruch nehmen können. Wir erstellen einen detaillierten Zeitplan während der ersten Beratung."
+        },
+        {
+          "question": "Bieten Sie Beratungsdienstleistungen an?",
+          "answer": "Ja, wir bieten Beratung für fortschrittliche Fertigung, Robotik-Integration und Digital-Twin-Entwicklung. Unser Team kann Ihnen helfen, bestehende Prozesse zu optimieren oder neue Lösungen zu entwickeln."
+        },
+        {
+          "question": "Welche Branchen bedienen Sie?",
+          "answer": "Wir bedienen verschiedene Sektoren, darunter Biotechnologie, Gesundheitswesen, Halbleiterfertigung, Luft- und Raumfahrt, Automotive und Forschungseinrichtungen. Jede Lösung wird auf branchenspezifische Anforderungen zugeschnitten."
+        }
+      ]
     }
   }
 }

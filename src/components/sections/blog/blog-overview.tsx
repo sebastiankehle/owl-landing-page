@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import type { BlogPost } from "@/data/blogPosts";
 import type { PostMetadata } from "@/lib/blog";
-import { InView } from "@/components/ui/in-view";
 
 interface BlogOverviewProps {
   posts: (BlogPost & { metadata: PostMetadata })[];
@@ -24,16 +23,14 @@ export function BlogOverview({ posts, dictionary, lang }: BlogOverviewProps) {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="container">
-        <InView className="mb-8">
-          <h1 className="text-xl font-semibold sm:text-2xl">
-            <span className="flex flex-col">
-              <span className="text-foreground">{dictionary.blog.title}</span>
-              <span className="text-muted-foreground">
-                {dictionary.blog.subtitle}
-              </span>
+        <h1 className="text-xl font-semibold sm:text-2xl">
+          <span className="flex flex-col">
+            <span className="text-foreground">{dictionary.blog.title}</span>
+            <span className="text-muted-foreground">
+              {dictionary.blog.subtitle}
             </span>
-          </h1>
-        </InView>
+          </span>
+        </h1>
 
         {/* Latest Post */}
         <motion.div
