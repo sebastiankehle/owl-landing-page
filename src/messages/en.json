@@ -338,7 +338,11 @@
     "article": "Article",
     "share": {
       "share": "Share",
-      "title": "Share"
+      "title": "Share",
+      "copyLink": "Copy link",
+      "copied": "Link copied to clipboard",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn"
     },
     "sidebar": {
       "connect": "Connect",

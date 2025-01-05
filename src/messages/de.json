@@ -361,7 +361,11 @@
     "article": "Artikel",
     "share": {
       "share": "Teilen",
-      "title": "Teilen"
+      "title": "Teilen",
+      "copyLink": "Link kopieren",
+      "copied": "Link in Zwischenablage kopiert",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn"
     },
     "sidebar": {
       "connect": "Kontakt",

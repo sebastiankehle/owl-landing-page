@@ -2,13 +2,13 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 const defaultLocale = "en";
-export const locales = ["en-US", "de"];
+export const locales = ["en", "de", "es"];
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   // If pathname doesn't start with a locale
-  if (!/^\/(?:en|de)(?:\/|$)/.test(pathname)) {
+  if (!/^\/(?:en|de|es)(?:\/|$)/.test(pathname)) {
     return NextResponse.redirect(
       new URL(`/${defaultLocale}${pathname}`, request.url),
     );
