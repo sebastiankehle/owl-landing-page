@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, TouchEvent } from "react";
 import { motion } from "framer-motion";
 import advancedAdditiveSolutions from "../../../public/images/hero/advanced-additive-solutions-hero.webp";
 import robotics from "../../../public/images/hero/robotics-hero.webp";
@@ -33,6 +33,8 @@ interface HeroProps {
 export function Hero({ dictionary }: HeroProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [activeSlide, setActiveSlide] = useState<number>(0);
+  const [touchStart, setTouchStart] = useState<number>(0);
+  const [touchEnd, setTouchEnd] = useState<number>(0);
 
   const services = [
     {
@@ -51,6 +53,26 @@ export function Hero({ dictionary }: HeroProps) {
       subtitle: dictionary.hero.slides.third.subtitle,
     },
   ];
+
+  const handleTouchStart = (e: TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStart - touchEnd > 75) {
+      // Swipe left
+      setActiveSlide((prev) => (prev + 1) % services.length);
+    }
+
+    if (touchStart - touchEnd < -75) {
+      // Swipe right
+      setActiveSlide((prev) => (prev - 1 + services.length) % services.length);
+    }
+  };
 
   return (
     <section className="relative min-h-screen pb-24">
@@ -124,9 +146,13 @@ export function Hero({ dictionary }: HeroProps) {
       {/* Mobile Version */}
       <div className="relative md:hidden">
         <div className="container py-20">
-          {/* Slides Container */}
           <div className="relative h-[80vh]">
-            <div className="relative h-full w-full overflow-hidden rounded-3xl shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]">
+            <div
+              className="relative h-full w-full overflow-hidden rounded-3xl shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               {services.map((service, index) => (
                 <motion.div
                   key={service.title}
