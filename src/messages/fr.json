@@ -1,0 +1,431 @@
+{
+  "header": {
+    "logo": "Old World Labs",
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "actions": {
+      "getQuote": "Obtenir un devis"
+    }
+  },
+  "mobile": {
+    "getInTouch": {
+      "title": "Contactez-nous",
+      "description": "Discutons de votre prochain projet et donnons vie à vos idées."
+    }
+  },
+  "hero": {
+    "title": {
+      "main": "Nos services.",
+      "sub": "La précision rencontre l'innovation."
+    },
+    "subtitle": "Solutions de fabrication avancées combinant l'impression 3D ultra-précise, la robotique et la visualisation Unreal Engine. Établissant de nouveaux standards en matière de précision et d'automatisation.",
+    "cta": {
+      "primary": "Explorer les solutions",
+      "secondary": "Nous contacter"
+    },
+    "network": {
+      "title": "Systèmes intelligents",
+      "subtitle": "Où la précision rencontre l'innovation numérique"
+    },
+    "slides": {
+      "first": {
+        "title": "Solutions additives avancées.",
+        "subtitle": "Ultra-précision à l'échelle micro."
+      },
+      "second": {
+        "title": "Robotique et automatisation.",
+        "subtitle": "La précision rencontre l'efficacité."
+      },
+      "third": {
+        "title": "Développement Unreal Engine.",
+        "subtitle": "La visualisation réinventée."
+      }
+    },
+    "scroll": "Défiler",
+    "swipe": "Glisser pour explorer"
+  },
+  "benefits": {
+    "title": {
+      "main": "Pourquoi choisir Old World Labs.",
+      "sub": "Établir de nouveaux standards de précision."
+    },
+    "items": {
+      "innovation": {
+        "title": "Fabrication et technologie avancées",
+        "description": "Impression 3D ultra-précise combinée à la visualisation Unreal Engine et à la robotique. Du prototype à la production, tout en une solution intégrée."
+      },
+      "integration": {
+        "title": "Solutions intégrées",
+        "description": "Unifiez vos systèmes d'automatisation en un flux de travail efficace. Notre approche systématique aide à optimiser les processus complexes."
+      },
+      "precision": {
+        "title": "Réseau fiable",
+        "description": "Collaboration avec des partenaires de confiance pour assurer une livraison ponctuelle des solutions. Notre réseau garantit une qualité constante pour les projets de toute taille."
+      }
+    }
+  },
+  "industries": {
+    "title": {
+      "main": "Solutions précises.",
+      "sub": "Pour chaque secteur."
+    },
+    "items": {
+      "biotech": {
+        "title": "Biotech & Pharmaceutique",
+        "description": "Dispositifs microfluidiques ultra-précis pour la recherche et le diagnostic de nouvelle génération."
+      },
+      "healthcare": {
+        "title": "Dispositifs médicaux",
+        "description": "Dispositifs médicaux conçus avec précision pour les soins modernes."
+      },
+      "semiconductor": {
+        "title": "Fabrication de semi-conducteurs",
+        "description": "Composants de haute précision pour la fabrication avancée de semi-conducteurs."
+      },
+      "aerospace": {
+        "title": "Aérospatial & Défense",
+        "description": "Composants critiques pour applications aérospatiales."
+      },
+      "automotive": {
+        "title": "Automobile & Mobilité",
+        "description": "Solutions de prototypage avancées pour l'innovation automobile."
+      },
+      "research": {
+        "title": "Recherche & Développement",
+        "description": "Solutions personnalisées repoussant les limites de la R&D."
+      }
+    },
+    "cta": {
+      "biotech": "En savoir plus",
+      "healthcare": "Découvrir plus",
+      "semiconductor": "Voir les détails",
+      "aerospace": "Explorer plus",
+      "research": "Lire plus"
+    }
+  },
+  "footer": {
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "copyright": "© 2024 Old World Labs. Tous droits réservés."
+  },
+  "about": {
+    "story": {
+      "title": {
+        "main": "Notre histoire.",
+        "sub": "Une décennie d'innovation."
+      },
+      "quote": "Notre mission est de donner aux personnes et aux organisations des systèmes intelligents capables d'opérer dans le monde réel et les environnements virtuels.",
+      "early": {
+        "title": "De l'impression 3D à l'IA",
+        "description": "Fondé par Nick Liverman en 2012, Old World Labs a débuté comme pionnier de l'impression 3D ultra-précise. Notre voyage a commencé avec la vision de créer des imprimantes 3D sans compromis sur la précision, capables de satisfaire les normes industrielles les plus exigeantes.",
+        "founder": {
+          "name": "À propos de Nick Liverman",
+          "background": "A commencé à créer des robots à 12 ans, en commençant par des scripts informatiques dans les jeux en ligne qui automatisaient l'extraction et la création d'objets. Cette expérience précoce a éveillé sa fascination pour la conversion d'objets numériques en produits physiques.",
+          "vision": "Lorsque les premières imprimantes 3D grand public sont apparues, Nick a été captivé par la possibilité de rendre la conception 3D accessible à tous. Après avoir constaté les limitations des premières imprimantes grand public, il a fondé Old World Laboratories avec la mission de fabriquer des imprimantes répondant aux normes industrielles les plus strictes.",
+          "link": "https://hartleynbarnes.wordpress.com/about-us/nick-liverman/",
+          "learnMore": "En savoir plus sur Nick Liverman"
+        }
+      },
+      "journey": {
+        "title": "Façonner demain",
+        "description": "Aujourd'hui, Old World Labs mène la charge dans l'intégration d'agents intelligents dans les robots humanoïdes et les mondes virtuels. Notre technologie révolutionnaire 'Replicants' combine le raisonnement piloté par l'IA avec la robotique consciente des ressources, établissant de nouvelles références pour l'automatisation durable et évolutive. En fusionnant l'IA de pointe avec des applications du monde réel, nous continuons à redéfinir ce qui est possible dans les domaines physiques et numériques."
+      },
+      "current": {
+        "title": "Intégration d'agents dans la robotique",
+        "description": "Au CES 2025, Old World Labs présente sa technologie 'Agents as a Service', intégrant l'IA dans les robots humanoïdes et les mondes virtuels. Cette innovation redéfinit le rôle de l'IA dans les espaces physiques et numériques."
+      }
+    },
+    "timeline": {
+      "title": {
+        "main": "Chronologie de l'innovation.",
+        "sub": "De la précision à l'intelligence."
+      },
+      "events": [
+        {
+          "year": "2012",
+          "title": "Fondation d'OWL",
+          "details": ["Fondation d'Old World Labs"]
+        },
+        {
+          "year": "2013",
+          "title": "Dépôt de brevets",
+          "details": [
+            "Dépôt initial de brevets pour le système de stéréolithographie",
+            "Système laser multi-longueurs d'onde avec piégeage optique",
+            "Focalisation dynamique du faisceau et surveillance en temps réel"
+          ],
+          "links": [
+            {
+              "url": "https://patents.justia.com/patent/20150183168",
+              "title": "Demande de brevet 20150183168"
+            }
+          ]
+        },
+        {
+          "year": "2014",
+          "title": "Débuts de l'OWL Nano au CES",
+          "details": [
+            "Old World Labs a présenté l'imprimante OWL Nano au CES 2014",
+            "L'OWL Nano est une imprimante stéréolithographique utilisant de la résine liquide solidifiée par laser",
+            "Utilise un faisceau laser monofilament pour une distorsion minimale",
+            "Capable d'imprimer en SLA avec une hauteur de couche incroyable de 0,1 micron",
+            "Positionné comme un concurrent solide de l'imprimante Formlabs Form1",
+            "Technologie en instance de brevet",
+            "Première zone dédiée à l'impression 3D au CES avec OWL parmi les leaders de l'industrie"
+          ],
+          "links": [
+            {
+              "url": "https://makezine.com/article/digital-fabrication/3d-printing-workshop/the-state-of-3d-printing-and-scanning-after-ces-2014-the-push-for-mainstreaming-begins/",
+              "title": "Couverture Makezine CES 2014"
+            }
+          ]
+        },
+        {
+          "year": "2015",
+          "title": "Ligne d'imprimantes MC & Brevets",
+          "details": [
+            "Introduction des imprimantes SLA MC-1 et MC-2 au CES 2015",
+            "Résolution révolutionnaire de 100 nanomètres utilisant la polymérisation à deux photons",
+            "Lancement du modèle d'abonnement pour imprimantes",
+            "Utilisé par la NASA, Stanford et d'autres institutions de premier plan",
+            "MC-1 : Dispositif de nanofabrication photonique de haute précision, construit à la main aux USA",
+            "MC-2 : Carte de contrôle avancée avec lasers multiples améliorés pour nouveaux matériaux",
+            "250x la résolution des autres imprimantes 3D de l'industrie",
+            "Collaboration avec le Département de la Défense américain et l'Institut de Photonique Intégrée",
+            "Modèle d'abonnement permettant des mises à niveau matérielles avec l'évolution de la technologie",
+            "Brevets accordés pour système de stéréolithographie avancé avec laser multi-longueurs d'onde et piégeage optique"
+          ],
+          "links": [
+            {
+              "url": "https://patents.justia.com/patent/10086566",
+              "title": "Brevet US 10,086,566"
+            }
+          ]
+        },
+        {
+          "year": "2016",
+          "title": "Maturité des produits",
+          "details": [
+            "Présentation au CES 2016 avec l'imprimante industrielle MC-2",
+            "Gamme de prix 100 000 $ à 250 000 $ reflétant les capacités industrielles",
+            "Projet Poumon Artificiel : Collaboration avec VA Ann Arbor pour développer des poumons artificiels microfluidiques imprimés en 3D",
+            "Pionnier de l'impression 3D polymère haute résolution pour réseaux de flux sanguin",
+            "Projet Venostent : Développement de support vasculaire bio-engineered pour accès dialyse",
+            "Focus sur l'amélioration des résultats pour les vétérans atteints de maladies respiratoires et d'insuffisance rénale"
+          ],
+          "links": [
+            {
+              "url": "https://www.research.va.gov/currents/0818-Researchers-strive-to-make-3D-printed-artificial-lung-to-help-Vets-with-respiratory-disease.cfm",
+              "title": "VA Research : Projet Poumon Artificiel"
+            },
+            {
+              "url": "https://www.venostent.com/",
+              "title": "Projet Venostent"
+            }
+          ]
+        },
+        {
+          "year": "2017",
+          "title": "Brevet accordé",
+          "details": [
+            "Brevet accordé pour la production d'objets 3D par stéréolithographie",
+            "Brevet US 10,086,566 pour système de stéréolithographie avancé",
+            "Inclut la technologie laser multi-longueurs d'onde et piégeage optique"
+          ],
+          "links": [
+            {
+              "url": "https://patents.justia.com/patent/10086566",
+              "title": "Brevet US 10,086,566"
+            }
+          ]
+        },
+        {
+          "year": "2018",
+          "title": "Recherche avancée",
+          "details": [
+            "Développement continu du prototype de poumon artificiel portable",
+            "Collaboration avec VA Ann Arbor Healthcare System sur la conception microfluidique pulmonaire",
+            "Prototype dimensionné pour sac à dos/ceinture avec >1 semaine de fonctionnement",
+            "Première utilisation d'impression 3D polymère haute résolution pour poumons microfluidiques fonctionnels",
+            "Développement de revêtement biocompatible pour prévenir le rejet immunitaire",
+            "Focus sur le traitement BPCO et support respiratoire pour vétérans"
+          ],
+          "links": [
+            {
+              "url": "https://copdnewstoday.com/2018/10/09/va-researchers-developing-3d-printed-artificial-lung-for-copd/",
+              "title": "COPD News : Développement poumon artificiel VA"
+            }
+          ]
+        },
+        {
+          "year": "2021",
+          "title": "Divertissement numérique",
+          "details": [
+            "Expansion dans le développement de jeux avec MMORPG Abyss Online",
+            "Développement d'un monde virtuel riche piloté par la communauté",
+            "Implémentation de technologie avancée de modélisation et simulation 3D",
+            "Création de huit biomes distincts avec cultures et environnements uniques",
+            "Focus sur l'économie pilotée par les joueurs et systèmes de crafting",
+            "Intégration de l'expertise en technologie 3D de précision dans le développement de jeux"
+          ],
+          "links": [
+            {
+              "url": "https://www.abyssonline.com/",
+              "title": "Site officiel Abyss Online"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "title": "Intégration d'agents dans la robotique",
+          "details": [
+            "Dévoilement de la technologie 'Agents as a Service' au CES 2025",
+            "Intégration transparente dans les robots humanoïdes et environnements virtuels",
+            "Les agents IA habitent et opèrent des robots humanoïdes, s'adaptant aux environnements 3D",
+            "Présence IA unifiée à travers les domaines physiques et numériques avec le système 'Replicants'",
+            "La technologie Replicants combine le raisonnement piloté par l'IA avec la robotique consciente des ressources",
+            "Permet aux robots humanoïdes de fonctionner comme des entités intelligentes et autonomes",
+            "Comble le fossé entre la robotique physique et les expériences numériques immersives"
+          ],
+          "links": [
+            {
+              "url": "https://www.oldworldlabs.com",
+              "title": "Site officiel Old World Labs"
+            }
+          ]
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Pionniers du futur.",
+      "subtitle": "De l'ingénierie de précision à la robotique IA.",
+      "images": {
+        "precision": "Fabrication de dispositifs microfluidiques",
+        "robotics": "Systèmes de laboratoire automatisés",
+        "virtual": "Modélisation et simulation 3D"
+      }
+    },
+    "teaser": {
+      "learnMore": "En savoir plus sur notre parcours",
+      "subtitle": "Découvrez notre histoire d'innovation",
+      "readMore": "Lire la suite"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Dernières actualités et mises à jour",
+    "readMore": "Lire la suite",
+    "article": "Article",
+    "share": {
+      "share": "Partager",
+      "title": "Partager",
+      "copyLink": "Copier le lien",
+      "copied": "Lien copié dans le presse-papiers",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn"
+    },
+    "sidebar": {
+      "connect": "Se connecter",
+      "socials": {
+        "twitter": "Suivre sur Twitter",
+        "linkedin": "Se connecter sur LinkedIn",
+        "email": "Envoyer un email",
+        "share": "Partager cet article"
+      }
+    },
+    "latest": {
+      "title": "OWL au CES 2025",
+      "excerpt": "Old World Labs dévoile sa technologie 'Agents as a Service', intégrant de manière transparente des agents IA dans des robots humanoïdes et des environnements virtuels grâce à notre système révolutionnaire 'Replicants'.",
+      "link": "ces-2025-agents-as-service",
+      "date": "2025-01-01"
+    }
+  },
+  "contact": {
+    "title": {
+      "main": "Contactez-nous.",
+      "sub": "Discutons de votre projet."
+    },
+    "form": {
+      "name": "Votre nom",
+      "company": "Entreprise (optionnel)",
+      "email": "Votre email",
+      "subject": "Sujet",
+      "message": "Votre message (optionnel)",
+      "submit": "Envoyer le message",
+      "success": "Message envoyé avec succès !",
+      "error": "Échec de l'envoi du message. Veuillez réessayer.",
+      "sending": "Envoi en cours..."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "question": "Avec quels matériaux pouvez-vous travailler ?",
+          "answer": "Notre équipement peut traiter la plupart des matériaux, y compris les matériaux haute température pour le moulage, les matériaux durables pour l'ingénierie de base, les matériaux biocompatibles et les matériaux artistiques avancés personnalisés."
+        },
+        {
+          "question": "Quelles sont vos capacités de tolérance ?",
+          "answer": "Nous gérons diverses exigences de précision. Par exemple, un canal microfluidique de 10 microns de diamètre intérieur est différent d'une finition de surface de 10 microns. Veuillez détailler vos exigences spécifiques dans votre message."
+        },
+        {
+          "question": "Gérez-vous les échanges de fichiers sécurisés ?",
+          "answer": "Oui, nous prenons en charge les échanges de fichiers sécurisés, y compris les NDA et les transferts de disques physiques. Veuillez mentionner vos exigences de sécurité dans votre message."
+        },
+        {
+          "question": "Quel est votre délai typique de projet ?",
+          "answer": "Les délais des projets varient selon la complexité et les exigences. Les prototypes simples peuvent être réalisés en 1-2 semaines, tandis que les systèmes complexes peuvent prendre plusieurs mois. Nous fournirons un calendrier détaillé lors de la consultation initiale."
+        },
+        {
+          "question": "Proposez-vous des services de conseil ?",
+          "answer": "Oui, nous fournissons des services de conseil pour la fabrication avancée, l'intégration robotique et le développement de jumeaux numériques. Notre équipe peut aider à optimiser vos processus existants ou concevoir de nouvelles solutions."
+        },
+        {
+          "question": "Quels secteurs servez-vous ?",
+          "answer": "Nous servons divers secteurs, notamment la biotechnologie, la santé, la fabrication de semi-conducteurs, l'aérospatial, l'automobile et les institutions de recherche. Chaque solution est adaptée aux exigences spécifiques du secteur."
+        }
+      ]
+    },
+    "teaser": {
+      "title": {
+        "main": "Collaborons.",
+        "sub": "Donnons vie à vos idées."
+      },
+      "description": "Que vous cherchiez à développer un nouveau produit, optimiser votre processus de fabrication ou intégrer une robotique avancée, nous sommes là pour vous aider. Notre équipe combine expertise en fabrication de précision, robotique et solutions numériques pour livrer des résultats qui dépassent les attentes.",
+      "cta": "Nous contacter"
+    }
+  },
+  "navigation": {
+    "company": {
+      "title": "Entreprise",
+      "items": {
+        "about": "À propos",
+        "blog": "Blog",
+        "contact": "Contact"
+      }
+    },
+    "legal": {
+      "title": "Mentions légales",
+      "items": {
+        "privacy": "Confidentialité",
+        "terms": "Conditions",
+        "cookies": "Cookies"
+      }
+    },
+    "social": {
+      "title": "Social",
+      "items": {
+        "twitter": "Twitter",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+      }
+    }
+  }
+}
