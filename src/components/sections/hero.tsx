@@ -24,6 +24,8 @@ interface HeroProps {
         primary: string;
         secondary: string;
       };
+      scroll: string;
+      swipe: string;
     };
   };
 }
@@ -54,7 +56,7 @@ export function Hero({ dictionary }: HeroProps) {
     <section className="relative min-h-screen pb-24">
       {/* Desktop Version */}
       <div className="container hidden h-[90vh] items-center md:flex">
-        <div className="mt-8 h-[75vh] w-full flex-col overflow-hidden rounded-3xl shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)] md:flex md:flex-row">
+        <div className="mt-24 h-[75vh] w-full flex-col overflow-hidden rounded-3xl shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)] md:flex md:flex-row">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -187,7 +189,7 @@ export function Hero({ dictionary }: HeroProps) {
                   ))}
                 </div>
                 <span className="text-xs font-light uppercase tracking-widest text-white/80">
-                  Swipe to explore
+                  {dictionary.hero.swipe}
                 </span>
               </div>
             </div>
@@ -198,13 +200,13 @@ export function Hero({ dictionary }: HeroProps) {
       {/* Scroll indicator - only show on desktop */}
       <div className="hidden md:block">
         <motion.div
-          className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2"
+          className="absolute bottom-4 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
           <span className="text-xs font-light uppercase tracking-widest text-foreground/50">
-            Scroll
+            {dictionary.hero.scroll}
           </span>
           <motion.div
             className="h-12 w-[1px] bg-foreground/20"

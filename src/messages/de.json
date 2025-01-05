@@ -44,7 +44,9 @@
         "title": "Unreal Engine Entwicklung.",
         "subtitle": "Visualisierung neu definiert."
       }
-    }
+    },
+    "scroll": "Scrollen",
+    "swipe": "Zum Erkunden scrollen"
   },
   "benefits": {
     "title": {
@@ -354,16 +356,21 @@
   },
   "blog": {
     "title": "Blog",
-    "subtitle": "Aktuelle Updates und Ankündigungen",
-    "error": {
-      "title": "Vorübergehend nicht verfügbar",
-      "description": "Wir haben Probleme beim Laden der neuesten Updates. Bitte versuchen Sie es später erneut."
-    },
+    "subtitle": "Aktuelle Einblicke und Updates",
+    "readMore": "Weiterlesen",
     "latest": {
       "title": "OWL auf der CES 2025",
       "excerpt": "Old World Labs präsentiert 'Agents as a Service'-Technologie, die KI-Agenten nahtlos in humanoide Roboter und virtuelle Umgebungen durch unser bahnbrechendes 'Replicants'-System integriert.",
       "link": "ces-2025-agents-as-a-service",
-      "date": "2025-01-07"
+      "date": "2025-01-01"
+    },
+    "posts": {
+      "ces-2025-agents-as-a-service": {
+        "title": "OWL auf der CES 2025: Integration von Agenten in humanoide Roboter und virtuelle Welten",
+        "excerpt": "Old World Labs präsentiert 'Agents as a Service'-Technologie, die KI-Agenten nahtlos in humanoide Roboter und virtuelle Umgebungen durch unser bahnbrechendes 'Replicants'-System integriert.",
+        "content": "<p>Old World Labs (OWL) freut sich, auf der CES 2025 seine revolutionäre \"Agents as a Service\"-Technologie vorzustellen, die eine nahtlose Integration in humanoide Roboter und virtuelle Umgebungen demonstriert. Diese bahnbrechende Innovation positioniert OWL an der Spitze des sich schnell entwickelnden agentengesteuerten Robotikmarktes und definiert das Potenzial der KI in physischen und digitalen Räumen neu.</p><h2>Erleben Sie die Zukunft der humanoiden Robotik und KI am Stand #8777</h2>...",
+        "date": "2025-01-01"
+      }
     }
   }
 }

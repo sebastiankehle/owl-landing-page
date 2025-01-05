@@ -27,6 +27,15 @@ interface AboutTeaserProps {
         link: string;
         date: string;
       };
+      readMore: string;
+      posts: {
+        [key: string]: {
+          title: string;
+          excerpt: string;
+          content: string;
+          date: string;
+        };
+      };
     };
   };
   lang: string;

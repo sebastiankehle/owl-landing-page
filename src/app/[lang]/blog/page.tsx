@@ -1,45 +1,32 @@
+import { blogPosts } from "@/data/blogPosts";
+import { getPostMetadata } from "@/lib/blog";
 import { getDictionary } from "@/app/[lang]/dictionaries";
-import { ClientTweetCard } from "@/components/ui/tweet-card";
-import { ErrorCard } from "@/components/ui/error-card";
-import { getLatestTweets } from "@/lib/twitter";
+import { BlogOverview } from "@/components/sections/blog/blog-overview";
 
 export default async function BlogPage({
   params,
 }: {
-  params: Promise<{ lang: string }>;
+  params: { lang: string };
 }) {
-  const { lang } = await params;
-  const dictionary = await getDictionary(lang);
-  const tweetIds = await getLatestTweets();
+  const dictionary = await getDictionary(params.lang);
+
+  // Only show posts that have a translation for the current language
+  const availablePosts = blogPosts.filter((post) =>
+    post.translations.includes(params.lang),
+  );
+
+  const postsWithMetadata = await Promise.all(
+    availablePosts.map(async (post) => ({
+      ...post,
+      metadata: await getPostMetadata(post.id, params.lang),
+    })),
+  );
 
   return (
-    <div className="container py-32">
-      <div className="mx-auto mb-32 max-w-3xl text-center">
-        <h1 className="text-3xl font-semibold sm:text-4xl">
-          {dictionary.blog.title}
-        </h1>
-        <p className="mt-6 text-lg text-muted-foreground">
-          {dictionary.blog.subtitle}
-        </p>
-      </div>
-
-      {tweetIds.length > 0 ? (
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {tweetIds.map((tweetId) => (
-            <ClientTweetCard
-              key={tweetId}
-              id={tweetId}
-              apiUrl={`https://api.twitter.com/2/tweets/${tweetId}`}
-              className="w-full"
-            />
-          ))}
-        </div>
-      ) : (
-        <ErrorCard
-          title={dictionary.blog.error.title}
-          description={dictionary.blog.error.description}
-        />
-      )}
-    </div>
+    <BlogOverview
+      posts={postsWithMetadata}
+      dictionary={dictionary}
+      lang={params.lang}
+    />
   );
 }

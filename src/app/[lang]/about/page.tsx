@@ -4,10 +4,11 @@ import { Story } from "@/components/sections/about/story";
 import { Timeline } from "@/components/sections/about/timeline";
 
 export default async function AboutPage({
-  params: { lang },
+  params,
 }: {
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }) {
+  const { lang } = await params;
   const dictionary = await getDictionary(lang);
 
   return (
