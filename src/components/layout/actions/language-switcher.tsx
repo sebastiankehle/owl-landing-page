@@ -20,6 +20,7 @@ const languages: Language[] = [
   { code: "en", name: "English" },
   { code: "de", name: "Deutsch" },
   { code: "es", name: "Español" },
+  { code: "ru", name: "Русский" },
   // Easy to add new languages:
   // { code: "fr", name: "Français" },
   // { code: "it", name: "Italiano" },
