@@ -123,11 +123,22 @@
       "quote": "Our mission is to empower people and organizations with intelligent systems that can operate in the real world and virtual environments alike.",
       "early": {
         "title": "From 3D Printing to AI",
-        "description": "Founded by Nick Liverman in 2012, Old World Labs began as a pioneer in ultra-precise 3D printing. Our journey started with a vision to create 3D printers of uncompromising precision, capable of satisfying the toughest industrial standards. This foundation in precision engineering led us to explore new frontiers in robotics and artificial intelligence."
+        "description": "Founded by Nick Liverman in 2012, Old World Labs began as a pioneer in ultra-precise 3D printing. Our journey started with a vision to create 3D printers of uncompromising precision, capable of satisfying the toughest industrial standards.",
+        "founder": {
+          "name": "About Nick Liverman",
+          "background": "Started making robots at age 12, beginning with computer scripts in online games that automated mining and item creation. This early experience sparked his fascination with converting digital objects into physical products.",
+          "vision": "When consumer 3D printers first emerged, Nick was captivated by the possibility of making 3D design accessible to everyone. After experiencing limitations with early consumer printers, he founded Old World Laboratories with the mission to manufacture printers meeting the most stringent industrial standards.",
+          "link": "https://hartleynbarnes.wordpress.com/about-us/nick-liverman/",
+          "learnMore": "Learn more about Nick Liverman"
+        }
       },
       "journey": {
         "title": "Shaping Tomorrow",
         "description": "Today, Old World Labs leads the charge in integrating intelligent agents into humanoid robots and virtual worlds. Our groundbreaking 'Replicants' technology combines AI-driven reasoning with resource-aware robotics, setting new benchmarks for sustainable and scalable automation. By merging cutting-edge AI with real-world applications, we continue to redefine what's possible in both physical and digital realms."
+      },
+      "current": {
+        "title": "Integrating Agents into Robotics",
+        "description": "At CES 2025, Old World Labs is showcasing its 'Agents as a Service' technology, integrating AI into humanoid robots and virtual worlds. This innovation redefines AI's role in both physical and digital spaces."
       }
     },
     "timeline": {
@@ -144,72 +155,161 @@
         {
           "year": "2013",
           "title": "Patents Submitted",
-          "details": ["Initial patent applications filed"]
+          "details": [
+            "Initial patent applications filed for stereolithography system",
+            "Multi-wavelength laser system with optical trapping",
+            "Dynamic beam focusing and real-time monitoring"
+          ],
+          "links": [
+            {
+              "url": "https://patents.justia.com/patent/20150183168",
+              "title": "Patent Application 20150183168"
+            }
+          ]
         },
         {
           "year": "2014",
-          "title": "Ultra Precision 3D Printer",
-          "details": ["Patent pending", "First showcase at CES"]
+          "title": "OWL Nano Debut at CES",
+          "details": [
+            "Old World Labs introduced the OWL Nano printer at CES 2014",
+            "The OWL Nano is a stereolithographic printer using liquid resin solidified by a laser",
+            "Features a single strand laser beam for minimal distortion",
+            "Capable of SLA printing at an incredible 0.1 micron layer height",
+            "Positioned as a strong competitor to the Formlabs Form1 printer",
+            "Patent pending for the innovative technology",
+            "First dedicated 3D printing area at CES featuring OWL alongside industry leaders"
+          ],
+          "links": [
+            {
+              "url": "https://makezine.com/article/digital-fabrication/3d-printing-workshop/the-state-of-3d-printing-and-scanning-after-ces-2014-the-push-for-mainstreaming-begins/",
+              "title": "Makezine CES 2014 Coverage"
+            },
+            {
+              "url": "https://americanlibrariesmagazine.org/blogs/the-scoop/3d-printing-at-ces-2014/",
+              "title": "American Libraries Magazine CES 2014 Coverage"
+            }
+          ]
         },
         {
           "year": "2015",
-          "title": "MC Printer Line Unveiled",
-          "details": ["Debut at CES 2015"]
+          "title": "MC Printer Line & Patents",
+          "details": [
+            "Introduction of MC-1 and MC-2 SLA printers at CES 2015",
+            "Revolutionary 100 nanometer resolution using two-photon polymerization",
+            "Launch of subscription-based printer service model",
+            "Used by NASA, Stanford, and other leading institutions",
+            "MC-1: High-precision nano-scale photo fabrication device, built by hand in USA",
+            "MC-2: Advanced control board with multiple upgraded lasers for new materials",
+            "250x the resolution of other 3D printers in the industry",
+            "Collaboration with US Department of Defense and Integrated Photonics Institute",
+            "Subscription model allowing hardware upgrades as technology evolves",
+            "Patents granted for advanced stereolithography system with multi-wavelength laser and optical trapping"
+          ],
+          "links": [
+            {
+              "url": "https://www.biospace.com/b-old-world-labs-b-unveils-new-range-of-professional-grade-3d-printers",
+              "title": "BioSpace CES 2015 Coverage"
+            },
+            {
+              "url": "https://patents.justia.com/patent/10086566",
+              "title": "US Patent 10,086,566"
+            },
+            {
+              "url": "https://patents.justia.com/patent/20150183168",
+              "title": "Patent Application 20150183168"
+            }
+          ]
         },
         {
           "year": "2016",
           "title": "Product Maturity",
           "details": [
-            "CES 2016",
-            "Artificial Lung Project",
-            "Venostent Project"
+            "Showcase at CES 2016 with MC-2 high-end industrial printer",
+            "Price range $100,000 to $250,000 reflecting industrial capabilities",
+            "Artificial Lung Project: Collaboration with VA Ann Arbor to develop 3D-printed microfluidic artificial lungs",
+            "Pioneering high-resolution 3D polymer printing for blood flow networks",
+            "Venostent Project: Development of bioengineered vascular support for dialysis access",
+            "Focus on improving outcomes for Veterans with respiratory diseases and kidney failure"
+          ],
+          "links": [
+            {
+              "url": "https://www.research.va.gov/currents/0818-Researchers-strive-to-make-3D-printed-artificial-lung-to-help-Vets-with-respiratory-disease.cfm",
+              "title": "VA Research: Artificial Lung Project"
+            },
+            {
+              "url": "https://www.venostent.com/",
+              "title": "Venostent Project"
+            }
           ]
         },
         {
           "year": "2017",
           "title": "Patent Granted",
           "details": [
-            "Patent for production of 3D objects by stereolithography"
+            "Patent granted for production of 3D objects by stereolithography",
+            "US Patent 10,086,566 for advanced stereolithography system",
+            "Includes multi-wavelength laser and optical trapping technology"
+          ],
+          "links": [
+            {
+              "url": "https://patents.justia.com/patent/10086566",
+              "title": "US Patent 10,086,566"
+            }
           ]
         },
         {
           "year": "2018",
-          "title": "Major Milestones",
+          "title": "Advanced Research",
           "details": [
-            "Publication on High Volume Manufacturing Technology: SPIE Advanced Lithography",
-            "Department of Veterans Affairs Contract",
-            "Recognition by National Institute of Standards & Technology",
-            "Begin mass production of clear aligners for dental industry"
+            "Continued development of wearable artificial lung prototype",
+            "Collaboration with VA Ann Arbor Healthcare System on microfluidic lung design",
+            "Prototype sized to fit in backpack/waist pack with >1 week operational time",
+            "First use of high-resolution 3D polymer printing for functional microfluidic lungs",
+            "Development of biocompatible coating to prevent immune rejection",
+            "Focus on COPD treatment and respiratory support for veterans"
+          ],
+          "links": [
+            {
+              "url": "https://copdnewstoday.com/2018/10/09/va-researchers-developing-3d-printed-artificial-lung-for-copd/",
+              "title": "COPD News: VA Artificial Lung Development"
+            }
           ]
-        },
-        {
-          "year": "2019",
-          "title": "Manufacturing Evolution",
-          "details": [
-            "Fully Automated Manufacturing Line",
-            "Partnership Clear Forward",
-            "Contract with VersAbility for mass production in ISO Certified clean room"
-          ]
-        },
-        {
-          "year": "2020",
-          "title": "Digital Twins Experiments",
-          "details": ["Development of digital worlds using Unreal Engine 5"]
         },
         {
           "year": "2021",
-          "title": "Abyss Online",
+          "title": "Digital Entertainment",
           "details": [
-            "Integration of cutting edge research into entertainment: www.abyssonline.com"
+            "Expansion into game development with Abyss Online MMORPG",
+            "Development of a rich, community-driven virtual world",
+            "Implementation of advanced 3D modeling and simulation technology",
+            "Creation of eight distinct biomes with unique cultures and environments",
+            "Focus on player-driven economy and crafting systems",
+            "Integration of high-precision 3D technology expertise into game development"
+          ],
+          "links": [
+            {
+              "url": "https://www.abyssonline.com/",
+              "title": "Abyss Online Official Website"
+            }
           ]
         },
         {
           "year": "2025",
-          "title": "Replicants Technology",
+          "title": "Integrating Agents into Robotics",
           "details": [
-            "Debut of self-replicating agent system",
-            "Integration of AI agents into humanoid robots",
-            "Unified presence across physical and digital realms"
+            "Unveiled 'Agents as a Service' technology at CES 2025",
+            "Seamless integration into humanoid robots and virtual environments",
+            "AI agents inhabit and operate humanoid robots, adapting to 3D environments",
+            "Unified AI presence across physical and digital realms with 'Replicants' system",
+            "Replicants technology combines AI-driven reasoning with resource-aware robotics",
+            "Empowers humanoid robots to function as intelligent, autonomous entities",
+            "Bridges the gap between physical robotics and immersive digital experiences"
+          ],
+          "links": [
+            {
+              "url": "https://www.oldworldlabs.com",
+              "title": "Old World Labs Official Website"
+            }
           ]
         }
       ]

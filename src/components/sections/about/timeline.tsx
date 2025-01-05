@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { InView } from "@/components/ui/in-view";
+import { ExternalLink } from "lucide-react";
 
 interface TimelineProps {
   dictionary: {
@@ -15,6 +16,10 @@ interface TimelineProps {
         year: string;
         title: string;
         details: string[];
+        links?: Array<{
+          url: string;
+          title: string;
+        }>;
       }>;
     };
   };
@@ -110,6 +115,27 @@ export function Timeline({ dictionary }: TimelineProps) {
                       ))}
                     </div>
                   </div>
+
+                  {event.links && (
+                    <div
+                      className={`mt-4 flex flex-col gap-2 ${
+                        index % 2 === 0 ? "sm:items-end" : "sm:items-start"
+                      }`}
+                    >
+                      {event.links.map((link, i) => (
+                        <a
+                          key={i}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+                        >
+                          {link.title}
+                          <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
 

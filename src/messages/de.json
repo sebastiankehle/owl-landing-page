@@ -123,11 +123,22 @@
       "quote": "Unsere Mission ist es, Menschen und Organisationen mit intelligenten Systemen auszustatten, die sowohl in der realen Welt als auch in virtuellen Umgebungen funktionieren.",
       "early": {
         "title": "Vom 3D-Druck zur KI",
-        "description": "Old World Labs, 2012 von Nick Liverman gegründet, begann als Pionier im ultrapräzisen 3D-Druck. Unsere Reise begann mit der Vision, 3D-Drucker von kompromissloser Präzision zu entwickeln, die den höchsten industriellen Standards gerecht werden. Diese Grundlage in der Präzisionstechnik führte uns zur Erforschung neuer Grenzen in Robotik und künstlicher Intelligenz."
+        "description": "Old World Labs, 2012 von Nick Liverman gegründet, begann als Pionier im ultrapräzisen 3D-Druck. Unsere Reise begann mit der Vision, 3D-Drucker von kompromissloser Präzision zu entwickeln.",
+        "founder": {
+          "name": "Über Nick Liverman",
+          "background": "Begann im Alter von 12 Jahren mit der Entwicklung von Robotern, zunächst mit Computerskripten in Online-Spielen zur Automatisierung von Mining und Itemerstellung. Diese frühe Erfahrung weckte seine Faszination für die Umwandlung digitaler Objekte in physische Produkte.",
+          "vision": "Als die ersten Consumer-3D-Drucker aufkamen, war Nick fasziniert von der Möglichkeit, 3D-Design für jeden zugänglich zu machen. Nach Erfahrungen mit den Limitierungen früher Consumer-Drucker gründete er Old World Laboratories mit der Mission, Drucker zu entwickeln, die höchsten industriellen Standards entsprechen.",
+          "link": "https://hartleynbarnes.wordpress.com/about-us/nick-liverman/",
+          "learnMore": "Mehr über Nick Liverman erfahren"
+        }
       },
       "journey": {
         "title": "Die Zukunft gestalten",
         "description": "Heute ist Old World Labs führend bei der Integration intelligenter Agenten in humanoide Roboter und virtuelle Welten. Unsere bahnbrechende 'Replicants'-Technologie verbindet KI-gesteuerte Logik mit ressourcenbewusster Robotik und setzt neue Maßstäbe für nachhaltige und skalierbare Automation. Durch die Verschmelzung modernster KI mit realen Anwendungen definieren wir weiterhin die Grenzen des Möglichen in physischen und digitalen Bereichen neu."
+      },
+      "current": {
+        "title": "Integration von Agenten in die Robotik",
+        "description": "Auf der CES 2025 präsentiert Old World Labs seine 'Agents as a Service'-Technologie, die KI in humanoide Roboter und virtuelle Welten integriert. Diese Innovation definiert die Rolle der KI in physischen und digitalen Räumen neu."
       }
     },
     "timeline": {
@@ -144,42 +155,124 @@
         {
           "year": "2013",
           "title": "Patentanmeldungen",
-          "details": ["Erste Patentanmeldungen eingereicht"]
+          "details": [
+            "Erste Patentanmeldungen für Stereolithographie-System eingereicht",
+            "Mehrwellenlängen-Lasersystem mit optischer Fixierung",
+            "Dynamische Strahlfokussierung und Echtzeit-Überwachung"
+          ],
+          "links": [
+            {
+              "url": "https://patents.justia.com/patent/20150183168",
+              "title": "Patentanmeldung 20150183168"
+            }
+          ]
         },
         {
           "year": "2014",
-          "title": "Ultrapräzisions-3D-Drucker",
-          "details": ["Patent angemeldet", "Erste Präsentation auf der CES"]
+          "title": "OWL Nano Debüt auf der CES",
+          "details": [
+            "Old World Labs stellte den OWL Nano Drucker auf der CES 2014 vor",
+            "Der OWL Nano ist ein stereolithografischer Drucker, der flüssiges Harz mit einem Laser verfestigt",
+            "Verfügt über einen Einzelstrahl-Laser für minimale Verzerrung",
+            "Ermöglicht SLA-Drucke mit einer unglaublichen Schichthöhe von 0,1 Mikron",
+            "Positioniert als starker Konkurrent zum Formlabs Form1 Drucker",
+            "Patent für die innovative Technologie angemeldet",
+            "Erster dedizierter 3D-Druck-Bereich auf der CES mit OWL neben Branchenführern"
+          ],
+          "links": [
+            {
+              "url": "https://makezine.com/article/digital-fabrication/3d-printing-workshop/the-state-of-3d-printing-and-scanning-after-ces-2014-the-push-for-mainstreaming-begins/",
+              "title": "Makezine CES 2014 Bericht"
+            },
+            {
+              "url": "https://americanlibrariesmagazine.org/blogs/the-scoop/3d-printing-at-ces-2014/",
+              "title": "American Libraries Magazine CES 2014 Bericht"
+            }
+          ]
         },
         {
           "year": "2015",
-          "title": "MC Drucker-Serie vorgestellt",
-          "details": ["Premiere auf der CES 2015"]
+          "title": "MC Drucker-Serie & Patente",
+          "details": [
+            "Einführung der MC-1 und MC-2 SLA-Drucker auf der CES 2015",
+            "Revolutionäre 100-Nanometer-Auflösung durch Zwei-Photonen-Polymerisation",
+            "Einführung eines Abonnement-basierten Druckerservice-Modells",
+            "Eingesetzt von NASA, Stanford und anderen führenden Institutionen",
+            "MC-1: Hochpräzise Nano-Skala-Photofabrikationsgerät, handgefertigt in den USA",
+            "MC-2: Fortschrittliche Steuerplatine mit mehreren verbesserten Lasern für neue Materialien",
+            "250-fache Auflösung im Vergleich zu anderen 3D-Druckern der Branche",
+            "Zusammenarbeit mit US-Verteidigungsministerium und Integrated Photonics Institute",
+            "Abonnementmodell ermöglicht Hardware-Upgrades mit der Technologieentwicklung",
+            "Patente erteilt für fortschrittliches Stereolithographie-System mit Mehrwellenlängen-Laser und optischer Fixierung"
+          ],
+          "links": [
+            {
+              "url": "https://www.biospace.com/b-old-world-labs-b-unveils-new-range-of-professional-grade-3d-printers",
+              "title": "BioSpace CES 2015 Bericht"
+            },
+            {
+              "url": "https://patents.justia.com/patent/10086566",
+              "title": "US Patent 10,086,566"
+            },
+            {
+              "url": "https://patents.justia.com/patent/20150183168",
+              "title": "Patentanmeldung 20150183168"
+            }
+          ]
         },
         {
           "year": "2016",
           "title": "Produktreife",
           "details": [
-            "CES 2016",
-            "Künstliche Lungen-Projekt",
-            "Venostent-Projekt"
+            "Präsentation auf der CES 2016 mit MC-2 High-End-Industriedrucker",
+            "Preisbereich 100.000 bis 250.000 USD entsprechend industrieller Fähigkeiten",
+            "Künstliche Lungen-Projekt: Zusammenarbeit mit VA Ann Arbor zur Entwicklung 3D-gedruckter mikrofluidischer künstlicher Lungen",
+            "Wegweisender hochauflösender 3D-Polymerdruck für Blutflussnetzwerke",
+            "Venostent-Projekt: Entwicklung biomedizinischer Gefäßunterstützung für Dialysezugänge",
+            "Fokus auf verbesserte Ergebnisse für Veteranen mit Atemwegs- und Nierenerkrankungen"
+          ],
+          "links": [
+            {
+              "url": "https://www.research.va.gov/currents/0818-Researchers-strive-to-make-3D-printed-artificial-lung-to-help-Vets-with-respiratory-disease.cfm",
+              "title": "VA Research: Künstliche Lungen-Projekt"
+            },
+            {
+              "url": "https://www.venostent.com/",
+              "title": "Venostent-Projekt"
+            }
           ]
         },
         {
           "year": "2017",
           "title": "Patent erteilt",
           "details": [
-            "Patent für die Produktion von 3D-Objekten durch Stereolithographie"
+            "Patent für die Produktion von 3D-Objekten durch Stereolithographie erteilt",
+            "US Patent 10,086,566 für fortschrittliches Stereolithographie-System",
+            "Beinhaltet Mehrwellenlängen-Laser und optische Fixierungstechnologie"
+          ],
+          "links": [
+            {
+              "url": "https://patents.justia.com/patent/10086566",
+              "title": "US Patent 10,086,566"
+            }
           ]
         },
         {
           "year": "2018",
-          "title": "Wichtige Meilensteine",
+          "title": "Fortgeschrittene Forschung",
           "details": [
-            "Publikation zur Hochvolumen-Fertigungstechnologie: SPIE Advanced Lithography",
-            "Vertrag mit dem Department of Veterans Affairs",
-            "Anerkennung durch das National Institute of Standards & Technology",
-            "Beginn der Massenproduktion von Clear Alignern für die Dentalindustrie"
+            "Weiterentwicklung des tragbaren künstlichen Lungen-Prototyps",
+            "Zusammenarbeit mit VA Ann Arbor Healthcare System bei mikrofluidischem Lungendesign",
+            "Prototyp in Rucksack-/Hüfttaschengröße mit >1 Woche Betriebszeit",
+            "Erstmalige Verwendung von hochauflösendem 3D-Polymerdruck für funktionale mikrofluidische Lungen",
+            "Entwicklung biokompatible Beschichtung zur Verhinderung von Immunabstoßung",
+            "Fokus auf COPD-Behandlung und Atemwegsunterstützung für Veteranen"
+          ],
+          "links": [
+            {
+              "url": "https://copdnewstoday.com/2018/10/09/va-researchers-developing-3d-printed-artificial-lung-for-copd/",
+              "title": "COPD News: Entwicklung künstlicher Lungen durch VA"
+            }
           ]
         },
         {
@@ -187,8 +280,17 @@
           "title": "Entwicklung der Fertigung",
           "details": [
             "Vollautomatische Fertigungslinie",
-            "Partnerschaft Clear Forward",
+            "Strategische Partnerschaft mit Clear Forward für Dental-Aligner-Produktion",
+            "Entwicklung maßgeschneiderter Behandlungsplanungslösungen für Dentallabore",
+            "Implementierung der Treatment Plan Optimization™ Technologie",
+            "Ausbau der globalen Aligner-Fertigungskapazitäten",
             "Vertrag mit VersAbility für Massenproduktion im ISO-zertifizierten Reinraum"
+          ],
+          "links": [
+            {
+              "url": "https://www.clear-forward.com/",
+              "title": "Clear Forward Partnerschaft"
+            }
           ]
         },
         {
@@ -198,18 +300,39 @@
         },
         {
           "year": "2021",
-          "title": "Abyss Online",
+          "title": "Digitale Unterhaltung",
           "details": [
-            "Integration modernster Forschungsprojekte in Unterhaltungsmedien: www.abyssonline.com"
+            "Expansion in die Spieleentwicklung mit Abyss Online MMORPG",
+            "Entwicklung einer reichhaltigen, community-getriebenen virtuellen Welt",
+            "Implementierung fortschrittlicher 3D-Modellierungs- und Simulationstechnologie",
+            "Erschaffung von acht verschiedenen Biomen mit einzigartigen Kulturen und Umgebungen",
+            "Fokus auf spielergesteuerter Wirtschaft und Crafting-Systemen",
+            "Integration von Hochpräzisions-3D-Technologie-Expertise in die Spieleentwicklung"
+          ],
+          "links": [
+            {
+              "url": "https://www.abyssonline.com/",
+              "title": "Abyss Online Offizielle Website"
+            }
           ]
         },
         {
           "year": "2025",
-          "title": "Replicants-Technologie",
+          "title": "Integration von Agenten in die Robotik",
           "details": [
-            "Debüt des selbstreplizierenden Agentensystems",
-            "Integration von KI-Agenten in humanoide Roboter",
-            "Einheitliche Präsenz in physischen und digitalen Welten"
+            "Vorstellung der 'Agents as a Service'-Technologie auf der CES 2025",
+            "Nahtlose Integration in humanoide Roboter und virtuelle Umgebungen",
+            "KI-Agenten bewohnen und steuern humanoide Roboter, Anpassung an 3D-Umgebungen",
+            "Einheitliche KI-Präsenz in physischen und digitalen Bereichen mit 'Replicants'-System",
+            "Replicants-Technologie kombiniert KI-gesteuertes Denken mit ressourcenbewusster Robotik",
+            "Ermöglicht humanoiden Robotern, als intelligente, autonome Einheiten zu agieren",
+            "Überbrückt die Lücke zwischen physischer Robotik und immersiven digitalen Erlebnissen"
+          ],
+          "links": [
+            {
+              "url": "https://www.oldworldlabs.com",
+              "title": "Old World Labs Offizielle Website"
+            }
           ]
         }
       ]
