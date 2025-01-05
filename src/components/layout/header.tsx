@@ -23,7 +23,7 @@ export function Header({ dictionary }: HeaderProps) {
   return (
     <header className="fixed left-0 right-0 top-2 z-50">
       <div className="container">
-        <div className="rounded-full bg-background/90 backdrop-blur-md backdrop-saturate-150 supports-[backdrop-filter]:bg-background/90">
+        <div className="rounded-full bg-background/80 backdrop-blur-md backdrop-saturate-150 supports-[backdrop-filter]:bg-background/80">
           <div className="mx-auto px-4">
             <div className="grid h-12 grid-cols-[10rem,1fr,10rem] items-center">
               <div>

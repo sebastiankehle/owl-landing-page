@@ -19,8 +19,8 @@
   },
   "hero": {
     "title": {
-      "main": "Ultra-Precise Engineering.",
-      "sub": "For industry leaders."
+      "main": "Our Services.",
+      "sub": "Precision meets innovation."
     },
     "subtitle": "Advanced manufacturing solutions combining ultra-precise 3D printing, robotics, and Unreal Engine visualization. Setting new standards in precision and automation.",
     "cta": {
@@ -103,26 +103,6 @@
       "semiconductor": "View Details",
       "aerospace": "Explore More",
       "research": "Read More"
-    }
-  },
-  "services": {
-    "title": {
-      "main": "Our Core Services.",
-      "sub": "Precision meets innovation."
-    },
-    "items": {
-      "additive": {
-        "title": "Advanced Additive Solutions",
-        "description": "Ultra-precise 3D printing and additive manufacturing for industrial applications"
-      },
-      "robotics": {
-        "title": "Robotics & Automation",
-        "description": "Advanced control systems and precision robotics for industrial automation"
-      },
-      "unreal": {
-        "title": "Unreal Engine Development",
-        "description": "Custom game development and interactive experiences powered by Unreal Engine"
-      }
     }
   },
   "footer": {

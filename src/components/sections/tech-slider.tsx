@@ -42,8 +42,8 @@ const technologies = [
 
 export function TechSlider() {
   return (
-    <div className="py-10 lg:py-24">
-      <InfiniteSlider duration={120} durationOnHover={240} className="py-8">
+    <div className="mb-8 py-10 lg:py-24">
+      <InfiniteSlider duration={120} durationOnHover={240}>
         {[...technologies, ...technologies, ...technologies].map(
           ({ icon: Icon, name, href }, index) => (
             <a

@@ -19,8 +19,8 @@
   },
   "hero": {
     "title": {
-      "main": "Ultrapräzise Technologie.",
-      "sub": "Für Industrieführer."
+      "main": "Unsere Services.",
+      "sub": "Präzision trifft Innovation."
     },
     "subtitle": "Fortschrittliche Fertigungslösungen, die ultrapräzisen 3D-Druck, Robotik und Unreal Engine Visualisierung vereinen. Neue Maßstäbe in Präzision und Automation.",
     "cta": {
@@ -103,26 +103,6 @@
       "semiconductor": "Details ansehen",
       "aerospace": "Erkunden",
       "research": "Weiterlesen"
-    }
-  },
-  "services": {
-    "title": {
-      "main": "Unsere Kernkompetenzen.",
-      "sub": "Präzision trifft Innovation."
-    },
-    "items": {
-      "additive": {
-        "title": "Advanced Additive Solutions",
-        "description": "Ultrapräziser 3D-Druck und additive Fertigung für industrielle Anwendungen"
-      },
-      "robotics": {
-        "title": "Robotik & Automation",
-        "description": "Fortschrittliche Steuerungssysteme und Präzisionsrobotik für industrielle Automation"
-      },
-      "unreal": {
-        "title": "Unreal Engine Development",
-        "description": "Individuelle Spieleentwicklung und interaktive Erlebnisse mit Unreal Engine"
-      }
     }
   },
   "footer": {
