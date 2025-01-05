@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import type { BlogPost } from "@/data/blogPosts";
 import type { PostMetadata } from "@/lib/blog";
 
@@ -33,12 +32,7 @@ export function BlogOverview({ posts, dictionary, lang }: BlogOverviewProps) {
         </h1>
 
         {/* Latest Post */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="relative mt-8 overflow-hidden rounded-3xl bg-background shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]"
-        >
+        <div className="relative mt-8 overflow-hidden rounded-3xl bg-background shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]">
           {posts[0] && (
             <Link
               href={`/${lang}/blog/${posts[0].date.split("-").slice(0, 2).join("/")}/${posts[0].id}`}
@@ -75,23 +69,17 @@ export function BlogOverview({ posts, dictionary, lang }: BlogOverviewProps) {
               </div>
             </Link>
           )}
-        </motion.div>
+        </div>
 
         {/* More Posts Grid */}
         <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {posts.slice(1).map((post) => (
-            <motion.div
+            <div
               key={post.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
               className="overflow-hidden rounded-3xl bg-background shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]"
             >
               <Link
-                href={`/${lang}/blog/${post.date
-                  .split("-")
-                  .slice(0, 2)
-                  .join("/")}/${post.id}`}
+                href={`/${lang}/blog/${post.date.split("-").slice(0, 2).join("/")}/${post.id}`}
                 className="group block"
               >
                 <div className="relative aspect-[16/10]">
@@ -124,7 +112,7 @@ export function BlogOverview({ posts, dictionary, lang }: BlogOverviewProps) {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
