@@ -99,7 +99,7 @@ export function AboutTeaser({ dictionary, lang }: AboutTeaserProps) {
               {dictionary.blog.latest.excerpt}
             </p>
             <Link
-              href={`/${lang}/blog/${dictionary.blog.latest.link}`}
+              href={`/${lang}/blog/${dictionary.blog.latest.date.split("-").slice(0, 2).join("/")}/${dictionary.blog.latest.link}`}
               className="group inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               {dictionary.about.teaser.readMore}
