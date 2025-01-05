@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils";
 export default async function BlogPost({
   params,
 }: {
-  params: { lang: string; year: string; month: string; slug: string };
+  params: Promise<{ lang: string; year: string; month: string; slug: string }>;
 }) {
-  const { lang, slug } = params;
+  const { lang, slug } = await params;
   const post = blogPosts.find((p) => p.id === slug);
 
   if (!post) {

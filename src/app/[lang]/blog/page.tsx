@@ -6,19 +6,20 @@ import { BlogOverview } from "@/components/sections/blog/blog-overview";
 export default async function BlogPage({
   params,
 }: {
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }) {
-  const dictionary = await getDictionary(params.lang);
+  const { lang } = await params;
+  const dictionary = await getDictionary(lang);
 
   // Only show posts that have a translation for the current language
   const availablePosts = blogPosts.filter((post) =>
-    post.translations.includes(params.lang),
+    post.translations.includes(lang),
   );
 
   const postsWithMetadata = await Promise.all(
     availablePosts.map(async (post) => ({
       ...post,
-      metadata: await getPostMetadata(post.id, params.lang),
+      metadata: await getPostMetadata(post.id, lang),
     })),
   );
 
@@ -26,7 +27,7 @@ export default async function BlogPage({
     <BlogOverview
       posts={postsWithMetadata}
       dictionary={dictionary}
-      lang={params.lang}
+      lang={lang}
     />
   );
 }
