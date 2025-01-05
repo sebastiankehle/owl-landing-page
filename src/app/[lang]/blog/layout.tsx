@@ -4,15 +4,15 @@ import { getDictionary } from "@/app/[lang]/dictionaries";
 
 interface BlogLayoutProps {
   children: ReactNode;
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }
 
 export default async function BlogLayout({
   children,
   params,
 }: BlogLayoutProps) {
-  const dictionary = await getDictionary(params.lang);
-
+  const { lang } = await params;
+  const dictionary = await getDictionary(lang);
   return (
     <div className="container py-24">
       <div className="grid gap-8 md:grid-cols-[1fr_300px]">
