@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/hero";
 import { TechSlider } from "@/components/sections/tech-slider";
 import { Benefits } from "@/components/sections/benefits";
 import { Industries } from "@/components/sections/industries";
+import { AboutTeaser } from "@/components/sections/about-teaser";
 
 export default async function Home({
   params,
@@ -17,6 +18,7 @@ export default async function Home({
       <Hero dictionary={dictionary} />
       <TechSlider />
       <Benefits dictionary={dictionary} />
+      <AboutTeaser dictionary={dictionary} lang={lang} />
       <Industries dictionary={dictionary} />
     </div>
   );
