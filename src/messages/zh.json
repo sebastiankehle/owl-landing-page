@@ -1,0 +1,402 @@
+{
+  "header": {
+    "logo": "Old World Labs",
+    "nav": {
+      "home": "首页",
+      "about": "关于我们",
+      "blog": "博客",
+      "contact": "联系我们"
+    },
+    "actions": {
+      "getQuote": "获取报价"
+    }
+  },
+  "mobile": {
+    "getInTouch": {
+      "title": "联系我们",
+      "description": "让我们讨论您的下一个项目，将您的想法变为现实。"
+    }
+  },
+  "hero": {
+    "title": {
+      "main": "我们的服务.",
+      "sub": "精密与创新的结合."
+    },
+    "subtitle": "结合超精密3D打印、机器人技术和虚幻引擎可视化的先进制造解决方案。为精密性和自动化设立新标准。",
+    "cta": {
+      "primary": "探索解决方案",
+      "secondary": "联系我们"
+    },
+    "network": {
+      "title": "智能系统",
+      "subtitle": "精密与数字创新的交汇点"
+    },
+    "slides": {
+      "first": {
+        "title": "先进增材解决方案.",
+        "subtitle": "微观尺度的超精密."
+      },
+      "second": {
+        "title": "机器人技术与自动化.",
+        "subtitle": "精密遇见效率."
+      },
+      "third": {
+        "title": "虚幻引擎开发.",
+        "subtitle": "可视化重新定义."
+      }
+    },
+    "scroll": "滚动",
+    "swipe": "滑动浏览"
+  },
+  "benefits": {
+    "title": {
+      "main": "为什么选择Old World Labs.",
+      "sub": "树立精密性新标准."
+    },
+    "items": {
+      "innovation": {
+        "title": "先进制造与技术",
+        "description": "超精密3D打印结合虚幻引擎可视化和机器人技术。从原型到生产，一体化解决方案。"
+      },
+      "integration": {
+        "title": "集成解决方案",
+        "description": "将您的自动化系统整合为高效工作流程。我们的系统方法帮助优化复杂流程。"
+      },
+      "precision": {
+        "title": "可靠网络",
+        "description": "与值得信赖的合作伙伴合作，确保及时交付解决方案。我们的网络确保任何规模项目的一致质量。"
+      }
+    }
+  },
+  "industries": {
+    "title": {
+      "main": "服务行业.",
+      "sub": "量身定制的解决方案."
+    },
+    "items": {
+      "biotech": {
+        "title": "生物技术",
+        "description": "生物技术研发的精密解决方案."
+      },
+      "semiconductor": {
+        "title": "半导体",
+        "description": "半导体行业的先进制造."
+      },
+      "aerospace": {
+        "title": "航空航天",
+        "description": "航空航天应用的高精度组件."
+      },
+      "automotive": {
+        "title": "汽车",
+        "description": "汽车制造的自动化解决方案."
+      },
+      "research": {
+        "title": "研究机构",
+        "description": "研究机构的先进工具."
+      },
+      "healthcare": {
+        "title": "医疗设备",
+        "description": "医疗设备的精密制造."
+      }
+    },
+    "cta": {
+      "primary": "探索解决方案",
+      "secondary": "联系我们"
+    }
+  },
+  "contact": {
+    "title": {
+      "main": "联系我们.",
+      "sub": "讨论您的项目."
+    },
+    "form": {
+      "name": "姓名",
+      "company": "公司（可选）",
+      "email": "电子邮件",
+      "subject": "主题",
+      "message": "消息（可选）",
+      "submit": "提交",
+      "success": "消息已发送！",
+      "error": "发送失败。请重试。",
+      "sending": "发送中..."
+    },
+    "faq": {
+      "title": "常见问题",
+      "items": [
+        {
+          "question": "您可以处理哪些材料？",
+          "answer": "我们的设备可以处理大多数材料，包括高温铸造材料、基础工程材料、生物相容性材料和特种艺术材料。"
+        },
+        {
+          "question": "公差能力如何？",
+          "answer": "我们可以满足各种精度要求。例如，10微米内径的微流体通道与10微米表面光洁度是不同的。请在消息中说明您的具体要求。"
+        },
+        {
+          "question": "您是否支持安全文件传输？",
+          "answer": "是的，我们支持安全文件传输，包括NDA和物理介质传输。请在消息中说明您的安全要求。"
+        },
+        {
+          "question": "典型项目周期是多长？",
+          "answer": "项目周期取决于复杂性和要求。简单原型可能需要1-2周，复杂系统可能需要数月。我们将在初次咨询时提供详细时间表。"
+        },
+        {
+          "question": "您是否提供咨询服务？",
+          "answer": "是的，我们提供先进制造、机器人集成和数字孪生开发的咨询服务。我们可以帮助优化现有流程或开发新解决方案。"
+        },
+        {
+          "question": "您服务哪些行业？",
+          "answer": "我们服务于生物技术、医疗、半导体制造、航空航天、汽车和研究机构等多个领域。每个解决方案都根据行业特定要求定制。"
+        }
+      ]
+    },
+    "teaser": {
+      "title": {
+        "main": "让我们合作.",
+        "sub": "实现您的想法."
+      },
+      "description": "无论您是想开发新产品、优化制造流程还是集成先进机器人技术，我们都能提供帮助。我们的团队结合精密制造、机器人技术和数字解决方案的专业知识，提供超出期望的结果。",
+      "cta": "联系我们"
+    }
+  },
+  "footer": {
+    "nav": {
+      "home": "首页",
+      "about": "关于我们",
+      "blog": "博客",
+      "contact": "联系我们"
+    },
+    "copyright": "© 2024 Old World Labs. 保留所有权利。"
+  },
+  "about": {
+    "story": {
+      "title": {
+        "main": "我们的故事.",
+        "sub": "有目标的创新."
+      },
+      "quote": "创新区分领导者和追随者.",
+      "early": {
+        "title": "从3D打印到AI",
+        "description": "Old World Labs由Nick Liverman于2012年创立，作为超精密3D打印的先驱起步。我们的旅程始于一个愿景：打造一台能满足最严格工业标准的无妥协精密3D打印机。",
+        "founder": {
+          "name": "关于Nick Liverman",
+          "background": "12岁开始制作机器人，从编写计算机脚本自动化在线游戏中的采矿和物品制作开始。这些早期经验激发了他将数字对象转化为物理产品的兴趣。",
+          "vision": "当第一批消费级3D打印机出现时，Nick被让3D设计人人可及的可能性所吸引。在经历了早期消费级打印机的局限性后，他创立了Old World Laboratories，致力于制造能满足最严格工业标准的打印机。",
+          "link": "https://hartleynbarnes.wordpress.com/about-us/nick-liverman/",
+          "learnMore": "了解更多关于Nick Liverman的信息"
+        }
+      },
+      "journey": {
+        "title": "塑造明天",
+        "description": "如今，Old World Labs在将智能代理集成到人形机器人和虚拟世界方面处于领先地位。革命性的'Replicants'技术将AI驱动的思维与资源感知机器人技术相结合，为可持续和可扩展的自动化设立新标准。通过融合最先进的AI和现实世界应用，我们继续在物理和数字领域重新定义可能性。"
+      },
+      "current": {
+        "title": "机器人技术的代理集成",
+        "description": "在CES 2025上，Old World Labs推出'Agents as a Service'技术，将AI集成到人形机器人和虚拟世界中。这一创新重新定义了AI在物理和数字空间中的角色。"
+      }
+    },
+    "timeline": {
+      "title": {
+        "main": "创新历程.",
+        "sub": "从精密到智能."
+      },
+      "events": [
+        {
+          "year": "2012",
+          "title": "OWL成立",
+          "details": ["Old World Labs成立"]
+        },
+        {
+          "year": "2013",
+          "title": "专利申请",
+          "details": [
+            "立体光刻系统初始专利申请",
+            "使用光捕获的多波长激光系统",
+            "动态光束聚焦和实时监控"
+          ],
+          "links": [
+            {
+              "url": "https://patents.justia.com/patent/20150183168",
+              "title": "专利申请20150183168"
+            }
+          ]
+        },
+        {
+          "year": "2014",
+          "title": "CES上的OWL Nano首秀",
+          "details": [
+            "Old World Labs在CES 2014上发布OWL Nano打印机",
+            "OWL Nano是一款使用激光固化液态树脂的立体光刻打印机",
+            "使用单丝激光束实现最小变形",
+            "能够以惊人的0.1微米层高进行SLA打印",
+            "定位为Formlabs Form1打印机的强大竞争对手",
+            "专利申请中的技术",
+            "OWL作为行业领导者参与CES首个专用3D打印区域"
+          ],
+          "links": [
+            {
+              "url": "https://makezine.com/article/digital-fabrication/3d-printing-workshop/the-state-of-3d-printing-and-scanning-after-ces-2014-the-push-for-mainstreaming-begins/",
+              "title": "Makezine CES 2014报道"
+            }
+          ]
+        },
+        {
+          "year": "2015",
+          "title": "MC打印机系列和专利",
+          "details": [
+            "在CES 2015上发布SLA MC-1和MC-2打印机",
+            "使用双光子聚合实现创新的100纳米分辨率",
+            "启动打印机订阅服务模式",
+            "在NASA、斯坦福等主要机构使用",
+            "MC-1：美国手工制造的高精度光子纳米制造设备",
+            "MC-2：具有改进多激光器的高级控制板，用于新材料",
+            "分辨率是行业其他3D打印机的250倍",
+            "与美国国防部和集成光子研究所合作",
+            "订阅模式允许随技术进步升级硬件",
+            "获得使用多波长激光器和光捕获的高级立体光刻系统专利"
+          ],
+          "links": [
+            {
+              "url": "https://patents.justia.com/patent/10086566",
+              "title": "美国专利10,086,566"
+            }
+          ]
+        },
+        {
+          "year": "2016",
+          "title": "产品成熟",
+          "details": [
+            "在CES 2016上展示工业级MC-2打印机",
+            "反映工业用途的$100,000-$250,000价格区间",
+            "人工肺项目：与VA Ann Arbor合作开发3D打印微流体人工肺",
+            "血流网络高分辨率聚合物3D打印的先驱",
+            "Venostent项目：开发用于透析通路的生物工程血管支架",
+            "专注于改善患有呼吸系统疾病和肾衰竭退伍军人的治疗效果"
+          ],
+          "links": [
+            {
+              "url": "https://www.research.va.gov/currents/0818-Researchers-strive-to-make-3D-printed-artificial-lung-to-help-Vets-with-respiratory-disease.cfm",
+              "title": "VA研究：人工肺项目"
+            },
+            {
+              "url": "https://www.venostent.com/",
+              "title": "Venostent项目"
+            }
+          ]
+        },
+        {
+          "year": "2017",
+          "title": "专利授权",
+          "details": [
+            "获得立体光刻3D对象生产专利",
+            "高级立体光刻系统美国专利10,086,566",
+            "包括多波长激光器和光捕获技术"
+          ],
+          "links": [
+            {
+              "url": "https://patents.justia.com/patent/10086566",
+              "title": "美国专利10,086,566"
+            }
+          ]
+        },
+        {
+          "year": "2018",
+          "title": "前沿研究",
+          "details": [
+            "便携式人工肺原型持续开发",
+            "与VA Ann Arbor Healthcare System合作进行肺部微流体设计",
+            "背包/腰包大小的原型，运行时间超过1周",
+            "首次将高分辨率聚合物3D打印用于功能性微流体肺",
+            "开发生物相容性涂层以防止免疫排斥",
+            "专注于COPD和退伍军人呼吸支持"
+          ],
+          "links": [
+            {
+              "url": "https://copdnewstoday.com/2018/10/09/va-researchers-developing-3d-printed-artificial-lung-for-copd/",
+              "title": "COPD新闻：VA人工肺开发"
+            }
+          ]
+        },
+        {
+          "year": "2021",
+          "title": "数字娱乐",
+          "details": [
+            "通过MMORPG Abyss Online扩展到游戏开发",
+            "开发社区驱动的丰富虚拟世界",
+            "实施先进的3D建模和模拟技术",
+            "创建八个具有独特文化和环境的不同生物群落",
+            "专注于玩家驱动的经济和制作系统",
+            "将高精度3D技术经验整合到游戏开发中"
+          ],
+          "links": [
+            {
+              "url": "https://www.abyssonline.com/",
+              "title": "Abyss Online官方网站"
+            }
+          ]
+        },
+        {
+          "year": "2025",
+          "title": "机器人技术的代理集成",
+          "details": [
+            "在CES 2025上发布'Agents as a Service'技术",
+            "与人形机器人和虚拟环境的无缝集成",
+            "AI代理栖息并操作人形机器人，适应3D环境",
+            "通过'Replicants'系统在物理和数字领域实现统一的AI存在",
+            "Replicants技术结合AI驱动思维和资源感知机器人技术",
+            "使人形机器人能够作为智能、自主的实体运作",
+            "连接物理机器人技术和沉浸式数字体验的鸿沟"
+          ],
+          "links": [
+            {
+              "url": "https://www.oldworldlabs.com",
+              "title": "Old World Labs官方网站"
+            }
+          ]
+        }
+      ]
+    },
+    "gallery": {
+      "title": "未来的先驱.",
+      "subtitle": "从精密工程到AI机器人技术.",
+      "images": {
+        "precision": "微流体设备制造",
+        "robotics": "自动化实验室系统",
+        "virtual": "3D建模和模拟"
+      }
+    },
+    "teaser": {
+      "learnMore": "了解我们的历程",
+      "subtitle": "探索我们的创新历史",
+      "readMore": "阅读更多"
+    }
+  },
+  "blog": {
+    "title": "博客",
+    "subtitle": "最新新闻和更新",
+    "readMore": "阅读更多",
+    "article": "文章",
+    "share": {
+      "share": "分享",
+      "title": "分享",
+      "copyLink": "复制链接",
+      "copied": "已复制到剪贴板",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn"
+    },
+    "sidebar": {
+      "connect": "连接",
+      "socials": {
+        "twitter": "在Twitter上关注",
+        "linkedin": "在LinkedIn上连接",
+        "email": "发送邮件",
+        "share": "分享帖子"
+      }
+    },
+    "latest": {
+      "title": "CES 2025上的OWL",
+      "excerpt": "Old World Labs通过革命性的'Replicants'系统推出'Agents as a Service'技术，将AI代理无缝集成到人形机器人和虚拟环境中。",
+      "link": "ces-2025-agents-as-service",
+      "date": "2025-01-01"
+    }
+  }
+}

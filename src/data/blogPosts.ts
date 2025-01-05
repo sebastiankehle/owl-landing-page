@@ -12,6 +12,6 @@ export const blogPosts: BlogPost[] = [
     id: "ces-2025-agents-as-service",
     date: "2025-01-01",
     image: ces2025.src,
-    translations: ["en", "de", "es", "ru", "ja"],
+    translations: ["en", "de", "es", "ru", "ja", "zh"],
   },
 ];

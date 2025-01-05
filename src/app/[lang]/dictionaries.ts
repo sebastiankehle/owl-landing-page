@@ -5,6 +5,7 @@ const dictionaries = {
   es: () => import("@/messages/es.json").then((module) => module.default),
   ru: () => import("@/messages/ru.json").then((module) => module.default),
   ja: () => import("@/messages/ja.json").then((module) => module.default),
+  zh: () => import("@/messages/zh.json").then((module) => module.default),
 };
 
 export const getDictionary = async (locale: string) =>
