@@ -86,7 +86,7 @@ export function Benefits({ dictionary }: BenefitsProps) {
         </h2>
       </InView>
 
-      <div className="mb-16 mt-8">
+      <div className="mb-24 mt-8">
         <BentoGrid>
           {BENEFIT_CONFIG.map((config, index) => {
             const item = dictionary.benefits.items[config.key];
