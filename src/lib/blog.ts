@@ -10,7 +10,7 @@ export interface PostMetadata {
   date: string;
 }
 
-interface PostData extends PostMetadata {
+export interface PostData extends PostMetadata {
   id: string;
   contentHtml: string;
 }

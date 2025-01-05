@@ -335,6 +335,19 @@
     "title": "Blog",
     "subtitle": "Latest insights and updates",
     "readMore": "Read more",
+    "article": "Article",
+    "share": {
+      "share": "Share"
+    },
+    "sidebar": {
+      "connect": "Connect",
+      "socials": {
+        "twitter": "Follow on Twitter",
+        "linkedin": "Connect on LinkedIn",
+        "email": "Send us an email",
+        "share": "Share this post"
+      }
+    },
     "latest": {
       "title": "OWL at CES 2025",
       "excerpt": "Old World Labs unveils 'Agents as a Service' technology, seamlessly integrating AI agents into humanoid robots and virtual environments through our groundbreaking 'Replicants' system.",

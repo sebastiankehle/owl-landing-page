@@ -51,7 +51,7 @@ export function Timeline({ dictionary }: TimelineProps) {
   return (
     <div ref={containerRef} className="container mx-auto py-24">
       <InView>
-        <h2 className="mb-16 text-xl font-semibold sm:text-2xl md:text-3xl">
+        <h2 className="mb-16 text-xl font-semibold sm:text-2xl">
           <span className="flex flex-col">
             <span className="text-foreground">
               {dictionary.timeline.title.main}

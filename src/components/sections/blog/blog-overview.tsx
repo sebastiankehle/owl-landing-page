@@ -23,9 +23,9 @@ export function BlogOverview({ posts, dictionary, lang }: BlogOverviewProps) {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="container py-24">
+      <section className="container">
         <InView className="mb-8">
-          <h1 className="text-xl font-semibold sm:text-2xl md:text-3xl">
+          <h1 className="text-xl font-semibold sm:text-2xl">
             <span className="flex flex-col">
               <span className="text-foreground">{dictionary.blog.title}</span>
               <span className="text-muted-foreground">

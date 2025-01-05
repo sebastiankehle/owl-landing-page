@@ -1,7 +1,5 @@
 "use client";
 
-import { InView } from "@/components/ui/in-view";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import innovation from "../../../../public/images/about/innovation.webp";
 import { ExternalLink } from "lucide-react";
@@ -41,28 +39,19 @@ export function Story({ dictionary }: StoryProps) {
   return (
     <div className="container py-24">
       {/* Section Title */}
-      <InView className="mb-8">
-        <h2 className="text-xl font-semibold sm:text-2xl md:text-3xl">
-          <span className="flex flex-col">
-            <span className="text-foreground">
-              {dictionary.story.title.main}
-            </span>
-            <span className="text-muted-foreground">
-              {dictionary.story.title.sub}
-            </span>
+      <h2 className="mb-8 text-xl font-semibold sm:text-2xl">
+        <span className="flex flex-col">
+          <span className="text-foreground">{dictionary.story.title.main}</span>
+          <span className="text-muted-foreground">
+            {dictionary.story.title.sub}
           </span>
-        </h2>
-      </InView>
+        </span>
+      </h2>
 
       <div className="mx-auto grid grid-cols-1 gap-4 md:grid-cols-3">
         {/* Combined Company & Founder Story */}
         <div className="relative col-span-1 overflow-hidden rounded-3xl bg-background p-6 shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex h-full flex-col justify-between"
-          >
+          <div className="flex h-full flex-col justify-between">
             <div>
               <h3 className="text-base font-semibold text-foreground">
                 {dictionary.story.early.title}
@@ -89,7 +78,7 @@ export function Story({ dictionary }: StoryProps) {
                 <ExternalLink className="h-3 w-3 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Image */}
@@ -104,25 +93,22 @@ export function Story({ dictionary }: StoryProps) {
 
         {/* Journey & Current Work */}
         <div className="relative col-span-1 overflow-hidden rounded-3xl bg-background p-6 shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex h-full flex-col"
-          >
-            <h3 className="text-base font-semibold text-foreground">
-              {dictionary.story.journey.title}
-            </h3>
-            <p className="mt-2 text-pretty text-sm text-muted-foreground">
-              {dictionary.story.journey.description}
-            </p>
-            <h3 className="mt-4 text-base font-semibold text-foreground">
-              {dictionary.story.current.title}
-            </h3>
-            <p className="mt-2 text-pretty text-sm text-muted-foreground">
-              {dictionary.story.current.description}
-            </p>
-          </motion.div>
+          <div className="flex h-full flex-col justify-between">
+            <div>
+              <h3 className="text-base font-semibold text-foreground">
+                {dictionary.story.journey.title}
+              </h3>
+              <p className="mt-2 text-pretty text-sm text-muted-foreground">
+                {dictionary.story.journey.description}
+              </p>
+              <h3 className="mt-4 text-base font-semibold text-foreground">
+                {dictionary.story.current.title}
+              </h3>
+              <p className="mt-2 text-pretty text-sm text-muted-foreground">
+                {dictionary.story.current.description}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

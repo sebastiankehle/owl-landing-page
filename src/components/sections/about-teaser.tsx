@@ -53,7 +53,7 @@ export function AboutTeaser({ dictionary, lang }: AboutTeaserProps) {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-xl font-semibold sm:text-2xl md:text-3xl">
+            <h2 className="text-xl font-semibold sm:text-2xl">
               <span className="flex flex-col">
                 <span className="text-foreground">
                   {dictionary.about.story.title.main}
@@ -84,7 +84,7 @@ export function AboutTeaser({ dictionary, lang }: AboutTeaserProps) {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-xl font-semibold sm:text-2xl md:text-3xl">
+            <h2 className="text-xl font-semibold sm:text-2xl">
               <span className="flex flex-col">
                 <span className="text-foreground">
                   {dictionary.blog.latest.title}

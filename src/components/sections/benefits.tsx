@@ -74,7 +74,7 @@ export function Benefits({ dictionary }: BenefitsProps) {
           visible: { opacity: 1, filter: "blur(0px)" },
         }}
       >
-        <h2 className="text-xl font-semibold sm:text-2xl md:text-3xl">
+        <h2 className="text-xl font-semibold sm:text-2xl">
           <span className="flex flex-col">
             <span className="text-foreground">
               {dictionary.benefits.title.main}

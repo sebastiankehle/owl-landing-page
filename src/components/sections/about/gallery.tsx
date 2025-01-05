@@ -34,7 +34,7 @@ export function Gallery({ dictionary }: GalleryProps) {
         animate={{ opacity: 1, y: 0 }}
         className="mb-16"
       >
-        <h1 className="text-xl font-semibold sm:text-2xl md:text-3xl">
+        <h1 className="text-xl font-semibold sm:text-2xl">
           <span className="flex flex-col">
             <span className="text-foreground">{dictionary.gallery.title}</span>
             <span className="text-muted-foreground">

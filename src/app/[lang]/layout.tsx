@@ -5,6 +5,7 @@ import { MobileMenu } from "@/components/layout/mobile-menu";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 import { Footer } from "@/components/layout/footer";
 import { Preloader } from "@/components/layout/preloader";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
           <MobileMenu dictionary={dictionary} />
           <main className="bg-zinc-100 dark:bg-black">{children}</main>
           <Footer dictionary={dictionary} />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
