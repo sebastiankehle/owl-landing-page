@@ -115,22 +115,26 @@
     "copyright": "© 2024 Old World Labs. All rights reserved."
   },
   "about": {
-    "hero": {
-      "title": "About Old World Labs",
-      "subtitle": "Founded in 2012 by Nick Liverman, our mission is to provide innovative solutions for microfluidic devices, medical devices, semiconductor connectors, interconnectors, and automated testing."
-    },
     "story": {
-      "quote": "His goal was clear: To create a 3D printer of uncompromising precision and accuracy, capable of satisfying the toughest industrial standards.",
+      "title": {
+        "main": "Our Story.",
+        "sub": "A decade of innovation."
+      },
+      "quote": "Our mission is to empower people and organizations with intelligent systems that can operate in the real world and virtual environments alike.",
       "early": {
-        "title": "Early stages and internships at Nasa",
-        "description": "From the age of 12, Nick Liverman discovered a fervor for robotics. His journey began with the creation of his first virtual robot, scripted within the digital world of Ultima Online. This rudimentary automaton, programmed to mine ore and craft items. An early understanding of cartesian robotics led to internships at NASA and an early introduction to 3D printing."
+        "title": "From 3D Printing to AI",
+        "description": "Founded by Nick Liverman in 2012, Old World Labs began as a pioneer in ultra-precise 3D printing. Our journey started with a vision to create 3D printers of uncompromising precision, capable of satisfying the toughest industrial standards. This foundation in precision engineering led us to explore new frontiers in robotics and artificial intelligence."
       },
       "journey": {
-        "description": "A decade ago, as consumer 3D printing started gaining traction, Nick was captivated by the prospect of democratizing 3D design. He invested in one of the pioneering 3D printer kits available to consumers, only to be disheartened by its lackluster resolution and accuracy. Despite months of relentless tweaking, the machine fell short of his expectations. Leveraging his substantial expertise in robotics and fabrication, Nick founded Old World Labs. His goal was clear: to create a 3D printer of uncompromising precision and accuracy, capable of satisfying the toughest industrial standards."
+        "title": "Shaping Tomorrow",
+        "description": "Today, Old World Labs leads the charge in integrating intelligent agents into humanoid robots and virtual worlds. Our groundbreaking 'Replicants' technology combines AI-driven reasoning with resource-aware robotics, setting new benchmarks for sustainable and scalable automation. By merging cutting-edge AI with real-world applications, we continue to redefine what's possible in both physical and digital realms."
       }
     },
     "timeline": {
-      "title": "Our Journey",
+      "title": {
+        "main": "Innovation Timeline.",
+        "sub": "From precision to intelligence."
+      },
       "events": [
         {
           "year": "2012",
@@ -198,8 +202,26 @@
           "details": [
             "Integration of cutting edge research into entertainment: www.abyssonline.com"
           ]
+        },
+        {
+          "year": "2025",
+          "title": "Replicants Technology",
+          "details": [
+            "Debut of self-replicating agent system",
+            "Integration of AI agents into humanoid robots",
+            "Unified presence across physical and digital realms"
+          ]
         }
       ]
+    },
+    "gallery": {
+      "title": "Pioneering the Future.",
+      "subtitle": "From precision engineering to AI-driven robotics.",
+      "images": {
+        "precision": "Microfluidic Device Manufacturing",
+        "robotics": "Automated Laboratory Systems",
+        "virtual": "3D Modeling & Simulation"
+      }
     }
   },
   "blog": {

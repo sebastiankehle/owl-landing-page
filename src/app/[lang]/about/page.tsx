@@ -1,21 +1,20 @@
 import { getDictionary } from "@/app/[lang]/dictionaries";
-import { AboutHero } from "@/components/sections/about/hero";
+import { Gallery } from "@/components/sections/about/gallery";
 import { Story } from "@/components/sections/about/story";
 import { Timeline } from "@/components/sections/about/timeline";
 
 export default async function AboutPage({
-  params,
+  params: { lang },
 }: {
-  params: Promise<{ lang: string }>;
+  params: { lang: string };
 }) {
-  const { lang } = await params;
   const dictionary = await getDictionary(lang);
 
   return (
-    <>
-      <AboutHero dictionary={dictionary.about} />
+    <div className="flex flex-col">
       <Story dictionary={dictionary.about} />
       <Timeline dictionary={dictionary.about} />
-    </>
+      <Gallery dictionary={dictionary.about} />
+    </div>
   );
 }

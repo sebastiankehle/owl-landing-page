@@ -13,11 +13,11 @@ export default async function Home({
   const dictionary = await getDictionary(lang);
 
   return (
-    <main className="flex flex-col">
+    <div className="flex flex-col">
       <Hero dictionary={dictionary} />
       <TechSlider />
       <Benefits dictionary={dictionary} />
       <Industries dictionary={dictionary} />
-    </main>
+    </div>
   );
 }
