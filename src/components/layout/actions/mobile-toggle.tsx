@@ -13,7 +13,7 @@ export function MobileToggle({ isOpen, onToggle }: MobileToggleProps) {
     <Button
       variant="ghost"
       size="icon"
-      className="md:hidden"
+      className="lg:hidden"
       onClick={onToggle}
     >
       {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}

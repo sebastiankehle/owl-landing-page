@@ -27,7 +27,7 @@ export function Actions({ dictionary }: ActionsProps) {
   return (
     <div className="flex items-center gap-4">
       <MobileToggle isOpen={isOpen} onToggle={toggle} />
-      <div className="hidden md:flex md:items-center md:gap-4">
+      <div className="hidden lg:flex lg:items-center lg:gap-4">
         <LanguageSwitcher />
         <ThemeToggle />
         <Link href={`/${lang}/contact`}>

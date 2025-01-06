@@ -5,8 +5,8 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import logoDark from "../../../public/logo_dark.svg";
-import logoLight from "../../../public/logo_light.svg";
+import logoDark from "../../../public/owl_dark.png";
+import logoLight from "../../../public/owl_light.png";
 
 interface LogoProps {
   text: string;
@@ -29,11 +29,10 @@ export function Logo({ text }: LogoProps) {
           mounted ? (resolvedTheme === "dark" ? logoLight : logoDark) : logoDark
         }
         alt="OWL Logo"
-        width={24}
         height={24}
-        className="h-6 w-6"
+        className="h-6"
       />
-      <span className="hidden text-sm font-semibold md:block">{text}</span>
+      <span className="hidden text-sm font-semibold lg:block">{text}</span>
     </Link>
   );
 }

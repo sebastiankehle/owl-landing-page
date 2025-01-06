@@ -192,9 +192,6 @@ export function Hero({ dictionary, lang }: HeroProps) {
                           duration: 0.3,
                           ease: "easeInOut",
                         }}
-                        onClick={() =>
-                          router.push(`/${lang}/services#${service.id}`)
-                        }
                       >
                         <Image
                           src={service.image}
@@ -221,10 +218,9 @@ export function Hero({ dictionary, lang }: HeroProps) {
                             <div className="mx-auto mt-4 h-[2px] w-24 bg-white" />
                           </div>
                           <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              router.push(`/${lang}/services#${service.id}`);
-                            }}
+                            onClick={() =>
+                              router.push(`/${lang}/services#${service.id}`)
+                            }
                             className="mt-8 flex items-center justify-center gap-2 rounded-full bg-white/10 px-6 py-2 text-sm text-white backdrop-blur-sm transition-colors hover:bg-white/20"
                           >
                             {dictionary.hero.cta.primary}

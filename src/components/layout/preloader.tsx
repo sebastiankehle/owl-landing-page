@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import logoDark from "../../../public/logo_dark.svg";
-import logoLight from "../../../public/logo_light.svg";
+import logoDark from "../../../public/owl_dark.png";
+import logoLight from "../../../public/owl_light.png";
 
 export function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
@@ -52,9 +52,8 @@ export function Preloader() {
               : logoDark
           }
           alt="OWL Logo"
-          width={128}
           height={128}
-          className="h-32 w-32"
+          className="h-32"
           priority
         />
       </motion.div>

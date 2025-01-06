@@ -31,7 +31,7 @@ export function Nav({ dictionary, variant = "desktop", onNavigate }: NavProps) {
   const baseStyles =
     "relative transition-colors after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:bg-violet-500/50 after:transition-[width] hover:after:w-full";
   const styles = {
-    desktop: "hidden md:flex items-center gap-6",
+    desktop: "hidden lg:flex items-center gap-6",
     mobile: "flex flex-col items-start gap-8 text-2xl",
     footer: "flex items-center gap-6",
   };

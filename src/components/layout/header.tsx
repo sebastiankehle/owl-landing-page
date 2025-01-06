@@ -8,6 +8,7 @@ interface HeaderProps {
       logo: string;
       nav: {
         home: string;
+        services: string;
         about: string;
         blog: string;
         contact: string;
@@ -25,7 +26,7 @@ export function Header({ dictionary }: HeaderProps) {
       <div className="container">
         <div className="rounded-full bg-background/80 backdrop-blur-md backdrop-saturate-150 supports-[backdrop-filter]:bg-background/80">
           <div className="mx-auto px-4">
-            <div className="grid h-12 grid-cols-[10rem,1fr,10rem] items-center">
+            <div className="grid h-12 grid-cols-[17rem,1fr,17rem] items-center">
               <div>
                 <Logo text={dictionary.header.logo} />
               </div>
