@@ -52,8 +52,7 @@ export function Preloader() {
               : logoDark
           }
           alt="OWL Logo"
-          height={128}
-          className="h-32"
+          height={60}
           priority
         />
       </motion.div>
