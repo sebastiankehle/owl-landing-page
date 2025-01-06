@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { useState, TouchEvent, useEffect } from "react";
+import { useState, TouchEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import advancedAdditiveSolutions from "../../../public/images/hero/advanced-additive-solutions-hero.webp";
 import robotics from "../../../public/images/hero/robotics-hero.webp";
@@ -36,10 +36,10 @@ interface HeroProps {
 export function Hero({ dictionary, lang }: HeroProps) {
   const router = useRouter();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [activeSlide, setActiveSlide] = useState<number>(0);
   const [touchStart, setTouchStart] = useState<number>(0);
   const [touchEnd, setTouchEnd] = useState<number>(0);
-  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const services = [
     {
@@ -62,23 +62,7 @@ export function Hero({ dictionary, lang }: HeroProps) {
     },
   ];
 
-  // Auto-scroll effect
-  useEffect(() => {
-    if (!isAutoScrolling) return;
-
-    const interval = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % services.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isAutoScrolling, services.length]);
-
-  const navigateToService = (id: string) => {
-    router.push(`/${lang}/services#${id}`);
-  };
-
   const handleTouchStart = (e: TouchEvent) => {
-    setIsAutoScrolling(false);
     setTouchStart(e.targetTouches[0].clientX);
   };
 
@@ -87,18 +71,31 @@ export function Hero({ dictionary, lang }: HeroProps) {
   };
 
   const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 50) {
-      // Swipe left - reduced threshold for better responsiveness
-      setActiveSlide((prev) => (prev + 1) % services.length);
+    const swipeThreshold = 75;
+    if (touchStart - touchEnd > swipeThreshold) {
+      // Swipe left
+      scrollRight();
     }
-
-    if (touchStart - touchEnd < -50) {
-      // Swipe right - reduced threshold for better responsiveness
-      setActiveSlide((prev) => (prev - 1 + services.length) % services.length);
+    if (touchStart - touchEnd < -swipeThreshold) {
+      // Swipe right
+      scrollLeft();
     }
+  };
 
-    // Resume auto-scrolling after 5 seconds of inactivity
-    setTimeout(() => setIsAutoScrolling(true), 5000);
+  const scrollLeft = () => {
+    if (!isAnimating) {
+      setIsAnimating(true);
+      setCurrentIndex((prev) => (prev === 0 ? services.length - 1 : prev - 1));
+      setTimeout(() => setIsAnimating(false), 500);
+    }
+  };
+
+  const scrollRight = () => {
+    if (!isAnimating) {
+      setIsAnimating(true);
+      setCurrentIndex((prev) => (prev === services.length - 1 ? 0 : prev + 1));
+      setTimeout(() => setIsAnimating(false), 500);
+    }
   };
 
   return (
@@ -112,7 +109,7 @@ export function Hero({ dictionary, lang }: HeroProps) {
               className="group relative flex-1 cursor-pointer overflow-hidden"
               onHoverStart={() => setHoveredIndex(index)}
               onHoverEnd={() => setHoveredIndex(null)}
-              onClick={() => navigateToService(service.id)}
+              onClick={() => router.push(`/${lang}/services#${service.id}`)}
             >
               {/* Background Image */}
               <div className="absolute inset-0">
@@ -174,26 +171,31 @@ export function Hero({ dictionary, lang }: HeroProps) {
       {/* Mobile Version */}
       <div className="relative md:hidden">
         <div className="container py-20">
-          <div className="relative h-[80vh]">
+          <div className="relative h-[80vh] overflow-hidden rounded-3xl shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]">
             <div
-              className="relative h-full w-full overflow-hidden rounded-3xl shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)]"
+              className="relative h-full w-full"
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
             >
-              <AnimatePresence mode="sync">
+              <AnimatePresence mode="popLayout" initial={false}>
                 {services.map(
                   (service, index) =>
-                    index === activeSlide && (
+                    index === currentIndex && (
                       <motion.div
-                        key={service.title}
-                        className="absolute inset-0"
+                        key={service.id}
+                        className="absolute inset-0 h-full w-full"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                        transition={{
+                          duration: 0.3,
+                          ease: "easeInOut",
+                        }}
+                        onClick={() =>
+                          router.push(`/${lang}/services#${service.id}`)
+                        }
                       >
-                        {/* Background Image */}
                         <Image
                           src={service.image}
                           alt={service.title}
@@ -201,73 +203,56 @@ export function Hero({ dictionary, lang }: HeroProps) {
                           className="object-cover"
                           priority
                         />
-                        <div className="absolute inset-0 bg-black/60 transition-opacity duration-500" />
-
-                        {/* Content */}
-                        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-                          <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className="flex max-w-[300px] flex-col items-center"
-                          >
+                        <div className="absolute inset-0 bg-black/60" />
+                        <motion.div
+                          className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center"
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -20 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <div className="flex max-w-[300px] flex-col items-center">
                             <h2 className="text-2xl font-bold text-white sm:text-3xl">
                               {service.title}
                             </h2>
                             <p className="mx-auto mt-2 text-sm text-white sm:text-base">
                               {service.subtitle}
                             </p>
-                            <motion.div
-                              className="mx-auto mt-4 h-[2px] w-24 bg-white"
-                              initial={{ width: 0 }}
-                              animate={{ width: "6rem" }}
-                              transition={{ duration: 0.3 }}
-                            />
-                          </motion.div>
+                            <div className="mx-auto mt-4 h-[2px] w-24 bg-white" />
+                          </div>
                           <button
-                            onClick={() => navigateToService(service.id)}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              router.push(`/${lang}/services#${service.id}`);
+                            }}
                             className="mt-8 flex items-center justify-center gap-2 rounded-full bg-white/10 px-6 py-2 text-sm text-white backdrop-blur-sm transition-colors hover:bg-white/20"
                           >
                             {dictionary.hero.cta.primary}
                             <ArrowRight className="h-4 w-4" />
                           </button>
-                        </div>
+                        </motion.div>
                       </motion.div>
                     ),
                 )}
               </AnimatePresence>
+            </div>
 
-              {/* Navigation Arrows */}
-              <div className="absolute inset-x-0 top-1/2 flex -translate-y-1/2 justify-between px-4">
-                <button
-                  onClick={() => {
-                    setActiveSlide(
-                      (prev) => (prev - 1 + services.length) % services.length,
-                    );
-                    setIsAutoScrolling(false);
-                    setTimeout(() => setIsAutoScrolling(true), 5000);
-                  }}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
-                >
-                  <ArrowLeft className="h-5 w-5" />
-                </button>
-                <button
-                  onClick={() => {
-                    setActiveSlide((prev) => (prev + 1) % services.length);
-                    setIsAutoScrolling(false);
-                    setTimeout(() => setIsAutoScrolling(true), 5000);
-                  }}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
-                >
-                  <ArrowRight className="h-5 w-5" />
-                </button>
-              </div>
-
-              {/* Swipe Indicator */}
-              <div className="absolute bottom-8 left-0 right-0 flex justify-center">
-                <span className="text-xs font-light uppercase tracking-widest text-white/80">
-                  {dictionary.hero.swipe}
-                </span>
-              </div>
+            {/* Navigation Arrows */}
+            <div className="absolute inset-x-0 top-1/2 flex -translate-y-1/2 justify-between px-4">
+              <button
+                onClick={scrollLeft}
+                disabled={isAnimating}
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20 disabled:opacity-50"
+              >
+                <ArrowLeft className="h-4 w-4" />
+              </button>
+              <button
+                onClick={scrollRight}
+                disabled={isAnimating}
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20 disabled:opacity-50"
+              >
+                <ArrowRight className="h-4 w-4" />
+              </button>
             </div>
           </div>
         </div>
