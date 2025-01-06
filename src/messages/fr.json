@@ -3,6 +3,7 @@
     "logo": "Old World Labs",
     "nav": {
       "home": "Accueil",
+      "services": "Services",
       "about": "À propos",
       "blog": "Blog",
       "contact": "Contact"
@@ -427,5 +428,86 @@
         "github": "GitHub"
       }
     }
+  },
+  "services": {
+    "title": {
+      "main": "Nos Services",
+      "sub": "Solutions de Fabrication Avancée"
+    },
+    "description": "Nous combinons des technologies de pointe en fabrication additive, robotique et solutions numériques pour fournir des solutions complètes aux défis industriels complexes.",
+    "hero": {
+      "slides": {
+        "first": {
+          "title": "Solutions Additives Avancées",
+          "subtitle": "Ultra-précis à l'échelle micro."
+        },
+        "second": {
+          "title": "Robotique et Automatisation",
+          "subtitle": "La précision rencontre l'efficacité."
+        },
+        "third": {
+          "title": "Développement Unreal Engine",
+          "subtitle": "Visualisation réinventée."
+        }
+      }
+    },
+    "services": {
+      "viewCaseStudy": "Voir l'Étude de Cas",
+      "additive": {
+        "title": "Solutions Additives Avancées",
+        "description": "Ultra-précis à l'échelle micro.",
+        "features": [
+          "Impression 3D en tant que service",
+          "Imprimantes industrielles",
+          "Solutions d'impression personnalisées",
+          "Production à haut volume",
+          "Précision et assurance qualité"
+        ],
+        "caseStudy": {
+          "title": "Bientôt Disponible",
+          "description": "Nos études de cas sur la fabrication avancée sont actuellement en développement.",
+          "link": "/case-studies/advanced-manufacturing"
+        }
+      },
+      "robotics": {
+        "title": "Robotique et Automatisation",
+        "description": "La précision rencontre l'efficacité.",
+        "features": [
+          "Développement robotique personnalisé",
+          "Systèmes de contrôle basés sur l'IA",
+          "Automatisation guidée par vision",
+          "Optimisation des processus",
+          "Sécurité et conformité"
+        ],
+        "caseStudy": {
+          "title": "Intégration Replicants",
+          "description": "Intégration transparente d'agents IA avec des robots humanoïdes et des environnements virtuels grâce au système révolutionnaire Replicants.",
+          "link": "https://www.replicants.com"
+        }
+      },
+      "digital": {
+        "title": "Développement Unreal Engine",
+        "description": "Visualisation réinventée.",
+        "features": [
+          "Modélisation et simulation",
+          "Environnements 3D immersifs",
+          "Intégration Unreal Engine 5",
+          "Amélioration du design",
+          "Optimisation des processus de test"
+        ],
+        "caseStudy": {
+          "title": "Abyss Online",
+          "description": "Un environnement de jeu riche, animé par la communauté, utilisant les fonctionnalités avancées d'Unreal Engine 5 pour la création de mondes et la visualisation immersive.",
+          "link": "https://www.abyssonline.com"
+        }
+      }
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À propos",
+    "blog": "Blog",
+    "contact": "Contact"
   }
 }

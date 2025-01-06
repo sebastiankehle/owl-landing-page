@@ -3,6 +3,7 @@
     "logo": "Old World Labs",
     "nav": {
       "home": "Home",
+      "services": "Services",
       "about": "About",
       "blog": "Blog",
       "contact": "Contact"
@@ -412,6 +413,80 @@
       },
       "description": "Whether you're looking to develop a new product, optimize your manufacturing process, or integrate advanced robotics, we're here to help. Our team combines expertise in precision manufacturing, robotics, and digital solutions to deliver results that exceed expectations.",
       "cta": "Get in touch"
+    }
+  },
+  "services": {
+    "title": {
+      "main": "Our Services",
+      "sub": "Advanced Manufacturing Solutions"
+    },
+    "description": "We combine cutting-edge technologies in additive manufacturing, robotics, and digital solutions to deliver comprehensive solutions for complex industrial challenges.",
+    "hero": {
+      "slides": {
+        "first": {
+          "title": "Advanced Additive Solutions",
+          "subtitle": "Ultra-precise at micro scale."
+        },
+        "second": {
+          "title": "Robotics & Automation",
+          "subtitle": "Precision meets efficiency."
+        },
+        "third": {
+          "title": "Unreal Engine Development",
+          "subtitle": "Visualization reimagined."
+        }
+      }
+    },
+    "services": {
+      "viewCaseStudy": "View Case Study",
+      "additive": {
+        "title": "Advanced Additive Solutions",
+        "description": "Ultra-precise at micro scale.",
+        "features": [
+          "3D Printing as a Service",
+          "Industrial-Scale Printers",
+          "Customized printing solutions",
+          "High-volume production",
+          "Precision and quality assurance"
+        ],
+        "caseStudy": {
+          "title": "Coming Soon",
+          "description": "Our advanced manufacturing case studies are currently in development.",
+          "link": "/case-studies/advanced-manufacturing"
+        }
+      },
+      "robotics": {
+        "title": "Robotics & Automation",
+        "description": "Precision meets efficiency.",
+        "features": [
+          "Custom robotics development",
+          "AI-driven control systems",
+          "Vision-guided automation",
+          "Process optimization",
+          "Safety and compliance"
+        ],
+        "caseStudy": {
+          "title": "Replicants Integration",
+          "description": "Seamless integration of AI agents with humanoid robots and virtual environments through the revolutionary Replicants system.",
+          "link": "https://www.replicants.com"
+        }
+      },
+      "digital": {
+        "title": "Unreal Engine Development",
+        "description": "Visualization reimagined.",
+        "features": [
+          "Modeling and Simulation",
+          "Immersive 3D environments",
+          "Unreal Engine 5 integration",
+          "Design enhancement",
+          "Testing process optimization"
+        ],
+        "caseStudy": {
+          "title": "Abyss Online",
+          "description": "A rich, community-driven game environment utilizing advanced Unreal Engine 5 features for immersive world-building and visualization.",
+          "link": "https://www.abyssonline.com"
+        }
+      }
     }
   }
 }

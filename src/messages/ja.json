@@ -3,6 +3,7 @@
     "logo": "Old World Labs",
     "nav": {
       "home": "ホーム",
+      "services": "サービス",
       "about": "会社概要",
       "blog": "ブログ",
       "contact": "お問い合わせ"
@@ -397,6 +398,80 @@
       "excerpt": "Old World Labsは革新的な'Replicants'システムを通じて、AIエージェントをヒューマノイドロボットと仮想環境にシームレスに統合する'Agents as a Service'テクノロジーを発表します。",
       "link": "ces-2025-agents-as-service",
       "date": "2025-01-01"
+    }
+  },
+  "services": {
+    "title": {
+      "main": "サービス",
+      "sub": "先進的な製造ソリューション"
+    },
+    "description": "アディティブマニュファクチャリング、ロボティクス、デジタルソリューションの最先端技術を組み合わせ、複雑な産業課題に対する包括的なソリューションを提供します。",
+    "hero": {
+      "slides": {
+        "first": {
+          "title": "先進的アディティブソリューション",
+          "subtitle": "ミイクロスケールの超精密。"
+        },
+        "second": {
+          "title": "ロボティクスと自動化",
+          "subtitle": "精密さと効率性の融合。"
+        },
+        "third": {
+          "title": "Unreal Engine開発",
+          "subtitle": "可視化の再構築。"
+        }
+      }
+    },
+    "services": {
+      "viewCaseStudy": "ケーススタディを見る",
+      "additive": {
+        "title": "先進的アディティブソリューション",
+        "description": "マイクロスケールの超精密。",
+        "features": [
+          "3Dプリンティングサービス",
+          "産業用プリンター",
+          "カスタマイズ印刷ソリューション",
+          "大量生産対応",
+          "精密性と品質保証"
+        ],
+        "caseStudy": {
+          "title": "近日公開",
+          "description": "先進的製造のケーススタディは現在開発中です。",
+          "link": "/case-studies/advanced-manufacturing"
+        }
+      },
+      "robotics": {
+        "title": "ロボティクスと自動化",
+        "description": "精密さと効率性の融合。",
+        "features": [
+          "カスタムロボティクス開発",
+          "AI駆動制御システム",
+          "ビジョンガイド自動化",
+          "プロセス最適化",
+          "安全性とコンプライアンス"
+        ],
+        "caseStudy": {
+          "title": "Replicantsインテグレーション",
+          "description": "革新的なReplicantsシステムによるAIエージェントとヒューマノイドロボット、仮想環境のシームレスな統合。",
+          "link": "https://www.replicants.com"
+        }
+      },
+      "digital": {
+        "title": "Unreal Engine開発",
+        "description": "可視化の再構築。",
+        "features": [
+          "モデリングとシミュレーション",
+          "没入型3D環境",
+          "Unreal Engine 5統合",
+          "デザイン強化",
+          "テストプロセス最適化"
+        ],
+        "caseStudy": {
+          "title": "Abyss Online",
+          "description": "Unreal Engine 5の先進機能を活用した、没入型ワールド構築と可視化を実現するコミュニティ主導の豊かなゲーム環境。",
+          "link": "https://www.abyssonline.com"
+        }
+      }
     }
   }
 }

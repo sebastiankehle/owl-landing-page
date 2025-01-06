@@ -2,11 +2,13 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { useState, TouchEvent } from "react";
-import { motion } from "framer-motion";
+import { useState, TouchEvent, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import advancedAdditiveSolutions from "../../../public/images/hero/advanced-additive-solutions-hero.webp";
 import robotics from "../../../public/images/hero/robotics-hero.webp";
 import unrealDevelopment from "../../../public/images/hero/unreal-development-hero.webp";
+import { useRouter } from "next/navigation";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 interface HeroProps {
   dictionary: {
@@ -28,33 +30,55 @@ interface HeroProps {
       swipe: string;
     };
   };
+  lang: string;
 }
 
-export function Hero({ dictionary }: HeroProps) {
+export function Hero({ dictionary, lang }: HeroProps) {
+  const router = useRouter();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [activeSlide, setActiveSlide] = useState<number>(0);
   const [touchStart, setTouchStart] = useState<number>(0);
   const [touchEnd, setTouchEnd] = useState<number>(0);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
 
   const services = [
     {
       image: advancedAdditiveSolutions,
       title: dictionary.hero.slides.first.title,
       subtitle: dictionary.hero.slides.first.subtitle,
+      id: "additive-solutions",
     },
     {
       image: robotics,
       title: dictionary.hero.slides.second.title,
       subtitle: dictionary.hero.slides.second.subtitle,
+      id: "robotics-automation",
     },
     {
       image: unrealDevelopment,
       title: dictionary.hero.slides.third.title,
       subtitle: dictionary.hero.slides.third.subtitle,
+      id: "unreal-development",
     },
   ];
 
+  // Auto-scroll effect
+  useEffect(() => {
+    if (!isAutoScrolling) return;
+
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % services.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isAutoScrolling, services.length]);
+
+  const navigateToService = (id: string) => {
+    router.push(`/${lang}/services#${id}`);
+  };
+
   const handleTouchStart = (e: TouchEvent) => {
+    setIsAutoScrolling(false);
     setTouchStart(e.targetTouches[0].clientX);
   };
 
@@ -63,15 +87,18 @@ export function Hero({ dictionary }: HeroProps) {
   };
 
   const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 75) {
-      // Swipe left
+    if (touchStart - touchEnd > 50) {
+      // Swipe left - reduced threshold for better responsiveness
       setActiveSlide((prev) => (prev + 1) % services.length);
     }
 
-    if (touchStart - touchEnd < -75) {
-      // Swipe right
+    if (touchStart - touchEnd < -50) {
+      // Swipe right - reduced threshold for better responsiveness
       setActiveSlide((prev) => (prev - 1 + services.length) % services.length);
     }
+
+    // Resume auto-scrolling after 5 seconds of inactivity
+    setTimeout(() => setIsAutoScrolling(true), 5000);
   };
 
   return (
@@ -85,6 +112,7 @@ export function Hero({ dictionary }: HeroProps) {
               className="group relative flex-1 cursor-pointer overflow-hidden"
               onHoverStart={() => setHoveredIndex(index)}
               onHoverEnd={() => setHoveredIndex(null)}
+              onClick={() => navigateToService(service.id)}
             >
               {/* Background Image */}
               <div className="absolute inset-0">
@@ -153,67 +181,89 @@ export function Hero({ dictionary }: HeroProps) {
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
             >
-              {services.map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  className="absolute inset-0"
-                  initial={false}
-                  animate={{
-                    opacity: activeSlide === index ? 1 : 0,
-                    scale: activeSlide === index ? 1 : 1.1,
-                  }}
-                  transition={{ duration: 0.7 }}
-                >
-                  {/* Background Image */}
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-black/60 transition-opacity duration-500" />
-
-                  {/* Content */}
-                  <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
-                    <motion.div
-                      key={activeSlide}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className="max-w-[300px]"
-                    >
-                      <h2 className="text-2xl font-bold text-white sm:text-3xl">
-                        {service.title}
-                      </h2>
-                      <p className="mx-auto mt-2 text-sm text-white sm:text-base">
-                        {service.subtitle}
-                      </p>
+              <AnimatePresence mode="sync">
+                {services.map(
+                  (service, index) =>
+                    index === activeSlide && (
                       <motion.div
-                        className="mx-auto mt-4 h-[2px] w-0 bg-white"
-                        animate={{ width: "100px" }}
-                        transition={{ duration: 0.3 }}
-                      />
-                    </motion.div>
-                  </div>
-                </motion.div>
-              ))}
+                        key={service.title}
+                        className="absolute inset-0"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                      >
+                        {/* Background Image */}
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          fill
+                          className="object-cover"
+                          priority
+                        />
+                        <div className="absolute inset-0 bg-black/60 transition-opacity duration-500" />
 
-              {/* Navigation */}
-              <div className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-4">
-                <div className="flex gap-2">
-                  {services.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setActiveSlide(index)}
-                      className={cn(
-                        "h-1 rounded-full transition-all",
-                        activeSlide === index
-                          ? "w-8 bg-white"
-                          : "w-2 bg-white/40",
-                      )}
-                    />
-                  ))}
-                </div>
+                        {/* Content */}
+                        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+                          <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="flex max-w-[300px] flex-col items-center"
+                          >
+                            <h2 className="text-2xl font-bold text-white sm:text-3xl">
+                              {service.title}
+                            </h2>
+                            <p className="mx-auto mt-2 text-sm text-white sm:text-base">
+                              {service.subtitle}
+                            </p>
+                            <motion.div
+                              className="mx-auto mt-4 h-[2px] w-24 bg-white"
+                              initial={{ width: 0 }}
+                              animate={{ width: "6rem" }}
+                              transition={{ duration: 0.3 }}
+                            />
+                          </motion.div>
+                          <button
+                            onClick={() => navigateToService(service.id)}
+                            className="mt-8 flex items-center justify-center gap-2 rounded-full bg-white/10 px-6 py-2 text-sm text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+                          >
+                            {dictionary.hero.cta.primary}
+                            <ArrowRight className="h-4 w-4" />
+                          </button>
+                        </div>
+                      </motion.div>
+                    ),
+                )}
+              </AnimatePresence>
+
+              {/* Navigation Arrows */}
+              <div className="absolute inset-x-0 top-1/2 flex -translate-y-1/2 justify-between px-4">
+                <button
+                  onClick={() => {
+                    setActiveSlide(
+                      (prev) => (prev - 1 + services.length) % services.length,
+                    );
+                    setIsAutoScrolling(false);
+                    setTimeout(() => setIsAutoScrolling(true), 5000);
+                  }}
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+                >
+                  <ArrowLeft className="h-5 w-5" />
+                </button>
+                <button
+                  onClick={() => {
+                    setActiveSlide((prev) => (prev + 1) % services.length);
+                    setIsAutoScrolling(false);
+                    setTimeout(() => setIsAutoScrolling(true), 5000);
+                  }}
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+                >
+                  <ArrowRight className="h-5 w-5" />
+                </button>
+              </div>
+
+              {/* Swipe Indicator */}
+              <div className="absolute bottom-8 left-0 right-0 flex justify-center">
                 <span className="text-xs font-light uppercase tracking-widest text-white/80">
                   {dictionary.hero.swipe}
                 </span>

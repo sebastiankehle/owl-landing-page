@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState, createContext, TouchEvent } from "react";
-import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image, { ImageProps } from "next/image";
 
@@ -174,20 +174,20 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         </div>
 
         {/* Navigation Arrows - Shown on both mobile and desktop */}
-        <div className="absolute left-6 top-1/2 z-50 block -translate-y-1/2">
+        <div className="absolute left-6 top-1/3 z-50 mt-4 block -translate-y-1/2">
           <button
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-background/60 shadow-lg backdrop-blur-sm transition-all hover:bg-background/90"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 shadow-lg backdrop-blur-sm transition-all hover:bg-white/20"
             onClick={scrollLeft}
           >
-            <IconArrowNarrowLeft className="h-6 w-6 text-foreground/90" />
+            <ArrowLeft className="h-6 w-6 text-white" />
           </button>
         </div>
-        <div className="absolute right-6 top-1/2 z-50 block -translate-y-1/2">
+        <div className="absolute right-6 top-1/3 z-50 mt-4 block -translate-y-1/2">
           <button
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-background/60 shadow-lg backdrop-blur-sm transition-all hover:bg-background/90"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 shadow-lg backdrop-blur-sm transition-all hover:bg-white/20"
             onClick={scrollRight}
           >
-            <IconArrowNarrowRight className="h-6 w-6 text-foreground/90" />
+            <ArrowRight className="h-6 w-6 text-white" />
           </button>
         </div>
       </div>

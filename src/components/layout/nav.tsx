@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 interface NavProps {
   dictionary: {
     about: string;
+    services: string;
     blog: string;
     contact: string;
     home: string;
@@ -17,6 +18,7 @@ interface NavProps {
 
 const navItems = [
   { href: "/about", key: "about" },
+  { href: "/services", key: "services" },
   { href: "/blog", key: "blog" },
   { href: "/contact", key: "contact" },
 ] as const;

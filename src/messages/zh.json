@@ -3,6 +3,7 @@
     "logo": "Old World Labs",
     "nav": {
       "home": "首页",
+      "services": "服务",
       "about": "关于我们",
       "blog": "博客",
       "contact": "联系我们"
@@ -397,6 +398,80 @@
       "excerpt": "Old World Labs通过革命性的'Replicants'系统推出'Agents as a Service'技术，将AI代理无缝集成到人形机器人和虚拟环境中。",
       "link": "ces-2025-agents-as-service",
       "date": "2025-01-01"
+    }
+  },
+  "services": {
+    "title": {
+      "main": "我们的服务",
+      "sub": "先进制造解决方案"
+    },
+    "description": "我们结合增材制造、机器人技术和数字解决方案的前沿技术，为复杂的工业挑战提供全面的解决方案。",
+    "hero": {
+      "slides": {
+        "first": {
+          "title": "先进增材解决方案",
+          "subtitle": "微观尺度的超精密。"
+        },
+        "second": {
+          "title": "机器人技术与自动化",
+          "subtitle": "精密与效率的完美结合。"
+        },
+        "third": {
+          "title": "虚幻引擎开发",
+          "subtitle": "重新构想可视化。"
+        }
+      }
+    },
+    "services": {
+      "viewCaseStudy": "查看案例研究",
+      "additive": {
+        "title": "先进增材解决方案",
+        "description": "微观尺度的超精密。",
+        "features": [
+          "3D打印服务",
+          "工业级打印机",
+          "定制打印解决方案",
+          "高产量生产",
+          "精密度和质量保证"
+        ],
+        "caseStudy": {
+          "title": "即将推出",
+          "description": "我们的先进制造案例研究正在开发中。",
+          "link": "/case-studies/advanced-manufacturing"
+        }
+      },
+      "robotics": {
+        "title": "机器人技术与自动化",
+        "description": "精密与效率的完美结合。",
+        "features": [
+          "定制机器人开发",
+          "AI驱动控制系统",
+          "视觉引导自动化",
+          "流程优化",
+          "安全性和合规性"
+        ],
+        "caseStudy": {
+          "title": "Replicants集成",
+          "description": "通过革命性的Replicants系统，将AI代理与人形机器人和虚拟环境无缝集成。",
+          "link": "https://www.replicants.com"
+        }
+      },
+      "digital": {
+        "title": "虚幻引擎开发",
+        "description": "重新构想可视化。",
+        "features": [
+          "建模与模拟",
+          "沉浸式3D环境",
+          "虚幻引擎5集成",
+          "设计增强",
+          "测试流程优化"
+        ],
+        "caseStudy": {
+          "title": "Abyss Online",
+          "description": "一个丰富的、由社区驱动的游戏环境，利用虚幻引擎5的先进功能实现沉浸式世界构建和可视化。",
+          "link": "https://www.abyssonline.com"
+        }
+      }
     }
   }
 }

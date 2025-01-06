@@ -2,7 +2,8 @@
   "header": {
     "logo": "Old World Labs",
     "nav": {
-      "home": "Start",
+      "home": "Startseite",
+      "services": "Dienstleistungen",
       "about": "Über uns",
       "blog": "Blog",
       "contact": "Kontakt"
@@ -491,6 +492,80 @@
       },
       "description": "Ob Sie ein neues Produkt entwickeln, Ihren Fertigungsprozess optimieren oder fortschrittliche Robotik integrieren möchten - wir sind für Sie da. Unser Team verbindet Expertise in Präzisionsfertigung, Robotik und digitalen Lösungen, um Ergebnisse zu liefern, die Ihre Erwartungen übertreffen.",
       "cta": "Kontakt aufnehmen"
+    }
+  },
+  "services": {
+    "title": {
+      "main": "Unsere Dienstleistungen",
+      "sub": "Fortschrittliche Fertigungslösungen"
+    },
+    "description": "Wir kombinieren modernste Technologien in der additiven Fertigung, Robotik und digitalen Lösungen, um umfassende Lösungen für komplexe industrielle Herausforderungen zu liefern.",
+    "hero": {
+      "slides": {
+        "first": {
+          "title": "Fortschrittliche Additive Lösungen",
+          "subtitle": "Ultrapräzise im Mikrobereich."
+        },
+        "second": {
+          "title": "Robotik & Automation",
+          "subtitle": "Präzision trifft Effizienz."
+        },
+        "third": {
+          "title": "Unreal Engine Entwicklung",
+          "subtitle": "Visualisierung neu gedacht."
+        }
+      }
+    },
+    "services": {
+      "viewCaseStudy": "Fallstudie ansehen",
+      "additive": {
+        "title": "Fortschrittliche Additive Lösungen",
+        "description": "Ultrapräzise im Mikrobereich.",
+        "features": [
+          "3D-Druck als Service",
+          "Industrielle Drucker",
+          "Maßgeschneiderte Drucklösungen",
+          "Hochvolumenproduktion",
+          "Präzision und Qualitätssicherung"
+        ],
+        "caseStudy": {
+          "title": "Demnächst verfügbar",
+          "description": "Unsere Fallstudien zur fortschrittlichen Fertigung befinden sich derzeit in Entwicklung.",
+          "link": "/case-studies/advanced-manufacturing"
+        }
+      },
+      "robotics": {
+        "title": "Robotik & Automation",
+        "description": "Präzision trifft Effizienz.",
+        "features": [
+          "Kundenspezifische Robotikentwicklung",
+          "KI-gesteuerte Kontrollsysteme",
+          "Sichtgeführte Automation",
+          "Prozessoptimierung",
+          "Sicherheit und Compliance"
+        ],
+        "caseStudy": {
+          "title": "Replicants Integration",
+          "description": "Nahtlose Integration von KI-Agenten mit humanoiden Robotern und virtuellen Umgebungen durch das revolutionäre Replicants-System.",
+          "link": "https://www.replicants.com"
+        }
+      },
+      "digital": {
+        "title": "Unreal Engine Entwicklung",
+        "description": "Visualisierung neu gedacht.",
+        "features": [
+          "Modellierung und Simulation",
+          "Immersive 3D-Umgebungen",
+          "Unreal Engine 5 Integration",
+          "Design-Optimierung",
+          "Testprozessoptimierung"
+        ],
+        "caseStudy": {
+          "title": "Abyss Online",
+          "description": "Eine reichhaltige, Community-getriebene Spielumgebung, die fortschrittliche Unreal Engine 5 Funktionen für immersives World-Building und Visualisierung nutzt.",
+          "link": "https://www.abyssonline.com"
+        }
+      }
     }
   }
 }

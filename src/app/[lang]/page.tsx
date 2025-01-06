@@ -16,7 +16,7 @@ export default async function Home({
 
   return (
     <div className="flex flex-col">
-      <Hero dictionary={dictionary} />
+      <Hero dictionary={dictionary} lang={lang} />
       <TechSlider />
       <Benefits dictionary={dictionary} />
       <AboutTeaser dictionary={dictionary} lang={lang} />
