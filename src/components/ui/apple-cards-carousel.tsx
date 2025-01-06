@@ -1,8 +1,7 @@
 "use client";
-import React, { useEffect, useState, createContext } from "react";
+import React, { useEffect, useState, createContext, TouchEvent } from "react";
 import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 
 interface CarouselProps {
@@ -24,15 +23,73 @@ export const CarouselContext = createContext<{
 
 export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   const carouselRef = React.useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = React.useState(false);
-  const [canScrollRight, setCanScrollRight] = React.useState(true);
   const [scrollAmount, setScrollAmount] = React.useState(400);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
+  const [slides] = useState(() => {
+    const itemsArray = React.Children.toArray(items);
+    return [
+      ...itemsArray.map((item, i) =>
+        React.cloneElement(item as React.ReactElement, {
+          key: `prev-${i}`,
+        }),
+      ),
+      ...itemsArray.map((item, i) =>
+        React.cloneElement(item as React.ReactElement, {
+          key: `current-${i}`,
+        }),
+      ),
+      ...itemsArray.map((item, i) =>
+        React.cloneElement(item as React.ReactElement, {
+          key: `next-${i}`,
+        }),
+      ),
+    ];
+  });
+
+  const checkScrollability = React.useCallback(() => {
+    if (carouselRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+      const scrollEnd = scrollWidth - clientWidth;
+
+      // If we're near the end, jump to the middle set
+      if (scrollLeft >= scrollEnd - 100) {
+        carouselRef.current.scrollLeft = scrollEnd / 3;
+      }
+      // If we're near the start, jump to the middle set
+      if (scrollLeft <= 100) {
+        carouselRef.current.scrollLeft = scrollEnd / 3;
+      }
+    }
+  }, []);
 
   const calculateScrollAmount = () => {
     if (typeof window === "undefined") return 400;
-    return window.innerWidth < 768
-      ? window.innerWidth - 32 + 16 // Full viewport width minus padding plus gap
-      : 384 + 16; // Desktop card width (w-96) plus gap
+    return window.innerWidth < 768 ? window.innerWidth - 32 + 16 : 384 + 16;
+  };
+
+  const handleTouchStart = (e: TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    const swipeThreshold = 75;
+    if (touchStart - touchEnd > swipeThreshold) {
+      // Swipe left
+      scrollRight();
+    }
+    if (touchStart - touchEnd < -swipeThreshold) {
+      // Swipe right
+      scrollLeft();
+    }
+
+    // Add infinite scroll check after swipe
+    setTimeout(handleInfiniteScroll, 300);
   };
 
   useEffect(() => {
@@ -40,7 +97,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
       setScrollAmount(calculateScrollAmount());
     };
 
-    handleResize(); // Initial calculation
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -50,15 +107,31 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
       carouselRef.current.scrollLeft = initialScroll;
       checkScrollability();
     }
-  }, [initialScroll]);
+  }, [initialScroll, checkScrollability]);
 
-  const checkScrollability = () => {
+  const handleInfiniteScroll = () => {
     if (carouselRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth);
+      const scrollEnd = scrollWidth - clientWidth;
+
+      // If we're near the end, jump to the middle set
+      if (scrollLeft >= scrollEnd - 100) {
+        carouselRef.current.scrollLeft = scrollEnd / 3;
+      }
+      // If we're near the start, jump to the middle set
+      if (scrollLeft <= 100) {
+        carouselRef.current.scrollLeft = scrollEnd / 3;
+      }
     }
   };
+
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (carousel) {
+      // Set initial scroll to middle set of items
+      carousel.scrollLeft = (carousel.scrollWidth - carousel.clientWidth) / 3;
+    }
+  }, []);
 
   const scrollLeft = () => {
     if (carouselRef.current) {
@@ -66,6 +139,10 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         left: -scrollAmount,
         behavior: "smooth",
       });
+      setTimeout(() => {
+        checkScrollability();
+        handleInfiniteScroll();
+      }, 300);
     }
   };
 
@@ -75,72 +152,42 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         left: scrollAmount,
         behavior: "smooth",
       });
+      setTimeout(() => {
+        checkScrollability();
+        handleInfiniteScroll();
+      }, 300);
     }
-  };
-
-  const handleCardClose = (index: number) => {
-    if (carouselRef.current) {
-      const cardWidth = isMobile() ? 230 : 384;
-      const gap = isMobile() ? 4 : 8;
-      const scrollPosition = (cardWidth + gap) * (index + 1);
-      carouselRef.current.scrollTo({
-        left: scrollPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const isMobile = () => {
-    return window && window.innerWidth < 768;
   };
 
   return (
-    <CarouselContext.Provider value={{ onCardClose: handleCardClose }}>
-      <div className="relative w-full">
+    <CarouselContext.Provider value={{ onCardClose: () => {} }}>
+      <div className="relative w-full py-4">
         <div
-          className="mb-16 mt-8 flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           ref={carouselRef}
+          className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth"
           onScroll={checkScrollability}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
-          <div className={cn("flex flex-row justify-start gap-4", "w-full")}>
-            {items.map((item, index) => (
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  y: 20,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    duration: 0.5,
-                    delay: 0.2 * index,
-                    ease: "easeOut",
-                    once: true,
-                  },
-                }}
-                key={"card" + index}
-                className="rounded-3xl"
-              >
-                {item}
-              </motion.div>
-            ))}
-          </div>
+          {slides}
         </div>
-        <div className="mb-10 flex justify-end gap-2">
+
+        {/* Navigation Arrows - Shown on both mobile and desktop */}
+        <div className="absolute left-6 top-1/2 z-50 block -translate-y-1/2">
           <button
-            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 disabled:opacity-50"
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-background/60 shadow-lg backdrop-blur-sm transition-all hover:bg-background/90"
             onClick={scrollLeft}
-            disabled={!canScrollLeft}
           >
-            <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
+            <IconArrowNarrowLeft className="h-6 w-6 text-foreground/90" />
           </button>
+        </div>
+        <div className="absolute right-6 top-1/2 z-50 block -translate-y-1/2">
           <button
-            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 disabled:opacity-50"
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-background/60 shadow-lg backdrop-blur-sm transition-all hover:bg-background/90"
             onClick={scrollRight}
-            disabled={!canScrollRight}
           >
-            <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
+            <IconArrowNarrowRight className="h-6 w-6 text-foreground/90" />
           </button>
         </div>
       </div>
@@ -150,7 +197,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
 export const Card = ({ card }: { card: Card }) => {
   return (
-    <div className="relative z-10 flex h-[500px] w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-xl bg-background shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)] sm:w-[calc(100vw-4rem)] md:w-96">
+    <div className="relative z-10 flex h-[500px] w-[calc(100vw-2rem)] flex-none snap-center flex-col overflow-hidden rounded-3xl bg-background shadow-[2px_4px_12px_rgba(0,0,0,0.08)] dark:shadow-[2px_4px_12px_rgba(0,0,0,0.3)] sm:w-[calc(100vw-4rem)] md:w-96">
       <div className="relative h-[65%] w-full overflow-hidden">
         <BlurImage
           src={card.src}
