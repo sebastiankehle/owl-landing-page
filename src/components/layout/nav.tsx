@@ -3,15 +3,10 @@
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { Navigation } from "@/types/nav";
 
 interface NavProps {
-  dictionary: {
-    about: string;
-    services: string;
-    blog: string;
-    contact: string;
-    home: string;
-  };
+  dictionary: Navigation;
   variant?: "desktop" | "mobile" | "footer";
   onNavigate?: () => void;
 }

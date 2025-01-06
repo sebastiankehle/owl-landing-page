@@ -153,12 +153,6 @@
     }
   },
   "footer": {
-    "nav": {
-      "home": "Inicio",
-      "about": "Nosotros",
-      "blog": "Blog",
-      "contact": "Contacto"
-    },
     "copyright": "© 2025 Old World Labs. Todos los derechos reservados."
   },
   "about": {

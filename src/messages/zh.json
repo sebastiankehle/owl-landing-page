@@ -160,12 +160,6 @@
     }
   },
   "footer": {
-    "nav": {
-      "home": "首页",
-      "about": "关于我们",
-      "blog": "博客",
-      "contact": "联系我们"
-    },
     "copyright": "© 2025 Old World Labs. 保留所有权利。"
   },
   "about": {

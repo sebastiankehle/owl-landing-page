@@ -7,15 +7,12 @@ import { ThemeToggle } from "./theme-toggle";
 import { LanguageSwitcher } from "./language-switcher";
 import { MobileToggle } from "./mobile-toggle";
 import { useMobileMenu } from "@/stores/mobile-menu";
+import { Navigation } from "@/types/nav";
 
 interface ActionsProps {
   dictionary: {
     getQuote: string;
-    nav: {
-      about: string;
-      blog: string;
-      contact: string;
-    };
+    nav: Navigation;
   };
 }
 

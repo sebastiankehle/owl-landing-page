@@ -160,12 +160,6 @@
     }
   },
   "footer": {
-    "nav": {
-      "home": "Главная",
-      "about": "О нас",
-      "blog": "Блог",
-      "contact": "Контакты"
-    },
     "copyright": "© 2025 Old World Labs. Все права защищены."
   },
   "about": {
