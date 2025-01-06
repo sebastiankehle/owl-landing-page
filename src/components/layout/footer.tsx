@@ -1,15 +1,10 @@
+import { Navigation } from "@/types/nav";
 import { Nav } from "./nav";
 
 interface FooterProps {
   dictionary: {
     footer: {
-      nav: {
-        home: string;
-        services: string;
-        about: string;
-        blog: string;
-        contact: string;
-      };
+      nav: Navigation;
       copyright: string;
     };
   };

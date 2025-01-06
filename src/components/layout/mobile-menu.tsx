@@ -4,18 +4,13 @@ import { useMobileMenu } from "@/stores/mobile-menu";
 import { ThemeToggle } from "./actions/theme-toggle";
 import { LanguageSwitcher } from "./actions/language-switcher";
 import { Nav } from "./nav";
+import { Navigation } from "@/types/nav";
 
 interface MobileMenuProps {
   dictionary: {
     header: {
       logo: string;
-      nav: {
-        home: string;
-        services: string;
-        about: string;
-        blog: string;
-        contact: string;
-      };
+      nav: Navigation;
       actions: {
         getQuote: string;
       };

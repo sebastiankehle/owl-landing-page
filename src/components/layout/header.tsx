@@ -1,3 +1,4 @@
+import { Navigation } from "@/types/nav";
 import { Actions } from "./actions/actions";
 import { Logo } from "./logo";
 import { Nav } from "./nav";
@@ -6,13 +7,7 @@ interface HeaderProps {
   dictionary: {
     header: {
       logo: string;
-      nav: {
-        home: string;
-        services: string;
-        about: string;
-        blog: string;
-        contact: string;
-      };
+      nav: Navigation;
       actions: {
         getQuote: string;
       };
