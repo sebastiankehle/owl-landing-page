@@ -5,6 +5,7 @@ interface FooterProps {
     footer: {
       nav: {
         home: string;
+        services: string;
         about: string;
         blog: string;
         contact: string;
