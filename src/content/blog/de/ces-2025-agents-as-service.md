@@ -4,6 +4,8 @@ excerpt: "Old World Labs präsentiert 'Agents as a Service'-Technologie, die KI-
 date: "2025-01-01"
 ---
 
+[CES 2025 Keynote auf YouTube](https://www.youtube.com/watch?v=ZhVvgT2jy4c)
+
 Old World Labs (OWL) freut sich, auf der CES 2025 seine revolutionäre "Agents as a Service"-Technologie vorzustellen, die eine nahtlose Integration in humanoide Roboter und virtuelle Umgebungen demonstriert. Diese bahnbrechende Innovation positioniert OWL an der Spitze des sich schnell entwickelnden agentengesteuerten Robotikmarktes und definiert das Potenzial der KI in physischen und digitalen Räumen neu.
 
 ## Erleben Sie die Zukunft der humanoiden Robotik und KI am Stand #8777

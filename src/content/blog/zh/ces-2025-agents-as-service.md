@@ -4,6 +4,8 @@ excerpt: "Old World Labs通过革命性的'Replicants'系统推出'Agents as a S
 date: "2025-01-01"
 ---
 
+观看视频演示：[在YouTube上观看完整演示](https://www.youtube.com/watch?v=ZhVvgT2jy4c)
+
 Old World Labs (OWL) 在CES 2025上自豪地展示其革命性的"Agents as a Service"技术，实现了与人形机器人和虚拟环境的完美集成。这一前沿创新确立了OWL在快速发展的AI代理机器人市场中的领导地位，重新定义了人工智能在物理和数字空间中的潜力。
 
 ## 在8777展位体验未来机器人技术和AI

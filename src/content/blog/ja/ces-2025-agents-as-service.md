@@ -4,6 +4,8 @@ excerpt: "Old World Labsは革新的な'Replicants'システムを通じて、AI
 date: "2025-01-01"
 ---
 
+[YouTube でご覧ください](https://www.youtube.com/watch?v=ZhVvgT2jy4c)
+
 Old World Labs (OWL)は、CES 2025において、ヒューマノイドロボットと仮想環境への完璧な統合を実現する革新的な"Agents as a Service"テクノロジーを発表します。この先進的なイノベーションにより、OWLはAIエージェントロボティクスの急速に発展する市場でのリーダーとしての地位を確立し、物理的およびデジタル空間の両方でAIの可能性を再定義します。
 
 ## ブース#8777で未来のロボティクスとAIを体験
