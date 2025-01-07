@@ -18,7 +18,7 @@ import {
 const technologies = [
   {
     icon: SiUnrealengine,
-    name: "Unreal Engine",
+    name: "Unreal",
     href: "https://www.unrealengine.com/",
   },
   {
@@ -48,7 +48,7 @@ const technologies = [
   },
   {
     icon: SiNvidia,
-    name: "NVIDIA CUDA",
+    name: "CUDA",
     href: "https://developer.nvidia.com/cuda-toolkit",
   },
   {
@@ -86,7 +86,7 @@ export function TechSlider() {
               )}
             >
               <Icon className="h-8 w-8" />
-              <span className="absolute -bottom-6 z-50 scale-0 rounded-md bg-background/80 px-3 py-1 text-xs shadow-sm backdrop-blur-sm transition-transform group-hover:scale-100">
+              <span className="z-1000 absolute scale-0 rounded-md bg-background/80 px-3 py-1 text-xs shadow-sm backdrop-blur-sm transition-transform group-hover:scale-100">
                 {name}
               </span>
             </a>
