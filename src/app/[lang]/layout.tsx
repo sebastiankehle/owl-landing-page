@@ -6,6 +6,7 @@ import { getDictionary } from "@/app/[lang]/dictionaries";
 import { Footer } from "@/components/layout/footer";
 import { Preloader } from "@/components/layout/preloader";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
         className={`${inter.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
+        <Analytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
